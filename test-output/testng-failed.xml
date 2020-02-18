@@ -3,19 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.esg.executableclasses.Canvassing_ExecutableClass"/>
+      <class name="com.esg.executableclasses.AddandtrackInventoryExecutableClass"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="com.esg.executableclasses.Canvassing_ExecutableClass">
+      <class name="com.esg.executableclasses.AddandtrackInventoryExecutableClass">
         <methods>
+          <include name="TrackInventory"/>
           <include name="Initialization"/>
-          <include name="getStatusWithScreenshot"/>
-          <include name="Report"/>
-          <include name="Copy_Customer_Canvassing_List_Module"/>
+          <include name="getResult"/>
+          <include name="LoginMethod"/>
+          <include name="AddInventory"/>
         </methods>
-      </class> <!-- com.esg.executableclasses.Canvassing_ExecutableClass -->
+      </class> <!-- com.esg.executableclasses.AddandtrackInventoryExecutableClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
