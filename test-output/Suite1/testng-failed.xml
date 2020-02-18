@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]" parallel="tests">
+  <parameter name="Browsername" value="chrome"/>
+  <test name="Testonchrome">
+    <parameter name="Browsername" value="chrome"/>
+    <classes>
+      <class name="com.esg.executableclasses.AddandtrackInventoryExecutableClass"/>
+    </classes>
+  </test> <!-- Testonchrome -->
+  <test name="Testonchrome(failed)" parallel="tests">
+    <parameter name="Browsername" value="chrome"/>
+    <classes>
+      <class name="com.esg.executableclasses.AddandtrackInventoryExecutableClass">
+        <methods>
+          <include name="TrackInventory"/>
+          <include name="Initialization"/>
+          <include name="getResult"/>
+          <include name="LoginMethod"/>
+          <include name="AddInventory"/>
+        </methods>
+      </class> <!-- com.esg.executableclasses.AddandtrackInventoryExecutableClass -->
+    </classes>
+  </test> <!-- Testonchrome(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
