@@ -74,73 +74,55 @@ public class BaseClass
 //***********************************Method is to enter the text in the TextBox Elements*******************************
 	public static void enterTextboxValue(String filename,String webelement,String fname,String sheet,int row,int column) 
 	{
-		explicitWait(3000, filename, webelement);
 		try {
-		/*	scrollToElement(filename, webelement);
-			if(Xpath(filename,webelement).isDisplayed() && Xpath(filename,webelement).isEnabled()) {
-				WebElement complexelement=Xpath(filename, webelement);		
-				Actions act=new Actions(driver);
-				act.moveToElement(complexelement);
-				act.click();
-				act.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();
-				{
-				if (Xpath(filename,webelement).getAttribute("value").isEmpty() && Xpath(filename,webelement).getText().isEmpty()) {
-					Xpath(filename,webelement).sendKeys(ReadExcel.readData(fname, sheet, row, column));
-				}
+			Xpath(filename,webelement).sendKeys(ReadExcel.readData(fname, sheet, row, column));
+			String TextValue = GetText(filename, webelement);
+			String AttributeValue =GetAttribute(filename, webelement);
+			String CssValue =GetCssValue(filename, webelement);
 			
-			}*/
+			String Value = TextValue+AttributeValue+CssValue;
+			System.out.println(Value);
+			System.out.println("Passed first print");
+			if (Value.equalsIgnoreCase("")) {
 				
-				do {
-					WebElement complexelement1=Xpath(filename, webelement);		
+					 WebElement complexelement1=Xpath(filename, webelement);		
+						Actions act1=new Actions(driver);
+						act1.moveToElement(complexelement1);
+						act1.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();
+				
+			} else {
+				
+					System.out.println("Text is successfully entered in the textbox using first method");
+			}
+		} catch (Exception e) {
+			try {
+				 WebElement complexelement1=Xpath(filename, webelement);		
 					Actions act1=new Actions(driver);
 					act1.moveToElement(complexelement1);
-					act1.click();
-					act1.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();
-					
-				} while (Xpath(filename,webelement).getText().contains(""));
-				
-				Xpath(filename,webelement).sendKeys(ReadExcel.readData(fname, sheet, row, column));
-			
-				
-				{
-					
-				}
-			/*}*/
-		/*
-		else {
-			System.out.println("Provided text is already entered in the text field");
-				
-			}	*/
-		} 
-			
-		catch ( NoSuchElementException exception) {
-			scrollToElement(filename, webelement);
-			System.out.println("Catch Block");
-			if (driver.getPageSource().contains("Error Code")) {
-				
-				Enter(KeyEvent.VK_F5);
-			}
-			else if(Xpath(filename,webelement).isDisplayed() && Xpath(filename,webelement).isEnabled()) {
-				WebElement complexelement=Xpath(filename, webelement);		
-				Actions act=new Actions(driver);
-				act.moveToElement(complexelement);
-				act.click();
-				act.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();		
-				}
-	
-			else if(Xpath(filename,webelement).isDisplayed() && Xpath(filename,webelement).isEnabled()) {
-				Xpath(filename,webelement).sendKeys(ReadExcel.readData(fname, sheet, row, column));
+					act1.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();	
+			} catch (Exception e1) {
+				// TODO: handle exception
 			}
 			
-			else {
-				System.out.println("Provided text is not entered in the text field");
-				
-			}
-			
+		
 		}
 	}
 		
+	public static String GetText(String filename,String webelement) {
+		threadWait(3000);
+		return Xpath(filename,webelement).getText();
 		
+	}
+	public static String GetAttribute(String filename,String webelement) {
+		threadWait(3000);
+		return Xpath(filename,webelement).getAttribute("value");
+		
+	}
+
+public static String GetCssValue(String filename,String webelement) {
+	threadWait(3000);
+	return Xpath(filename,webelement).getCssValue("value");
+}
 	public static void selectDropdownValue(String filename,String webelement,String excelfname,String sheet,int row,int column) 
 	{
 		Select select=new Select(Xpath(filename,webelement));

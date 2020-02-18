@@ -40,6 +40,7 @@ public class UserDefinedWorkflowTestClass extends HelperClass {
 				"Navigate to Application - Measure page Successfully",
 				"Failed to navigate to Application - Measure page", "UserDefinedWorkflow", "VerifyMeasurepage");
 		clickWebelement("UserDefinedWorkflow", "EnableMeasure");
+		threadWait(5000);
 		enterTextboxValue("UserDefinedWorkflow", "MeasureQty", "ESG Values", "User_Defined_Workflow", 7, 1);
 		clickonSave();
 		clickonProcess();
