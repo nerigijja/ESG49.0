@@ -12,6 +12,7 @@
         <methods>
           <include name="CEERefrigerator"/>
           <include name="getStatusWithScreenshot"/>
+          <include name="Report"/>
           <include name="Initialization"/>
         </methods>
       </class> <!-- com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass -->

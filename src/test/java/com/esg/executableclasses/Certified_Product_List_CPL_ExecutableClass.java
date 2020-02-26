@@ -21,7 +21,7 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		initialization();
 	}	
 	
-	/*@Test(priority = 1,  groups = {"Air_Conditioner"})
+	@Test(priority = 1,  groups = {"Air_Conditioner"})
 	public static void AHRI_Air_Conditioner_Residential() {
 		test = Report.startTest("AHRI_Air_Conditioner_Residential");
 		OpenBrowser("helper", "BaseURL");
@@ -201,7 +201,7 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		AHRI_HeatPump_Residential_Backend_Enrollment_Before_Process();
 		AHRI_HeatPump_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}*/
+	}
 	@Test(priority = 19, groups={"CEERefrigerator"})
 	public static void CEERefrigerator() throws IOException {
 		test=Report.startTest("CPL_CEE_Refrigerator");
@@ -210,7 +210,7 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Refrigerator();
 		EECPApplicationRefrigerator();
 	}
-	/*@Test(priority = 20, groups ={"CEEDishwasher"})
+	@Test(priority = 20, groups ={"CEEDishwasher"})
 	public static void CEEDishwasher() throws IOException {
 		test=Report.startTest("CPL_CEE_Dishwasher");
 		OpenBrowser("helper", "BaseURL");
@@ -606,7 +606,7 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 										Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesDryer_BackendEnrollment();
 										CloseBrowserWindow();
 									}
-	*/
+	
 	@AfterMethod(groups = {"CEERefrigerator","CEEClotheswasher","CEEDishwasher","WaterSense_Irrigation_Controller","WaterSense_Showerhead","WaterSense_Toilet","AHRI_Heat_Pump","AHRI_Furnace","Air_Conditioner","CeilingFan","ClothesWasher","ClothesDryer","Energy_Star","CeilingFan_MobileApplication","ClothesWasher_MobileApplication","ClothesDryer_MobileApplication"
 			,"Energy_Star_MobileApplication","CeilingFan_BackendEnrollment","ClothesWasher_BackendEnrollment","ClothesDryer_BackendEnrollment","Energy_Star_BackendEnrollment"})
 	public static void getStatusWithScreenshot(ITestResult result) throws IOException {

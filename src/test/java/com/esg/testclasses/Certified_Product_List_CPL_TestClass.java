@@ -1784,7 +1784,7 @@ public static void Refrigerator() {
 			//Step 1 Get started
 				clickWebelement("Certified_Product_List_CPL_1", "AccountHolder");
 				clickWebelement("Certified_Product_List_CPL_1", "AccountNumer");
-				enterTextboxValue("Certified_Product_List_CPL_1", "AccountNumer", "ESG Values","CPL_1_1", 1, 1);
+				enterTextboxValue("Certified_Product_List_CPL_1", "AccountNumer", "ESG Values","CPL_1", 1, 1);
 				explicitWait(300, "Certified_Product_List_CPL_1", "ZipCode");
 				clickWebelement("Certified_Product_List_CPL_1", "ZipCode");
 				enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 2, 1);
