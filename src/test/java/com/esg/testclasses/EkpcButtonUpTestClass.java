@@ -47,7 +47,7 @@ public class EkpcButtonUpTestClass extends HelperClass {
 	public static void NeedToBeRammed() {
 		ClickByActionClass("EKPCButtonUp", "MainMenu", "ESG Values", "EKPC ButtonUp", 11, 1);
 		clickWebelement("EKPCButtonUp", "NewButton");
-		selectDropdownByVisibleText("EKPCButtonUp", "SelectProgram", "ESG Values", "EKPC ButtonUp", 2, 1);
+		selectDropdownByVisibleText("EKPCButtonUp", "SelectProgram","ESG Values", "EKPC ButtonUp", 2, 1);
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "NextButton");
 		enterTextboxValue("EKPCButtonUp", "SearchType", "ESG Values", "EKPC ButtonUp", 3, 1);
@@ -69,6 +69,7 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		enterTextboxValue("EKPCButtonUp", "PremiseSqft", "ESG values", "EKPC ButtonUp", 32, 1);
 		clickonSave();
 		threadWait(2500);
+		scrollToElement("EKPCButtonUp", "Measure");
 		clickWebelement("EKPCButtonUp", "Measure");
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "AddMeasure");

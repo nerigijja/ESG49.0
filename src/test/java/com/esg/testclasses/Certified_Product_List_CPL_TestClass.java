@@ -211,7 +211,7 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 		
 		//Equipment information Validation
 		test.log(LogStatus.INFO, "Online Application Validation");
-		threadWait(2500);
+		threadWait(3500);
 		VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_AHRI_Furnace_BrandName", "ESG Values","CPL", 47, 1);
 		VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_AHRI_Furnace_Configuration", "ESG Values","CPL", 48, 1);
 		VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_AHRI_Furnace_Eae_including_Eso", "ESG Values","CPL",49, 1);
@@ -346,7 +346,7 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				//explicitWait(300, "Certified_Product_List_CPL", "EquipedInformation_AHRI_HeatPump_AHRIType");
 				
 				//Equipment information Validation
-				threadWait(2500);
+				threadWait(3500);
 				test.log(LogStatus.INFO, "Online Application Validation");
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_AHRI_HeatPump_AHRIType", "ESG Values","CPL", 80, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_AHRI_HeatPump_CoolingCapacity", "ESG Values","CPL", 81, 1);
@@ -998,7 +998,7 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				threadWait(5000);
 				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelNumber", "ESG Values","CPL", 270, 1);
 				explicitWait(3000, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelName");
-				threadWait(2500);
+				threadWait(5000);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelName", "ESG Values","CPL", 271, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_Product_Type", "ESG Values","CPL", 272, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_Zone_Capacity", "ESG Values","CPL", 273, 1);
@@ -1035,7 +1035,6 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				explicitWait(3000, "Certified_Product_List_CPL", "Application_WaterSense_Irrigation_Controller_OnlineApplication_BrandName");
 				
 				//Enrollment Measures Validation
-				
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_WaterSense_Irrigation_Controller_OnlineApplication_BrandName", "ESG Values","CPL", 269, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_WaterSense_Irrigation_Controller_OnlineApplication_ModelNumber", "ESG Values","CPL", 270, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_WaterSense_Irrigation_Controller_OnlineApplication_ModelName", "ESG Values","CPL", 271, 1);
@@ -1515,10 +1514,10 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			scrollToElement("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_SaveButton");
-			threadWait(10000);
+			threadWait(20000);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_MeasureName");
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_Backend_Enrollment_MeasureQty", "ESG Values","CPL", 375, 1);
-			threadWait(3000);
+			threadWait(10000);
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_AHRICertifiedReferenceNumber", "ESG Values","CPL" , 374, 1);
 			threadWait(2500);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_AirConditioner_Backend_Enrollment_AHRICertifiedReferenceNumber_Click");
@@ -1613,10 +1612,10 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			scrollToElement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_SaveButton");
-			threadWait(10000);
+			threadWait(20000);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_MeasureName");
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_MeasureQty", "ESG Values","CPL", 407, 1);
-			threadWait(2500);
+			threadWait(10000);
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_AHRICertifiedReferenceNumber", "ESG Values","CPL" , 406, 1);
 			threadWait(2500);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_AHRICertifiedReferenceNumber_Click");
@@ -1701,14 +1700,14 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			scrollToElement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_SelectMeasure");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_SaveButton");
-			threadWait(10000);
+			threadWait(20000);
 			//explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_MeasureName");
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_MeasureName");
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_MeasureQty", "ESG Values","CPL", 435, 1);
 			threadWait(2500);
 			enterTextboxValue("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_AHRICertifiedReferenceNumber", "ESG Values","CPL" , 434, 1);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_AHRICertifiedReferenceNumberClick");
-			threadWait(2500);
+			threadWait(10000);
 			test.log(LogStatus.INFO, "Application Measure data validation Before Process");
 			VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_AHRIType", "ESG Values","CPL", 437, 1);
 			VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_CoolingCapacity", "ESG Values","CPL", 438, 1);
@@ -3110,7 +3109,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 							clickWebelement("Certified_Product_List_CPL", "CeilingFan_MobileApplication_Step1_BladeSpan");
 							threadWait(2000);
 							clickWebelement("Certified_Product_List_CPL", "CeilingFan_MobileApplication_Step1_Select_60");
-
+							threadWait(5000);
 							// Verify CPL: Energy Star - Ceiling Fan - Residential Mobile Application
 							Pass_Message("Verify CPL: Energy Star - Ceiling Fan - Residential Mobile Application");
 							
@@ -3500,10 +3499,13 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 										clickWebelement("Certified_Product_List_CPL", "MobileApplication_ApplicantInformation_Step2_EnterName");
 										enterTextboxValue("Certified_Product_List_CPL", "MobileApplication_ApplicantInformation_Step2_EnterName", "CPL", "ClothesDryer_MobileApplication", 47, 1);
 										//Enter(KeyEvent.VK_ENTER);
+										threadWait(3000);
 										Enter(KeyEvent.VK_TAB);
 										enterTextboxValue("Certified_Product_List_CPL", "MobileApplication_ApplicantInformation_Step2_EnterAccountNumber", "CPL", "ClothesDryer_MobileApplication", 48, 1);
+										threadWait(3000);
 										Enter(KeyEvent.VK_TAB);
 										enterTextboxValue("Certified_Product_List_CPL", "MobileApplication_ApplicantInformation_Step2_EnterEmailAddress", "CPL", "ClothesDryer_MobileApplication", 49, 1);
+										threadWait(3000);
 										Enter(KeyEvent.VK_TAB);
 										enterTextboxValue("Certified_Product_List_CPL", "MobileApplication_ApplicantInformation_Step2_EnterPhoneNumber", "CPL", "ClothesDryer_MobileApplication", 50, 1);
 										

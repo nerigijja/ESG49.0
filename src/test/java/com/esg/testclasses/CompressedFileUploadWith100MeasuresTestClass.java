@@ -66,7 +66,7 @@ public class CompressedFileUploadWith100MeasuresTestClass extends HelperClass {
 		threadWait(5000);
 		clickWebelement("CompressedFileUploadWith100Measures", "OutcomePass");
 		clickWebelement("CompressedFileUploadWith100Measures", "PaymentRequest");
-		selectActualReviewDate();
+		//selectActualReviewDate();
 		clickWebelement("CompressedFileUploadWith100Measures", "QAReviewSave");
 		threadWait(2500);
 		clickWebelement("CompressedFileUploadWith100Measures", "QAReviewProcess");
@@ -76,7 +76,7 @@ public class CompressedFileUploadWith100MeasuresTestClass extends HelperClass {
 	public static void InitiatePaymentProcess() {
 		clickWebelement("CompressedFileUploadWith100Measures", "Initiatepayment");
 		threadWait(2500);
-		selectActualReviewDate();
+	//	selectActualReviewDate();
 		defineLogs("Howards - ALTN", "Howards - ALTN", "Howards - ALTN", "Payee Name is successfully validated", "Wrong Payee Name is selected", "CompressedFileUploadWith100Measures", "Payee");
 		scrollToElement("CompressedFileUploadWith100Measures", "InitiatepaymentTotalCost");
 		defineLogs("$4,000.00", "$4,000.00", "$4,000.00", "Job Cost Summary Total value is validated", "Job Cost Summary Total is failed to validate", "CompressedFileUploadWith100Measures", "InitiatepaymentTotalCost");

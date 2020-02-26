@@ -23,7 +23,7 @@ public class Canvassing_ExecutableClass extends Canvassing_TestClass {
 		test = Report.startTest("Login Module");
 		Login();
 	}
-/*	@Test(priority =2)
+	@Test(priority =2)
 	public static void Create_Canvassing_List() {
 		test = Report.startTest("Create Canvassing List");
 		Create_New_Canvassing_List();
@@ -54,7 +54,7 @@ public class Canvassing_ExecutableClass extends Canvassing_TestClass {
 	public static void Export_Customer_Canvassing_List_Module() throws IOException {
 		test = Report.startTest("Export Customer Canvassing List");
 		Export_Customer_Canvassing_List();
-	}*/
+	}
 	
 	@Test(priority =8)
 	public static void Copy_Customer_Canvassing_List_Module() throws IOException {

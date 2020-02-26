@@ -23,7 +23,7 @@ public class PayeeRegressionExecutableClass extends PayeeRegressionTestClass{
 		test = Report.startTest("Enrollment");
 		login("helper","BaseURL",1, 0, 1, 1);
 	}
-/*	@Test(priority=2)
+	@Test(priority=2)
 	public static void payeeRegression_NoInstall_Standard()
 	{
 		test = Report.startTest("payeeRegression_NoInstall_Standard");
@@ -40,7 +40,7 @@ public class PayeeRegressionExecutableClass extends PayeeRegressionTestClass{
 		payee_SecondaryTradeAlly_NoInstall_Standard();
 		test.log(LogStatus.INFO, "payeeRegression_NoInstall_Standard Module is completed");
 		Report.endTest(test);
-	}*/
+	}
 	@Test(priority=3)
 	public static void payeeRegression_NoInstall_Measure_Override()
 	{
@@ -59,7 +59,7 @@ public class PayeeRegressionExecutableClass extends PayeeRegressionTestClass{
 		test.log(LogStatus.INFO, "payeeRegression_NoInstall_Measure_Override Module is completed");
 		Report.endTest(test);
 	}
-/*	@Test(priority=4)
+	@Test(priority=4)
 	public static void payeeRegression_NoInstall_ReOpenApplicationAndChangePayee()
 	{
 		test = Report.startTest("payeeRegression_NoInstall_ReOpenApplicationAndChangePayee");
@@ -149,7 +149,7 @@ public class PayeeRegressionExecutableClass extends PayeeRegressionTestClass{
 		test.log(LogStatus.INFO, "payeeRegression_InstallStep_Closed_ReOpenApplicationAndChangePayee Module is completed");
 		Report.endTest(test);
 	}
-	*/
+	
 	@AfterMethod
 	 public void getResult(ITestResult result) throws IOException
 	    {

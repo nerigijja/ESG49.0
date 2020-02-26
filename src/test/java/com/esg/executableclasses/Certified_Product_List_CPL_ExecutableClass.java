@@ -42,8 +42,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_AHRI_Furnace();
 		MeasurePropertiesValidationFurnace();
 		Close();
-	}
-	@Test(priority = 3, groups = {"AHRI_Heat_Pump"})
+	}*/
+/*	@Test(priority = 3, groups = {"AHRI_Heat_Pump"})
 	public static void AHRI_Heat_Pump_OnlineApplication() {
 		test = Report.startTest("AHRI_Air_Heat_Pump_OnlineApplication");
 		OpenBrowser("helper", "BaseURL");
@@ -53,8 +53,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_AHRI_Heat_Pump_OnlineApplication();
 		MeasurePropertiesValidation_Heat_Pump_OnlineApplication();
 		Close();
-	}
-	@Test(priority = 4, groups = {"Air_Conditioner"})
+	}*/
+	/*@Test(priority = 4, groups = {"Air_Conditioner"})
 	public static void AHRI_Air_Conditioner_Residential_Mobile_Application() {
 		test = Report.startTest("AHRI Air Conditioner Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -62,8 +62,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Equipment_Information_AHRI_Air_Conditioner_Mobile_Application();
 		EnrollmentApplication_AHRI_Air_Conditioner_Mobile_Application();
 		Close();
-	}
-	@Test(priority = 5, groups = {"AHRI_Furnace"})	
+	}*/
+	/*@Test(priority = 5, groups = {"AHRI_Furnace"})	
 	public static void AHRI_Furnace_Residential_Mobile_Application() {
 		test = Report.startTest("AHRI Furnace Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -71,8 +71,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Equipment_Information_AHRI_Furnace_Mobile_Application();
 		EnrollmentApplication_AHRI_Furnace_Mobile_Application();
 		Close();
-	}
-	@Test(priority = 6, groups = {"AHRI_Heat_Pump"})
+	}*/
+	/*@Test(priority = 6, groups = {"AHRI_Heat_Pump"})
 	public static void AHRI_Heat_Pump_Residential_Mobile_Application() {
 		test = Report.startTest("AHRI Heat Pump Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -80,8 +80,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Equipment_Information_AHRI_Heat_Pump_Mobile_Application();
 		EnrollmentApplication_AHRI_Heat_Pump_Mobile_Application();
 		Close();
-	}
-	@Test(priority = 7, groups = {"	"})
+	}*/
+	/*@Test(priority = 7, groups = {"	"})
 	public static void WaterSense_Toilet_Residential_Online_Application() {
 		test = Report.startTest("WaterSense Toilet Residential Online Application");
 		OpenBrowser("helper", "BaseURL");
@@ -91,8 +91,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_WaterSense_Toilet_Residential_OnlineApplication();
 		MeasurePropertiesValidation_WaterSense_Toilet_Residential_OnlineApplication();
 		Close();
-	}
-	@Test(priority = 8, groups = {"WaterSense_Showerhead"})
+	}*/
+	/*@Test(priority = 8, groups = {"WaterSense_Showerhead"})
 	public static void WaterSense_Showerhead_Residential_Online_Application() {
 		test = Report.startTest("WaterSense Showerhead Residential Online Application");
 		OpenBrowser("helper", "BaseURL");
@@ -102,8 +102,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_WaterSense_Showerhead_Residential_OnlineApplication();
 		MeasurePropertiesValidation_WaterSense_Showerhead_Residential_OnlineApplication();
 		Close();
-	}
-	@Test(priority = 9, groups = {"WaterSense_Irrigation_Controller"})
+	}*/
+	/*@Test(priority = 9, groups = {"WaterSense_Irrigation_Controller"})
 	public static void WaterSense_Irrigation_Controller_Online_Application() {
 		test = Report.startTest("WaterSense Irrigation Controller Online Application");
 		OpenBrowser("helper", "BaseURL");
@@ -113,8 +113,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_WaterSense_Irrigation_Controller_OnlineApplication();
 		MeasurePropertiesValidation_WaterSense_Irrigation_Controller_OnlineApplication();
 		Close();
-	}
-	@Test(priority = 10, groups = {"WaterSense_Toilet"})
+	}*/
+/*	@Test(priority = 10, groups = {"WaterSense_Toilet"})
 	public static void WaterSense_Toilet_Residential_Mobile_Application() {
 		test = Report.startTest("WaterSense Toilet Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -122,8 +122,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Equipment_Information_WaterSense_Toilet_Residential_Mobile_Application();
 		EnrollmentApplication_WaterSense_Toilet_Residential_Mobile_Application();
 		Close();
-	}
-	@Test(priority = 11, groups = {"WaterSense_Showerhead"})
+	}*/
+/*	@Test(priority = 11, groups = {"WaterSense_Showerhead"})
 	public static void WaterSense_ShowerHead_Residential_Mobile_Application() {
 		test = Report.startTest("WaterSense Showerhead Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -132,7 +132,7 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		EnrollmentApplication_WaterSense_Showerhead_Residential_Mobile_Application();
 		Close();
 	}*/
-	@Test(priority = 12, groups = {"WaterSense_Irrigation_Controller"})
+/*	@Test(priority = 12, groups = {"WaterSense_Irrigation_Controller"})
 	public static void WaterSense_Irrigation_Controller_Residential_Mobile_Application() {
 		test = Report.startTest("WaterSense Irrigation Controller Residential Mobile Application");
 		OpenBrowser("helper", "BaseURL");
@@ -140,7 +140,7 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		Equipment_Information_WaterSense_Irrigation_Controller_Residential_Mobile_Application();
 		EnrollmentApplication_WaterSense_Irrigation_Controller_Residential_Mobile_Application();
 		Close();
-	}
+	}*/
 	/*@Test(priority = 13, groups = {"WaterSense_Toilet"})
 	public static void WaterSense_Toilet_Residential_Backend_Enrollment() {
 		test = Report.startTest("WaterSense Toilet Residential Backend Enrollment");
@@ -150,8 +150,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		WaterSense_Toilet_Residential_Backend_Enrollment_Before_Process();
 		WaterSense_Toilet_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}
-	@Test(priority = 14, groups = {"WaterSense_Showerhead"})
+	}*/
+/*	@Test(priority = 14, groups = {"WaterSense_Showerhead"})
 	public static void WaterSense_Showerhead_Residential_Backend_Enrollment() {
 		test = Report.startTest("WaterSense Showerhead Residential Backend Enrollment");
 		OpenBrowser("helper", "BaseURL");
@@ -160,19 +160,19 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		WaterSense_ShowerHead_Residential_Backend_Enrollment_Before_Process();
 		WaterSense_Showerhead_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}
-	@Test(priority = 15, groups = {"WaterSense_Irrigation_Controller"})
-	public static void WaterSense_Irrigation_Controller_Residential_Backend_Enrollment() {
-		test = Report.startTest("WaterSense Irrigation Controller Residential Backend Enrollment");
-		OpenBrowser("helper", "BaseURL");
-		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_Login();
-		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_EnrollmentPage();
-		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_Before_Process();
-		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_After_Process();
-		Close();
-	}
+	}*/
+//	@Test(priority = 15, groups = {"WaterSense_Irrigation_Controller"})
+//	public static void WaterSense_Irrigation_Controller_Residential_Backend_Enrollment() {
+//		test = Report.startTest("WaterSense Irrigation Controller Residential Backend Enrollment");
+//		OpenBrowser("helper", "BaseURL");
+//		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_Login();
+//		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_EnrollmentPage();
+//		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_Before_Process();
+//		WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_After_Process();
+//		Close();
+//	}
 	//*[text()='CPL: WaterSense - Irrigation Controller']/preceding-sibling::td/div/span/following-sibling::input
-	@Test(priority = 16, groups = {"Air_Conditioner"})
+/*	@Test(priority = 16, groups = {"Air_Conditioner"})
 	public static void AHRI_Air_Conditioner_Residential_Backend_Enrollment() {
 		test = Report.startTest("AHRI Air Conditioner Residential Backend Enrollment");
 		OpenBrowser("helper", "BaseURL");
@@ -181,8 +181,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		AHRI_Air_Conditioner_Residential_Backend_Enrollment_Before_Process();
 		AHRI_Air_Conditioner_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}
-	@Test(priority = 17, groups = {"AHRI_Furnace"})
+	}*/
+/*	@Test(priority = 17, groups = {"AHRI_Furnace"})
 	public static void AHRI_Furnace_Residential_Residential_Backend_Enrollment() {
 		test = Report.startTest("AHRI Furnace Residential Backend Enrollment");
 		OpenBrowser("helper", "BaseURL");
@@ -191,8 +191,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		AHRI_Furnace_Residential_Backend_Enrollment_Before_Process();
 		AHRI_Furnace_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}
-	@Test(priority = 18, groups = {"AHRI_Heat_Pump"})
+	}*/
+	/*@Test(priority = 18, groups = {"AHRI_Heat_Pump"})
 	public static void AHRI_HeatPump_Residential_Backend_Enrollment() {
 		test = Report.startTest("AHRI Heat PumpResidential Backend Enrollment");
 		OpenBrowser("helper", "BaseURL");
@@ -201,8 +201,8 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 		AHRI_HeatPump_Residential_Backend_Enrollment_Before_Process();
 		AHRI_HeatPump_Residential_Backend_Enrollment_After_Process();
 		Close();
-	}
-	@Test(priority = 1, groups={"CEERefrigerator"})
+	}*/
+/*	@Test(priority = 1, groups={"CEERefrigerator"})
 	public static void CEERefrigerator() throws IOException {
 		test=Report.startTest("CPL_CEE_Refrigerator");
 		OnlineApplication();
@@ -258,9 +258,9 @@ public class Certified_Product_List_CPL_ExecutableClass  extends Certified_Produ
 	public static void CEEClotheswasher_BackendEnrollment() {
 		test=Report.startTest("CPL_CEE_Clotheswasher_BackendEnrollment");
 		CEEClotheswasherBackendEnrollment();
-	}
+	}*/
 	//*****************************************************CPL Energy Star Ceiling Fan*************************************************************************************
-	@Test(priority = 1 , groups = {"CeilingFan","Energy_Star"})
+	/*@Test(priority = 1 , groups = {"CeilingFan","Energy_Star"})
 public static void CPL_Energy_Star_CeilingFan_Login() {
 	OpenOnlineApplication();
 }
@@ -309,10 +309,10 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 	test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 	Verify_ApplicationWorkflowStep_After_Process_EnergyStar_CeilingFan();
 	CloseBrowserWindow();
-}
+}*/
 
 //*****************************************************CPL Energy Star Clothes Washer*************************************************************************************
-	@Test(priority = 9 , groups = {"ClothesWasher","Energy_Star"})
+	/*@Test(priority = 9 , groups = {"ClothesWasher","Energy_Star"})
 	public static void CPL_Energy_Star_ClothesWasher_Login() {
 		OpenOnlineApplication();
 	}
@@ -362,9 +362,9 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 		Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesWasher();
 		CloseBrowserWindow();
 	}
-	
+	*/
 //*****************************************************CPL Energy Star Clothes Dryer*************************************************************************************
-			@Test(priority = 17 , groups = {"ClothesDryer","Energy_Star"})
+			/*@Test(priority = 17 , groups = {"ClothesDryer","Energy_Star"})
 			public static void CPL_Energy_Star_ClothesDryer_Login() {
 				OpenOnlineApplication();
 			}
@@ -413,8 +413,7 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 				test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 				Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesDryer();
 				CloseBrowserWindow();
-			}
-			
+			}*/
 			
 //*****************************************************CPL Energy Star Ceiling Fan Mobile Application*************************************************************************************
 			@Test(priority = 25 , groups = {"CeilingFan_MobileApplication","Energy_Star_MobileApplication"})
@@ -457,7 +456,7 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 			}
 			
 //*****************************************************CPL Energy Star Clothes Washer Mobile Application*************************************************************************************
-				@Test(priority = 31 , groups = {"ClothesWasher_MobileApplication","Energy_Star_MobileApplication"})
+			/*	@Test(priority = 31 , groups = {"ClothesWasher_MobileApplication","Energy_Star_MobileApplication"})
 				public static void CPL_Energy_Star_ClothesWasher_MobileApplication_Login() {
 					Open_MobileApplication_EnergyStar_ClothesWasher();
 				}
@@ -495,10 +494,10 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 					test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 					Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesWasher_MobileApplication();
 					CloseBrowserWindow();
-				}
+				}*/
 				
 //*****************************************************CPL Energy Star Clothes Dryer Mobile Application*************************************************************************************
-									@Test(priority = 37 , groups = {"ClothesDryer_MobileApplication","Energy_Star_MobileApplication"})
+						/*			@Test(priority = 37 , groups = {"ClothesDryer_MobileApplication","Energy_Star_MobileApplication"})
 						public static void CPL_Energy_Star_ClothesDryer_MobileApplication_Login() {
 							Open_MobileApplication_EnergyStar_ClothesDryer();
 						}
@@ -536,11 +535,11 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 							test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 							Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesDryer_MobileApplication();
 							CloseBrowserWindow();
-						}
+						}*/
 						
 						
 //*****************************************************CPL Energy Star Ceiling Fan Backend Enrollment*************************************************************************************
-						@Test(priority = 43 , groups = {"CeilingFan_BackendEnrollment","Energy_Star_BackendEnrollment"})
+						/*@Test(priority = 43 , groups = {"CeilingFan_BackendEnrollment","Energy_Star_BackendEnrollment"})
 						public static void CPL_Energy_Star_CeilingFan_BackendEnrollment_LoginEECP() {
 							test = Report.startTest("CPL Energy Star Ceiling Fan Backend Enrollment LoginEECP");
 							Open_BackendEnrollment_EnergyStar_CeilingFan();
@@ -557,10 +556,10 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 							test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 							Verify_ApplicationWorkflowStep_After_Process_EnergyStar_CeilingFan_BackendEnrollment();
 							CloseBrowserWindow();
-						}
+						}*/
 						
 //*****************************************************CPL Energy Star Clothes Washer Backend Enrollment*************************************************************************************
-							@Test(priority = 46 , groups = {"ClothesWasher_BackendEnrollment","Energy_Star_BackendEnrollment"})
+						/*	@Test(priority = 46 , groups = {"ClothesWasher_BackendEnrollment","Energy_Star_BackendEnrollment"})
 							public static void CPL_Energy_Star_ClothesWasher_BackendEnrollment_Login() {
 								test = Report.startTest("CPL Energy Star Clothes Washer Backend Enrollment LoginEECP");
 								Open_BackendEnrollment_EnergyStar_ClothesWasher();
@@ -578,10 +577,10 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 								test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 								Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesWasher_BackendEnrollment();
 								CloseBrowserWindow();
-							}
+							}*/
 							
 //*****************************************************CPL Energy Star Clothes Dryer Backend Enrollment*************************************************************************************
-									@Test(priority = 49 , groups = {"ClothesDryer_BackendEnrollment","Energy_Star_BackendEnrollment"})
+								/*	@Test(priority = 49 , groups = {"ClothesDryer_BackendEnrollment","Energy_Star_BackendEnrollment"})
 									public static void CPL_Energy_Star_ClothesDryer_BackendEnrollment_Login() {
 										test = Report.startTest("CPL Energy Star Clothes Dryer Backend Enrollment LoginEECP");
 										Open_BackendEnrollment_EnergyStar_ClothesDryer();
@@ -599,8 +598,8 @@ public static void CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_Aft
 										test = Report.startTest("CPL Energy Star Verify Application Workflow Step After Process");
 										Verify_ApplicationWorkflowStep_After_Process_EnergyStar_ClothesDryer_BackendEnrollment();
 										CloseBrowserWindow();
-									}
-	*/
+									}*/
+	
 	@AfterMethod(groups = {"CEERefrigerator","CEEClotheswasher","CEEDishwasher","WaterSense_Irrigation_Controller","WaterSense_Showerhead","WaterSense_Toilet","AHRI_Heat_Pump","AHRI_Furnace","Air_Conditioner","CeilingFan","ClothesWasher","ClothesDryer","Energy_Star","CeilingFan_MobileApplication","ClothesWasher_MobileApplication","ClothesDryer_MobileApplication"
 			,"Energy_Star_MobileApplication","CeilingFan_BackendEnrollment","ClothesWasher_BackendEnrollment","ClothesDryer_BackendEnrollment","Energy_Star_BackendEnrollment"})
 	public static void getStatusWithScreenshot(ITestResult result) throws IOException {

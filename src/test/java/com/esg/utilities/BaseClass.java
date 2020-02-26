@@ -82,9 +82,7 @@ public class BaseClass
 			
 			String Value = TextValue+AttributeValue+CssValue;
 			System.out.println(Value);
-			System.out.println("Passed first print");
 			if (Value.equalsIgnoreCase("")) {
-				
 					 WebElement complexelement1=Xpath(filename, webelement);		
 						Actions act1=new Actions(driver);
 						act1.moveToElement(complexelement1);
@@ -94,6 +92,7 @@ public class BaseClass
 				
 					System.out.println("Text is successfully entered in the textbox using first method");
 			}
+			
 		} catch (Exception e) {
 			try {
 				 WebElement complexelement1=Xpath(filename, webelement);		
@@ -101,13 +100,40 @@ public class BaseClass
 					act1.moveToElement(complexelement1);
 					act1.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();	
 			} catch (Exception e1) {
-				// TODO: handle exception
+
+				if (driver.getPageSource().contains("Error Code")) {
+					
+					Enter(KeyEvent.VK_F5);
+					 WebElement complexelement=Xpath(filename, webelement);		
+						Actions act=new Actions(driver);
+						act.moveToElement(complexelement);
+						act.sendKeys(ReadExcel.readData(fname, sheet, row, column)).build().perform();	
+				}
 			}
-			
-		
 		}
 	}
 		
+//***************************************Select Drop Down Method***************************
+	
+	/*public static void selectDropdownByVisibleText(String filename,String webelement,String actionLocator, String excelfname, String sheet, int row, int column) {
+		
+		//WebElement value = Xpath(filename, webelement);
+		
+		try {
+		
+				Select select=new Select(Xpath(filename,webelement));
+				select.selectByVisibleText(ReadExcel.readData(excelfname, sheet, row, column));	
+				
+		} catch (Exception e) {
+			
+		
+				ClickWebelementByActionClass(filename, actionLocator);
+				enterTextboxValue(filename, webelement, excelfname, sheet, row, column);
+				Enter(KeyEvent.VK_ENTER);
+			}
+			
+		}	*/
+	
 	public static String GetText(String filename,String webelement) {
 		threadWait(3000);
 		return Xpath(filename,webelement).getText();
@@ -370,6 +396,7 @@ public static void SwitchToChild() {
 		   if(file.delete())
 		   System.out.println("file deleted");
 	}
+
 
 
 }

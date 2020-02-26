@@ -55,10 +55,12 @@ public class UserDefinedWorkflowTestClass extends HelperClass {
 				"Inspection - Unscheduled / Awaiting Results", "Navigate to Inspection Workflow Step Successfully",
 				"Failed to navigate to Inspection Workflow Step", "UserDefinedWorkflow",
 				"VerifyInspection_WorkflowStep");
+		selectDropdownByVisibleText("UserDefinedWorkflow", "SearchFromList","ESG Values", "User_Defined_Workflow", 9, 1);
 		ClickWebelementByActionClass("UserDefinedWorkflow", "AssignTo");
 		enterTextboxValue("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 9, 1);
 		Enter(KeyEvent.VK_ENTER);
 		threadWait(3000);
+		selectDropdownByVisibleText("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 10, 1);
 		ClickWebelementByActionClass("UserDefinedWorkflow", "Employee");
 		enterTextboxValue("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 10, 1);
 		Enter(KeyEvent.VK_ENTER);
@@ -97,16 +99,19 @@ public class UserDefinedWorkflowTestClass extends HelperClass {
 				"Correction - Unscheduled / Awaiting Results", "Navigate to Correction Workflow Step Successfully",
 				"Failed to navigate to Correction Workflow Step", "UserDefinedWorkflow",
 				"VerifyCorrection_WorkflowStep");
+		selectDropdownByVisibleText("UserDefinedWorkflow", "SearchFromList","ESG Values", "User_Defined_Workflow", 9, 1);
 		ClickWebelementByActionClass("UserDefinedWorkflow", "AssignTo");
 		enterTextboxValue("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 9, 1);
 		Enter(KeyEvent.VK_ENTER);
 		threadWait(3000);
+		selectDropdownByVisibleText("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 10, 1);
 		ClickWebelementByActionClass("UserDefinedWorkflow", "Employee");
 		enterTextboxValue("UserDefinedWorkflow", "SearchFromList", "ESG Values", "User_Defined_Workflow", 10, 1);
 		Enter(KeyEvent.VK_ENTER);
 		selectActualVisitDate();
 		clickWebelement("UserDefinedWorkflow", "EnableMeasure");
 		threadWait(2000);
+		selectDropdownByVisibleText("UserDefinedWorkflow", "CorrectionInfo", "ESG Values", "User_Defined_Workflow", 18, 1);
 		clickWebelement("UserDefinedWorkflow", "CorrectionInfo");
 		enterTextboxValue("UserDefinedWorkflow", "CorrectionInfo", "ESG Values", "User_Defined_Workflow", 18, 1);
 		Enter(KeyEvent.VK_DOWN);

@@ -9,7 +9,7 @@ public class EnergyAuditTestClass extends HelperClass {
 
 	public static void login(int UsernameRow,int UsernameColumn,int PasswordRow,int PasswordColumn) 
 	{
-		  test.log(LogStatus.INFO, "This test is running against version = https://esg-eecp-qa2.directapps.int/45.0/");
+		  test.log(LogStatus.INFO, "This test is running against version = https://esg-eecp-qa.directapps.int/49.0");
 		  setProperty("helper", "chrome", "Chrome_Path");	  
 		  openChrome();
 		  enterLogs("Browser was Opened Successfully");
@@ -33,7 +33,7 @@ public class EnergyAuditTestClass extends HelperClass {
 		clickWebelement("Configuration", "SearchButton");
 		clickWebelement("Configuration", "CheckBox");
 		clickWebelement("Configuration", "NextButton");
-		selectDropdownByVisibleText("Configuration", "AuditType", "ESG Values", "Energy Audit", 5, 1);
+		selectDropdownByVisibleText("Configuration", "AuditType","ESG Values", "Energy Audit", 5, 1);
 		clickWebelement("Configuration", "CheckBox2");
 		clickWebelement("Configuration", "NextButton2");
 		clickWebelement("Configuration", "ErrorOk");
@@ -61,7 +61,7 @@ public class EnergyAuditTestClass extends HelperClass {
 		scrollToElement("Configuration", "Construction");
 		selectDropdownByVisibleText("Configuration", "BuildingType", "ESG Values", "Energy Audit", 9, 1);
 		TextBoxvalue("Building Type", "Building Type", "Building Type", "Building Type Value is Validated", "Building Type Value is Failed to validate", "Configuration", "BuildingType");
-		selectDropdownByVisibleText("Configuration", "ConstructionType", "ESG Values", "Energy Audit", 10, 1);
+		selectDropdownByVisibleText("Configuration", "ConstructionType","ESG Values", "Energy Audit", 10, 1);
 		TextBoxvalue("Construction Type", "Construction Type", "Construction Type", "Construction Type Value is Validated", "Construction Type Value is Failed to validate", "Configuration", "ConstructionType");
 		enterTextboxValue("Configuration", "NumberOfoccupants", "ESG Values", "Energy Audit", 11, 1);
 		TextBoxvalue("Number of Occupants", "Number of Occupants", "Number of Occupants", "Number of Occupants Value is Validated", "Number of Occupants Value is Failed to validate", "Configuration", "NumberOfoccupants");

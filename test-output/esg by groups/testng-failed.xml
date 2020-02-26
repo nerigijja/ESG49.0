@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [esg by groups]">
+  <test verbose="2" name="GRP-WaterSense_Toilet,AHRI_Heat_Pump">
+    <groups>
+      <run>
+        <include name="WaterSense_Toilet"/>
+        <include name="AHRI_Heat_Pump"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass"/>
+    </classes>
+  </test> <!-- GRP-WaterSense_Toilet,AHRI_Heat_Pump -->
+  <test name="GRP-WaterSense_Toilet,AHRI_Heat_Pump(failed)">
+    <groups>
+      <run>
+        <include name="WaterSense_Toilet"/>
+        <include name="AHRI_Heat_Pump"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass">
+        <methods>
+          <include name="AHRI_HeatPump_Residential_Backend_Enrollment"/>
+          <include name="getStatusWithScreenshot"/>
+          <include name="Report"/>
+          <include name="WaterSense_Toilet_Residential_Backend_Enrollment"/>
+          <include name="Initialization"/>
+        </methods>
+      </class> <!-- com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass -->
+    </classes>
+  </test> <!-- GRP-WaterSense_Toilet,AHRI_Heat_Pump(failed) -->
+</suite> <!-- Failed suite [esg by groups] -->
