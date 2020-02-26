@@ -1779,767 +1779,779 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 
 			
 //******************************************************************************************************************************************************************************************************
-			public static void Refrigerator() throws IOException {
+public static void Refrigerator() {
+			
+			//Step 1 Get started
+				clickWebelement("Certified_Product_List_CPL_1", "AccountHolder");
+				clickWebelement("Certified_Product_List_CPL_1", "AccountNumer");
+				enterTextboxValue("Certified_Product_List_CPL_1", "AccountNumer", "ESG Values","CPL_1_1", 1, 1);
+				explicitWait(300, "Certified_Product_List_CPL_1", "ZipCode");
+				clickWebelement("Certified_Product_List_CPL_1", "ZipCode");
+				enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 2, 1);
+				/*threadWait(2000);
+				Enter(KeyEvent.VK_TAB);
+				enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 2, 1);;*/
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				explicitWait(300, "Certified_Product_List_CPL_1", "NextButton");
 				
-				//Step 1 Get started
-					clickWebelement("Certified_Product_List_CPL", "AccountHolder");
-					clickWebelement("Certified_Product_List_CPL", "AccountNumer");
-					enterTextboxValue("Certified_Product_List_CPL", "AccountNumer", "ESG Values","CPL_1", 1, 1);
-					explicitWait(300, "Certified_Product_List_CPL", "ZipCode");
-					clickWebelement("Certified_Product_List_CPL", "ZipCode");
-					enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 2, 1);
-					/*threadWait(2000);
-					Enter(KeyEvent.VK_TAB);
-					enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 2, 1);;*/
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
-					explicitWait(300, "Certified_Product_List_CPL", "NextButton");
+			//Step 2 customer information
+				scrollToElement("Certified_Product_List_CPL_1", "NextButton");
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				
+			//Step 3 Equipment information
+				explicitWait(300, "Certified_Product_List_CPL_1", "AddEquipment");
+				clickWebelement("Certified_Product_List_CPL_1", "AddEquipment");
+				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "Refrigerator");
+				ClickWebelementByActionClass("Certified_Product_List_CPL_1", "Refrigerator");
+				clickWebelement("Certified_Product_List_CPL_1", "OkButton");
+				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Quantity");
+				enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Quantity", "ESG Values","CPL_1", 3, 1);
+				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 4, 1);
+				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ModelNumber");
+				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 5, 1);
+				threadWait(5000);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				
+			//Step 4 Review and submit
+				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "SubmitButton");
+				scrollToElement("Certified_Product_List_CPL_1", "SubmitButton");
+				clickWebelement("Certified_Product_List_CPL_1", "SubmitButton");
+				
+			//Step 5 Confirmation
+				explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber");
+				TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber", "ESG Values", "CPL_1", 21, 1);
+			
+			}	
+			public static void EECPApplicationRefrigerator() {
+				
+			//Login to EECP Application
+				login("helper", "BaseURL", 1, 0, 1, 1);
+				ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 23, 1);
+				explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+				enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 21, 1);
+				explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
+				threadWait(3000);
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+				explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				selectMeasures();
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+				GreenTickMarkValidation();
+				clickonProcess();
+				explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				selectMeasures();
+				
+			//Measure verification
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+				GreenTickMarkValidation();
+				
+				
+			}
+		   public static void Dishwasher() {
+			  
+			//Step 1 Get started
+			   clickWebelement("Certified_Product_List_CPL_1", "AccountHolder");
+			   clickWebelement("Certified_Product_List_CPL_1", "AccountNumer");
+			   enterTextboxValue("Certified_Product_List_CPL_1", "AccountNumer", "ESG Values","CPL_1", 29, 1);
+			   explicitWait(300, "Certified_Product_List_CPL_1", "ZipCode");
+			   clickWebelement("Certified_Product_List_CPL_1", "ZipCode");
+			   enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 30, 1);
+			   /*threadWait(2000);
+			   Enter(KeyEvent.VK_TAB);
+			   enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 30, 1);*/
+			   clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+			   explicitWait(300, "Certified_Product_List_CPL_1", "NextButton");	
+			 		
+			//Step 2 customer information
+				scrollToElement("Certified_Product_List_CPL_1", "NextButton");
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
 					
-				//Step 2 customer information
-					scrollToElement("Certified_Product_List_CPL", "NextButton");
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
-					
-				//Step 3 Equipment information
-					explicitWait(300, "Certified_Product_List_CPL", "AddEquipment");
-					clickWebelement("Certified_Product_List_CPL", "AddEquipment");
-					explicitWaitForClickable(300, "Certified_Product_List_CPL", "Refrigerator");
-					ClickWebelementByActionClass("Certified_Product_List_CPL", "Refrigerator");
-					clickWebelement("Certified_Product_List_CPL", "OkButton");
-					explicitWait(300, "Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Quantity");
-					enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Quantity", "ESG Values","CPL_1", 3, 1);
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 4, 1);
-					threadWait(3000);
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 5, 1);
-					threadWait(5000);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
-					
-				//Step 4 Review and submit
-					explicitWaitForClickable(300, "Certified_Product_List_CPL", "SubmitButton");
-					scrollToElement("Certified_Product_List_CPL", "SubmitButton");
-					clickWebelement("Certified_Product_List_CPL", "SubmitButton");
-					
-				//Step 5 Confirmation
-					explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber");
-					TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber", "ESG Values", "CPL_1", 21, 1);
-					
-				}	
-				public static void EECPApplicationRefrigerator() {
-					
-				//Login to EECP Application
-					login2(1, 0, 1, 1);
-					ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 23, 1);
-					explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-					enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 21, 1);
-					scrollToElement("Certified_Product_List_CPL", "Enrollment_Search");
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
-					threadWait(3000);
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-					explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-					selectMeasures();
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-					GreenTickMarkValidation();
-					clickonProcess();
-					explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-					selectMeasures();
-					
-				//Measure verification
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-					GreenTickMarkValidation();
-					
-					
-				}
-			   public static void Dishwasher() throws IOException {
+			//Step 3 Equipment information
+				explicitWait(300, "Certified_Product_List_CPL_1", "AddEquipment");
+				clickWebelement("Certified_Product_List_CPL_1", "AddEquipment");
+				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "Dishwasher");
+				ClickWebelementByActionClass("Certified_Product_List_CPL_1", "Dishwasher");
+				clickWebelement("Certified_Product_List_CPL_1", "OkButton");
+				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity");
+				enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 32, 1);
+				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand");
+				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 33, 1);
+				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 34, 1);
+				threadWait(5000);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);	
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				
+			//Step 4 Review and submit
+				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "SubmitButton");
+				scrollToElement("Certified_Product_List_CPL_1", "SubmitButton");
+				clickWebelement("Certified_Product_List_CPL_1", "SubmitButton");	
+				
+			//Step 5 Confirmation
+				explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber");
+				TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber", "ESG Values", "CPL_1", 40, 1);
+				
+		   }
+		   
+		   public static void EECPApplicationDishwasher() {
+			 
+			//Login to EECP Application
+			 	login("helper", "BaseURL", 1, 0, 1, 1);
+			 	ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 42, 1);
+			 	explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+			 	enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 40, 1);
+			 	explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+			 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
+			 	threadWait(3000);
+			 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+			 	explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+			 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+			 	selectMeasures();
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+			 	GreenTickMarkValidation();
+			 	clickonProcess();
+				explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				selectMeasures();
+				
+			//Measure verification
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+			 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+			 	GreenTickMarkValidation();
+		   }
+		   
+		   public static void Clotheswasher() {
 				  
-				//Step 1 Get started
-				   clickWebelement("Certified_Product_List_CPL", "AccountHolder");
-				   clickWebelement("Certified_Product_List_CPL", "AccountNumer");
-				   enterTextboxValue("Certified_Product_List_CPL", "AccountNumer", "ESG Values","CPL_1", 29, 1);
-				   explicitWait(300, "Certified_Product_List_CPL", "ZipCode");
-				   clickWebelement("Certified_Product_List_CPL", "ZipCode");
-				   enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 30, 1);
-				   /*threadWait(2000);
-				   Enter(KeyEvent.VK_TAB);
-				   enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 30, 1);*/
-				   clickWebelement("Certified_Product_List_CPL", "NextButton");
-				   explicitWait(300, "Certified_Product_List_CPL", "NextButton");	
-				 		
-				//Step 2 customer information
-					scrollToElement("Certified_Product_List_CPL", "NextButton");
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
+			//Step 1 Get started
+				 clickWebelement("Certified_Product_List_CPL_1", "AccountHolder");
+				 clickWebelement("Certified_Product_List_CPL_1", "AccountNumer");
+				 enterTextboxValue("Certified_Product_List_CPL_1", "AccountNumer", "ESG Values","CPL_1", 48, 1);
+				 explicitWait(300, "Certified_Product_List_CPL_1", "ZipCode");
+				 clickWebelement("Certified_Product_List_CPL_1", "ZipCode");
+				 enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 49, 1);
+				 /*threadWait(2000);
+				 Enter(KeyEvent.VK_TAB);
+				 enterTextboxValue("Certified_Product_List_CPL_1", "ZipCode", "ESG Values","CPL_1", 49, 1);*/
+				 clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				 explicitWait(300, "Certified_Product_List_CPL_1", "NextButton");	
+				 
+			//Step 2 customer information
+				scrollToElement("Certified_Product_List_CPL_1", "NextButton");
+				clickWebelement("Certified_Product_List_CPL_1", "NextButton");
+				
+			//Step 3 Equipment information
+				    explicitWait(300, "Certified_Product_List_CPL_1", "AddEquipment");
+				    clickWebelement("Certified_Product_List_CPL_1", "AddEquipment");
+				    explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "Clotheswasher");
+					ClickWebelementByActionClass("Certified_Product_List_CPL_1", "Clotheswasher");
+				    clickWebelement("Certified_Product_List_CPL_1", "OkButton");
+					explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity");
+					enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 51, 1);
+					explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand");
+					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 52, 1);
+					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 53, 1);
+					threadWait(5000);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);	
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
+					clickWebelement("Certified_Product_List_CPL_1", "NextButton");
 						
-				//Step 3 Equipment information
-					explicitWait(300, "Certified_Product_List_CPL", "AddEquipment");
-					clickWebelement("Certified_Product_List_CPL", "AddEquipment");
-					explicitWaitForClickable(300, "Certified_Product_List_CPL", "Dishwasher");
-					ClickWebelementByActionClass("Certified_Product_List_CPL", "Dishwasher");
-					clickWebelement("Certified_Product_List_CPL", "OkButton");
-					explicitWait(300, "Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Quantity");
-					enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 32, 1);
-					explicitWait(300, "Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Brand");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 33, 1);
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 34, 1);
-					threadWait(2000);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);	
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
-					
 				//Step 4 Review and submit
-					explicitWaitForClickable(300, "Certified_Product_List_CPL", "SubmitButton");
-					scrollToElement("Certified_Product_List_CPL", "SubmitButton");
-					clickWebelement("Certified_Product_List_CPL", "SubmitButton");	
+					explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "SubmitButton");
+					scrollToElement("Certified_Product_List_CPL_1", "SubmitButton");
+					clickWebelement("Certified_Product_List_CPL_1", "SubmitButton");
 					
 				//Step 5 Confirmation
-					explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber");
-					TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber", "ESG Values", "CPL_1", 40, 1);
-			   }
-			   
-			   public static void EECPApplicationDishwasher() {
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber");
+					TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber", "ESG Values", "CPL_1", 63, 1);
+					
+		 }
+		   
+		   public static void EECPApplicationClotheswasher() {
 				 
 				//Login to EECP Application
-				   login2(1, 0, 1, 1);
-				 	ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 42, 1);
-				 	explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-				 	enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 40, 1);
-				 	explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Search");
-				 	clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
+				 	login("helper", "BaseURL", 1, 0, 1, 1);
+				 	ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 65, 1);
+				 	explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+				 	enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 63, 1);
+				 	explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+				 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
 				 	threadWait(3000);
-				 	clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-				 	explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-				 	clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
+				 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+				 	explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				 	clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
 				 	selectMeasures();
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
 				 	GreenTickMarkValidation();
 				 	clickonProcess();
-					explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
+					explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
 					selectMeasures();
 					
 				//Measure verification
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
 				 	GreenTickMarkValidation();
-			   }
-			   
-			   public static void Clotheswasher() {
-					  
-				//Step 1 Get started
-					 clickWebelement("Certified_Product_List_CPL", "AccountHolder");
-					 clickWebelement("Certified_Product_List_CPL", "AccountNumer");
-					 enterTextboxValue("Certified_Product_List_CPL", "AccountNumer", "ESG Values","CPL_1", 48, 1);
-					 explicitWait(300, "Certified_Product_List_CPL", "ZipCode");
-					 clickWebelement("Certified_Product_List_CPL", "ZipCode");
-					 enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 49, 1);
-					 /*threadWait(2000);
-					 Enter(KeyEvent.VK_TAB);
-					 enterTextboxValue("Certified_Product_List_CPL", "ZipCode", "ESG Values","CPL_1", 49, 1);*/
-					 clickWebelement("Certified_Product_List_CPL", "NextButton");
-					 explicitWait(300, "Certified_Product_List_CPL", "NextButton");	
-					 
-				//Step 2 customer information
-					scrollToElement("Certified_Product_List_CPL", "NextButton");
-					clickWebelement("Certified_Product_List_CPL", "NextButton");
-					
-				//Step 3 Equipment information
-					    explicitWait(300, "Certified_Product_List_CPL", "AddEquipment");
-					    clickWebelement("Certified_Product_List_CPL", "AddEquipment");
-					    explicitWaitForClickable(300, "Certified_Product_List_CPL", "Clotheswasher");
-						ClickWebelementByActionClass("Certified_Product_List_CPL", "Clotheswasher");
-					    clickWebelement("Certified_Product_List_CPL", "OkButton");
-						explicitWait(300, "Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Quantity");
-						enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 51, 1);
-						explicitWait(300, "Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Brand");
-						selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 52, 1);
-						selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 53, 1);
-						threadWait(2000);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);	
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Equipment_Information_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-						clickWebelement("Certified_Product_List_CPL", "NextButton");
-							
-					//Step 4 Review and submit
-						explicitWaitForClickable(300, "Certified_Product_List_CPL", "SubmitButton");
-						scrollToElement("Certified_Product_List_CPL", "SubmitButton");
-						clickWebelement("Certified_Product_List_CPL", "SubmitButton");
-						
-					//Step 5 Confirmation
-						explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber");
-						TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber", "ESG Values", "CPL_1", 63, 1);
-			 }
-			   
-			   public static void EECPApplicationClotheswasher() {
-					 
-					//Login to EECP Application
-				   		login2(1, 0, 1, 1);
-					 	ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 65, 1);
-					 	explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-					 	enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 63, 1);
-					 	explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Search");
-					 	clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
-					 	threadWait(3000);
-					 	clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-					 	explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-					 	clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-					 	selectMeasures();
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-					 	GreenTickMarkValidation();
-					 	clickonProcess();
-						explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();
-						
-					//Measure verification
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-					 	GreenTickMarkValidation();
-					 	
-			   }	 
-			   
-			   public static void RefrigeratorMobileApplicationURL() {
-					
-					//open online application
-						openURL("Certified_Product_List_CPL", "RefrigeratorMobileApplication");
-					}
-			   
-			   public static void RefrigeratorMobileApplication() {
-				   
-				    //Page 1
-				   
-				        clickWebelement("Certified_Product_List_CPL", "Brand");
-				        explicitWait(300, "Certified_Product_List_CPL", "RefrigeratorBrandName");
-				        scrollToElement("Certified_Product_List_CPL", "RefrigeratorBrandName");
-				        clickWebelement("Certified_Product_List_CPL", "RefrigeratorBrandName");
-				        threadWait(2000);
-				        //explicitWait(3000, "Certified_Product_List_CPL", "Model");
-				        clickWebelement("Certified_Product_List_CPL", "Model");
-				        explicitWait(300, "Certified_Product_List_CPL", "RefrigeratorModelNumber");
-				        scrollToElement("Certified_Product_List_CPL", "RefrigeratorModelNumber");
-				        clickWebelement("Certified_Product_List_CPL", "RefrigeratorModelNumber");
-				        threadWait(2000);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Configuration", "ESG Values","CPL_1", 8, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_DefrostType", "ESG Values","CPL_1", 9, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Compact", "ESG Values","CPL_1", 10, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Volume(cu.ft)", "ESG Values","CPL_1", 13, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AdjustedVolume", "ESG Values","CPL_1", 14, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_kWh/year", "ESG Values","CPL_1", 15, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_FederalStandard", "ESG Values","CPL_1", 16, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_MeasuredFederalStandard", "ESG Values","CPL_1", 17, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_PercentBetterThanMeasured", "ESG Values","CPL_1", 18, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Refrigerator_Mobile_Application_CEETier", "ESG Values","CPL_1", 19, 1);
-				        clickWebelement("Certified_Product_List_CPL", "NextButtonMobileApplication");
-				        
-				   //Page 2
-				        
-				        explicitWait(300, "Certified_Product_List_CPL", "AcceptButton");
-				        clickWebelement("Certified_Product_List_CPL", "AcceptButton");
-				        
-				   //Page 3
-				        
-				        clickWebelement("Certified_Product_List_CPL", "Name_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Name_MobileApplication", "ESG Values","CPL_1", 73, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Account_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Account_MobileApplication", "ESG Values","CPL_1", 74, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Email_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Email_MobileApplication", "ESG Values","CPL_1", 75, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Phone_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Phone_MobileApplication", "ESG Values","CPL_1", 76, 1);
-				        explicitWait(300, "Certified_Product_List_CPL", "SubmitButtonMobileApplication");
-				        clickWebelement("Certified_Product_List_CPL", "SubmitButtonMobileApplication");
-				      
-				   //Page 4 Confirmation
-						explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication");
-						TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 77, 1); 
-			   }
-				    
-				public static void EECPApplicationRefrigerator_MobileApplication() {
-							
-					//Login to EECP Application
-						login2(1, 0, 1, 1);
-						ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 78, 1);
-						explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-						enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 77, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Search");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
-						threadWait(5000);
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();   
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-						GreenTickMarkValidation();  
-				      
-			   }
+				 	
+		   }	 
+		   
+		   public static void RefrigeratorMobileApplicationURL() {
 				
-			   public static void DishwasherMobileApplicationURL() {
-					
-					//open online application
-				   openURL("Certified_Product_List_CPL", "DishwasherMobileApplication");
-					}
-				
-			   public static void DishwasherMobileApplication() {
-				   
-				    //Page 1
-				   
-				        clickWebelement("Certified_Product_List_CPL", "Brand");
-				        explicitWait(300, "Certified_Product_List_CPL", "DishwasherBrandName");
-				        scrollToElement("Certified_Product_List_CPL", "DishwasherBrandName");
-				        clickWebelement("Certified_Product_List_CPL", "DishwasherBrandName");
-				        threadWait(2000);
-				        //explicitWait(3000, "Certified_Product_List_CPL", "Model");
-				        clickWebelement("Certified_Product_List_CPL", "Model");
-				        explicitWait(300, "Certified_Product_List_CPL", "DishwasherModelNumber");
-				        scrollToElement("Certified_Product_List_CPL", "DishwasherModelNumber");
-				        clickWebelement("Certified_Product_List_CPL", "DishwasherModelNumber");
-				        threadWait(2000);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Dishwasher_Mobile_Application_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Dishwasher_Mobile_Application_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Dishwasher_Mobile_Application_Capacity", "ESG Values","CPL_1", 37, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Dishwasher_Mobile_Application_CEETier", "ESG Values","CPL_1", 38, 1);
-				        clickWebelement("Certified_Product_List_CPL", "NextButtonMobileApplication");
-				        
-			       //Page 2
-				        
-				        explicitWait(300, "Certified_Product_List_CPL", "AcceptButton");
-				        clickWebelement("Certified_Product_List_CPL", "AcceptButton");
-				        
-				   //Page 3
-				        
-				        clickWebelement("Certified_Product_List_CPL", "Name_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Name_MobileApplication", "ESG Values","CPL_1", 83, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Account_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Account_MobileApplication", "ESG Values","CPL_1", 84, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Email_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Email_MobileApplication", "ESG Values","CPL_1", 85, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Phone_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Phone_MobileApplication", "ESG Values","CPL_1", 86, 1);
-				        explicitWait(300, "Certified_Product_List_CPL", "SubmitButtonMobileApplication");
-				        clickWebelement("Certified_Product_List_CPL", "SubmitButtonMobileApplication");    
-				        
-				    //Page 4 Confirmation
-						explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication");
-						TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 87, 1);    
-			   }    
-				 
-			   public static void EECPApplicationDishwasher_MobileApplication() {
-					
-					//Login to EECP Application
-				   		login2(1, 0, 1, 1);
-						ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 88, 1);
-						explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-						enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 87, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Search");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
-						threadWait(5000);
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();   
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
-					 	GreenTickMarkValidation();        
-			}
-			   
-			   public static void ClotheswasherMobileApplicationURL() {
-					
-					//open online application
-				   openURL("Certified_Product_List_CPL", "ClotheswasherMobileApplication");
-					} 
-			   
-			   public static void ClotheswasherMobileApplication() {
-				   
-				    //Page 1
-				   
-				        clickWebelement("Certified_Product_List_CPL", "Brand");
-				        explicitWait(300, "Certified_Product_List_CPL", "ClotheswasherBrandName");
-				        scrollToElement("Certified_Product_List_CPL", "ClotheswasherBrandName");
-				        clickWebelement("Certified_Product_List_CPL", "ClotheswasherBrandName");
-				        threadWait(2000);
-				        //explicitWait(3000, "Certified_Product_List_CPL", "Model");
-				        clickWebelement("Certified_Product_List_CPL", "Model");
-				        explicitWait(300, "Certified_Product_List_CPL", "ClotheswasherModelNumber");
-				        scrollToElement("Certified_Product_List_CPL", "ClotheswasherModelNumber");
-				        clickWebelement("Certified_Product_List_CPL", "ClotheswasherModelNumber");
-				        threadWait(2000);
-			            VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);	
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_MeetsEnergystarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-				        VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_CEETier", "ESG Values","CPL_1", 61, 1);
-				        clickWebelement("Certified_Product_List_CPL", "NextButtonMobileApplication");
-				        
-				    //Page 2
-				 	        
-				 	    explicitWait(300, "Certified_Product_List_CPL", "AcceptButton");
-				 	    clickWebelement("Certified_Product_List_CPL", "AcceptButton");
-				 	        
-				    //Page 3
-				 	        
-				 	    clickWebelement("Certified_Product_List_CPL", "Name_MobileApplication");
-				        enterTextboxValue("Certified_Product_List_CPL", "Name_MobileApplication", "ESG Values","CPL_1", 93, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Account_MobileApplication");
-			 	        enterTextboxValue("Certified_Product_List_CPL", "Account_MobileApplication", "ESG Values","CPL_1", 94, 1);
-			 	        clickWebelement("Certified_Product_List_CPL", "Email_MobileApplication");
-				 	    enterTextboxValue("Certified_Product_List_CPL", "Email_MobileApplication", "ESG Values","CPL_1", 95, 1);
-				        clickWebelement("Certified_Product_List_CPL", "Phone_MobileApplication");
-			 	        enterTextboxValue("Certified_Product_List_CPL", "Phone_MobileApplication", "ESG Values","CPL_1", 96, 1);
-			 	        explicitWait(300, "Certified_Product_List_CPL", "SubmitButtonMobileApplication");
-				 	    clickWebelement("Certified_Product_List_CPL", "SubmitButtonMobileApplication");    
-				   
-				 	//Page 4 Confirmation
-						explicitWait(3000, "Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication");
-						TrackEnrollmentNumber("Certified_Product_List_CPL", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 97, 1); 
-			   }	
-			   public static void EECPApplicationClotheswasher_MobileApplication() {
-					
-					//Login to EECP Application
-				   		login2(1, 0, 1, 1);
-						ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 98, 1);
-						explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Enrollment_Number");
-						enterTextboxValue("Certified_Product_List_CPL", "Enrollment_Number", "ESG Values", "CPL_1", 97, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Search");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Search");
-						threadWait(5000);
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_EnrollmentSelection");
-						explicitWait(3000, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();   
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-					 	GreenTickMarkValidation();		
-						
-			   }
-			   
-			   public static void CEERefrigeratorBackendEnrollment() {
-				   
-				 //Login to EECP Application
-				   	login2(1, 0, 1, 1);
-					ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 101, 1);
-					explicitWaitForClickable(300, "Certified_Product_List_CPL", "NewButton");
-					clickWebelement("Certified_Product_List_CPL", "NewButton");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values", "CPL_1", 102, 1);
-					explicitWaitForClickable(5000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-					clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-					explicitWait(300, "Certified_Product_List_CPL", "GeneralSearchNumber");
-					clickWebelement("Certified_Product_List_CPL", "GeneralSearchNumber");
-					enterTextboxValue("Certified_Product_List_CPL", "GeneralSearchNumber", "ESG Values", "CPL_1", 103, 1);
-					explicitWait(3000, "Certified_Product_List_CPL", "GoButton");
-					clickWebelement("Certified_Product_List_CPL", "GoButton");
-					explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Customer");
-					clickWebelement("Certified_Product_List_CPL", "Customer");
-					explicitWaitForClickable(2000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-					clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-					selectMeasures();
-					threadWait(5000);
-					
-				//New Measure
-					clickWebelement("Certified_Product_List_CPL", "AddMeasure");
-					explicitWait(300, "Certified_Product_List_CPL", "RefrigeratorCheckBox");
-					clickWebelement("Certified_Product_List_CPL", "RefrigeratorCheckBox");
-					clickWebelement("Certified_Product_List_CPL", "SavebuttonBackendEnrollment");
-					threadWait(3000);
-					clickWebelement("Certified_Product_List_CPL", "MeasureActivate");
-					threadWait(5000);
-					enterTextboxValue("Certified_Product_List_CPL", "Quantity", "ESG Values", "CPL_1", 104, 1);
-					explicitWait(300, "Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-					clickWebelement("Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-					enterTextboxValue("Certified_Product_List_CPL", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 105, 1);
-					threadWait(2000);
-					Enter(KeyEvent.VK_DOWN);	
-					threadWait(2000);
-					Enter(KeyEvent.VK_DOWN);
-					threadWait(2000);
-					Enter(KeyEvent.VK_ENTER);
-					explicitWait(3000, "Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-					clickWebelement("Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-					enterTextboxValue("Certified_Product_List_CPL", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 106, 1);
-					threadWait(2000);
-					Enter(KeyEvent.VK_DOWN);
-					Enter(KeyEvent.VK_ENTER);
-					threadWait(2000);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-					GreenTickMarkValidation();
-					clickonProcess();
-					explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-					clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-					selectMeasures();
-					
-				//Application Measure verification
-					
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
-					VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
-					GreenTickMarkValidation();
-						
+				//open online application
+					OpenBrowser("Certified_Product_List_CPL_1", "RefrigeratorMobileApplication");
 				}
-					
-			   public static void CEEDishwasherBackendEnrollment() {
-				   
-					 //Login to EECP Application
-				   		login2(1, 0, 1, 1);
-						ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 109, 1);
-						explicitWaitForClickable(300, "Certified_Product_List_CPL", "NewButton");
-						clickWebelement("Certified_Product_List_CPL", "NewButton");
-						selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values", "CPL_1", 110, 1);
-						explicitWaitForClickable(5000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						explicitWait(300, "Certified_Product_List_CPL", "GeneralSearchNumber");
-						clickWebelement("Certified_Product_List_CPL", "GeneralSearchNumber");
-						enterTextboxValue("Certified_Product_List_CPL", "GeneralSearchNumber", "ESG Values", "CPL_1", 111, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "GoButton");
-						clickWebelement("Certified_Product_List_CPL", "GoButton");
-						explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Customer");
-						clickWebelement("Certified_Product_List_CPL", "Customer");
-						explicitWaitForClickable(2000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						selectMeasures();
-						threadWait(5000);
-					
-				     //New Measure
-						clickWebelement("Certified_Product_List_CPL", "AddMeasure");
-						explicitWait(300, "Certified_Product_List_CPL", "DishwasherCheckBox");
-						clickWebelement("Certified_Product_List_CPL", "DishwasherCheckBox");
-						clickWebelement("Certified_Product_List_CPL", "SavebuttonBackendEnrollment");
-						threadWait(3000);
-						clickWebelement("Certified_Product_List_CPL", "MeasureActivate");
-						threadWait(3000);
-						enterTextboxValue("Certified_Product_List_CPL", "Quantity", "ESG Values", "CPL_1", 112, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-						enterTextboxValue("Certified_Product_List_CPL", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 113, 1);
-						threadWait(2000);
-						Enter(KeyEvent.VK_DOWN);
-						threadWait(2000);
-						Enter(KeyEvent.VK_ENTER);
-						explicitWait(3000, "Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-						enterTextboxValue("Certified_Product_List_CPL", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 114, 1);
-						threadWait(2000);
-						Enter(KeyEvent.VK_DOWN);
-						Enter(KeyEvent.VK_ENTER);
-						threadWait(2000);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
-					 	GreenTickMarkValidation();
-					 	clickonProcess();
-						explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();
-						
-					//Measure verification
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
-					 	GreenTickMarkValidation();
-			   }  
+		   
+		   public static void RefrigeratorMobileApplication() {
 			   
-			   public static void CEEClotheswasherBackendEnrollment() {
-				   
-					 //Login to EECP Application
-				   		login2(1, 0, 1, 1);
-						ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL_1", 117, 1);
-						explicitWaitForClickable(300, "Certified_Product_List_CPL", "NewButton");
-						clickWebelement("Certified_Product_List_CPL", "NewButton");
-						selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values", "CPL_1", 118, 1);
-						explicitWaitForClickable(5000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						explicitWait(300, "Certified_Product_List_CPL", "GeneralSearchNumber");
-						clickWebelement("Certified_Product_List_CPL", "GeneralSearchNumber");
-						enterTextboxValue("Certified_Product_List_CPL", "GeneralSearchNumber", "ESG Values", "CPL_1", 119, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "GoButton");
-						clickWebelement("Certified_Product_List_CPL", "GoButton");
-						explicitWaitForClickable(3000, "Certified_Product_List_CPL", "Customer");
-						clickWebelement("Certified_Product_List_CPL", "Customer");
-						explicitWaitForClickable(2000, "Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "NextButtonBackendEnrollment");
-						selectMeasures();
-						threadWait(5000);
+			    //Page 1
+			   
+			        clickWebelement("Certified_Product_List_CPL_1", "Brand");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "RefrigeratorBrandName");
+			        scrollToElement("Certified_Product_List_CPL_1", "RefrigeratorBrandName");
+			        clickWebelement("Certified_Product_List_CPL_1", "RefrigeratorBrandName");
+			        threadWait(2000);
+			        //explicitWait(3000, "Certified_Product_List_CPL_1", "Model");
+			        clickWebelement("Certified_Product_List_CPL_1", "Model");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "RefrigeratorModelNumber");
+			        scrollToElement("Certified_Product_List_CPL_1", "RefrigeratorModelNumber");
+			        clickWebelement("Certified_Product_List_CPL_1", "RefrigeratorModelNumber");
+			        threadWait(2000);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Configuration", "ESG Values","CPL_1", 8, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_DefrostType", "ESG Values","CPL_1", 9, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Compact", "ESG Values","CPL_1", 10, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_Volume(cu.ft)", "ESG Values","CPL_1", 13, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_AdjustedVolume", "ESG Values","CPL_1", 14, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_kWh/year", "ESG Values","CPL_1", 15, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_FederalStandard", "ESG Values","CPL_1", 16, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_MeasuredFederalStandard", "ESG Values","CPL_1", 17, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_PercentBetterThanMeasured", "ESG Values","CPL_1", 18, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Refrigerator_Mobile_Application_CEETier", "ESG Values","CPL_1", 19, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "NextButtonMobileApplication");
+			        
+			   //Page 2
+			        
+			        explicitWait(300, "Certified_Product_List_CPL_1", "AcceptButton");
+			        clickWebelement("Certified_Product_List_CPL_1", "AcceptButton");
+			        
+			   //Page 3
+			        
+			        clickWebelement("Certified_Product_List_CPL_1", "Name_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Name_MobileApplication", "ESG Values","CPL_1", 73, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Account_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Account_MobileApplication", "ESG Values","CPL_1", 74, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Email_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Email_MobileApplication", "ESG Values","CPL_1", 75, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Phone_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Phone_MobileApplication", "ESG Values","CPL_1", 76, 1);
+			        explicitWait(300, "Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");
+			        clickWebelement("Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");
+			      
+			   //Page 4 Confirmation
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication");
+					TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 77, 1);
 					
-				     //New Measure
-						clickWebelement("Certified_Product_List_CPL", "AddMeasure");
-						explicitWait(300, "Certified_Product_List_CPL", "ClotheswasherCheckBox");
-						clickWebelement("Certified_Product_List_CPL", "ClotheswasherCheckBox");
-						clickWebelement("Certified_Product_List_CPL", "SavebuttonBackendEnrollment");
-						threadWait(3000);
-						clickWebelement("Certified_Product_List_CPL", "MeasureActivate");
-						threadWait(3000);
-						enterTextboxValue("Certified_Product_List_CPL", "Quantity", "ESG Values", "CPL_1", 120, 1);
-						explicitWait(3000, "Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "BrandNameBackendEnrollment");
-						enterTextboxValue("Certified_Product_List_CPL", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 121, 1);
-						threadWait(2000);
-						Enter(KeyEvent.VK_DOWN);
-						threadWait(2000);
-						Enter(KeyEvent.VK_ENTER);
-						explicitWait(3000, "Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-						clickWebelement("Certified_Product_List_CPL", "ModelNumberBackendEnrollment");
-						enterTextboxValue("Certified_Product_List_CPL", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 122, 1);
-						threadWait(2000);
-						Enter(KeyEvent.VK_DOWN);
-						Enter(KeyEvent.VK_ENTER);
-						threadWait(2000);
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-					 	GreenTickMarkValidation();
-					 	clickonProcess();
-						explicitWait(300, "Certified_Product_List_CPL", "Enrollment_Application_Click");
-						clickWebelement("Certified_Product_List_CPL", "Enrollment_Application_Click");
-						selectMeasures();
+		   }
+			    
+			public static void EECPApplicationRefrigerator_MobileApplication() {
 						
-					//Measure verification
-						VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
-					 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
-					 	GreenTickMarkValidation();
+				//Login to EECP Application
+					login("helper", "BaseURL", 1, 0, 1, 1);
+					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 78, 1);
+					explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+					enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 77, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+					scrollToElement("Certified_Product_List_CPL_1", "Enrollment_Search");
+					threadWait(2000);
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
+					threadWait(5000);
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					selectMeasures();   
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+					GreenTickMarkValidation();  
+			      
+		   }
+			
+		   public static void DishwasherMobileApplicationURL() {
+				
+				//open online application
+					OpenBrowser("Certified_Product_List_CPL_1", "DishwasherMobileApplication");
+				}
+			
+		   public static void DishwasherMobileApplication() {
+			   
+			    //Page 1
+			   
+			        clickWebelement("Certified_Product_List_CPL_1", "Brand");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "DishwasherBrandName");
+			        scrollToElement("Certified_Product_List_CPL_1", "DishwasherBrandName");
+			        clickWebelement("Certified_Product_List_CPL_1", "DishwasherBrandName");
+			        threadWait(2000);
+			        //explicitWait(3000, "Certified_Product_List_CPL_1", "Model");
+			        clickWebelement("Certified_Product_List_CPL_1", "Model");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "DishwasherModelNumber");
+			        scrollToElement("Certified_Product_List_CPL_1", "DishwasherModelNumber");
+			        clickWebelement("Certified_Product_List_CPL_1", "DishwasherModelNumber");
+			        threadWait(2000);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Dishwasher_Mobile_Application_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Dishwasher_Mobile_Application_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Dishwasher_Mobile_Application_Capacity", "ESG Values","CPL_1", 37, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Dishwasher_Mobile_Application_CEETier", "ESG Values","CPL_1", 38, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "NextButtonMobileApplication");
+			        
+		       //Page 2
+			        
+			        explicitWait(300, "Certified_Product_List_CPL_1", "AcceptButton");
+			        clickWebelement("Certified_Product_List_CPL_1", "AcceptButton");
+			        
+			   //Page 3
+			        
+			        clickWebelement("Certified_Product_List_CPL_1", "Name_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Name_MobileApplication", "ESG Values","CPL_1", 83, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Account_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Account_MobileApplication", "ESG Values","CPL_1", 84, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Email_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Email_MobileApplication", "ESG Values","CPL_1", 85, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Phone_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Phone_MobileApplication", "ESG Values","CPL_1", 86, 1);
+			        explicitWait(300, "Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");
+			        clickWebelement("Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");    
+			        
+			    //Page 4 Confirmation
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication");
+					TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 87, 1);
+					   
+		   }    
+			 
+		   public static void EECPApplicationDishwasher_MobileApplication() {
+				
+				//Login to EECP Application
+					login("helper", "BaseURL", 1, 0, 1, 1);
+					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 88, 1);
+					explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+					enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 87, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
+					threadWait(5000);
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					selectMeasures();   
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+				 	GreenTickMarkValidation();        
+		}
+		   
+		   public static void ClotheswasherMobileApplicationURL() {
+				
+				//open online application
+					OpenBrowser("Certified_Product_List_CPL_1", "ClotheswasherMobileApplication");
+				} 
+		   
+		   public static void ClotheswasherMobileApplication() {
+			   
+			    //Page 1
+			   
+			        clickWebelement("Certified_Product_List_CPL_1", "Brand");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "ClotheswasherBrandName");
+			        scrollToElement("Certified_Product_List_CPL_1", "ClotheswasherBrandName");
+			        clickWebelement("Certified_Product_List_CPL_1", "ClotheswasherBrandName");
+			        threadWait(2000);
+			        //explicitWait(3000, "Certified_Product_List_CPL_1", "Model");
+			        clickWebelement("Certified_Product_List_CPL_1", "Model");
+			        explicitWait(300, "Certified_Product_List_CPL_1", "ClotheswasherModelNumber");
+			        scrollToElement("Certified_Product_List_CPL_1", "ClotheswasherModelNumber");
+			        clickWebelement("Certified_Product_List_CPL_1", "ClotheswasherModelNumber");
+			        threadWait(2000);
+		            VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);	
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_MeetsEnergystarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+			        VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "EquipedInformation_CEE_Clotheswasher_Mobile_Application_CEETier", "ESG Values","CPL_1", 61, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "NextButtonMobileApplication");
+			        
+			    //Page 2
+			 	        
+			 	    explicitWait(300, "Certified_Product_List_CPL_1", "AcceptButton");
+			 	    clickWebelement("Certified_Product_List_CPL_1", "AcceptButton");
+			 	        
+			    //Page 3
+			 	        
+			 	    clickWebelement("Certified_Product_List_CPL_1", "Name_MobileApplication");
+			        enterTextboxValue("Certified_Product_List_CPL_1", "Name_MobileApplication", "ESG Values","CPL_1", 93, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Account_MobileApplication");
+		 	        enterTextboxValue("Certified_Product_List_CPL_1", "Account_MobileApplication", "ESG Values","CPL_1", 94, 1);
+		 	        clickWebelement("Certified_Product_List_CPL_1", "Email_MobileApplication");
+			 	    enterTextboxValue("Certified_Product_List_CPL_1", "Email_MobileApplication", "ESG Values","CPL_1", 95, 1);
+			        clickWebelement("Certified_Product_List_CPL_1", "Phone_MobileApplication");
+		 	        enterTextboxValue("Certified_Product_List_CPL_1", "Phone_MobileApplication", "ESG Values","CPL_1", 96, 1);
+		 	        explicitWait(300, "Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");
+			 	    clickWebelement("Certified_Product_List_CPL_1", "SubmitButtonMobileApplication");    
+			   
+			 	//Page 4 Confirmation
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication");
+					TrackEnrollmentNumber("Certified_Product_List_CPL_1", "ConfirmationNumber_MobileApplication", "ESG Values", "CPL_1", 97, 1);
+					
+		   }	
+		   public static void EECPApplicationClotheswasher_MobileApplication() {
+				
+				//Login to EECP Application
+					login("helper", "BaseURL", 1, 0, 1, 1);
+					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 98, 1);
+					explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Enrollment_Number");
+					enterTextboxValue("Certified_Product_List_CPL_1", "Enrollment_Number", "ESG Values", "CPL_1", 97, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Search");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Search");
+					threadWait(5000);
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_EnrollmentSelection");
+					explicitWait(3000, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					selectMeasures();   
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
+				 	GreenTickMarkValidation();		
+					
+		   }
+		   
+		   public static void CEERefrigeratorBackendEnrollment() {
+			   
+			 //Login to EECP Application
+				login("helper", "BaseURL", 1, 0, 1, 1);
+				ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 101, 1);
+				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
+				clickWebelement("Certified_Product_List_CPL_1", "NewButton");
+				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 102, 1);
+				explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+				clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+				explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
+				clickWebelement("Certified_Product_List_CPL_1", "GeneralSearchNumber");
+				enterTextboxValue("Certified_Product_List_CPL_1", "GeneralSearchNumber", "ESG Values", "CPL_1", 103, 1);
+				explicitWait(3000, "Certified_Product_List_CPL_1", "GoButton");
+				clickWebelement("Certified_Product_List_CPL_1", "GoButton");
+				explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Customer");
+				clickWebelement("Certified_Product_List_CPL_1", "Customer");
+				explicitWaitForClickable(2000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+				clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+				selectMeasures();
+				threadWait(5000);
+				
+			//New Measure
+				clickWebelement("Certified_Product_List_CPL_1", "AddMeasure");
+				explicitWait(300, "Certified_Product_List_CPL_1", "RefrigeratorCheckBox");
+				clickWebelement("Certified_Product_List_CPL_1", "RefrigeratorCheckBox");
+				clickWebelement("Certified_Product_List_CPL_1", "SavebuttonBackendEnrollment");
+				threadWait(3000);
+				clickWebelement("Certified_Product_List_CPL_1", "MeasureActivate");
+				threadWait(5000);
+				enterTextboxValue("Certified_Product_List_CPL_1", "Quantity", "ESG Values", "CPL_1", 104, 1);
+				explicitWait(300, "Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+				clickWebelement("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+				enterTextboxValue("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 105, 1);
+				threadWait(5000);
+				Enter(KeyEvent.VK_DOWN);	
+				threadWait(3000);
+				Enter(KeyEvent.VK_DOWN);
+				threadWait(3000);
+				Enter(KeyEvent.VK_ENTER);
+				explicitWait(3000, "Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+				clickWebelement("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+				enterTextboxValue("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 106, 1);
+				threadWait(2000);
+				Enter(KeyEvent.VK_DOWN);
+				Enter(KeyEvent.VK_ENTER);
+				threadWait(2000);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+				GreenTickMarkValidation();
+				clickonProcess();
+				explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+				selectMeasures();
+				
+			//Application Measure verification
+				
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 25, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 26, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_DefrostType", "ESG Values","CPL_1", 9, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Compact", "ESG Values","CPL_1", 10, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_ThroughTheDoorDispenser", "ESG Values","CPL_1", 11, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AutomaticIceMaker", "ESG Values","CPL_1", 12, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Volume", "ESG Values","CPL_1", 13, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_AjustedVolume", "ESG Values","CPL_1", 14, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_Kwh/year", "ESG Values","CPL_1", 15, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_FederalStandard", "ESG Values","CPL_1", 16, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_MeasuredFederal", "ESG Values","CPL_1", 17, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_PercentageBetterThanMeasuredFederalStandard", "ESG Values","CPL_1", 18, 1);
+				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Refrigerator_CeeTire", "ESG Values","CPL_1", 19, 1);
+				GreenTickMarkValidation();
+					
+			}
+				
+		   public static void CEEDishwasherBackendEnrollment() {
+			   
+				 //Login to EECP Application
+					login("helper", "BaseURL", 1, 0, 1, 1);
+					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 109, 1);
+					explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
+					clickWebelement("Certified_Product_List_CPL_1", "NewButton");
+					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 110, 1);
+					explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
+					clickWebelement("Certified_Product_List_CPL_1", "GeneralSearchNumber");
+					enterTextboxValue("Certified_Product_List_CPL_1", "GeneralSearchNumber", "ESG Values", "CPL_1", 111, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "GoButton");
+					clickWebelement("Certified_Product_List_CPL_1", "GoButton");
+					explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Customer");
+					clickWebelement("Certified_Product_List_CPL_1", "Customer");
+					explicitWaitForClickable(2000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					selectMeasures();
+					threadWait(5000);
+				
+			     //New Measure
+					clickWebelement("Certified_Product_List_CPL_1", "AddMeasure");
+					explicitWait(300, "Certified_Product_List_CPL_1", "DishwasherCheckBox");
+					clickWebelement("Certified_Product_List_CPL_1", "DishwasherCheckBox");
+					clickWebelement("Certified_Product_List_CPL_1", "SavebuttonBackendEnrollment");
+					threadWait(5000);
+					clickWebelement("Certified_Product_List_CPL_1", "MeasureActivate");
+					threadWait(3000);
+					enterTextboxValue("Certified_Product_List_CPL_1", "Quantity", "ESG Values", "CPL_1", 112, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+					enterTextboxValue("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 113, 1);
+					threadWait(2000);
+					Enter(KeyEvent.VK_DOWN);
+					threadWait(2000);
+					Enter(KeyEvent.VK_ENTER);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+					enterTextboxValue("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 114, 1);
+					threadWait(2000);
+					Enter(KeyEvent.VK_DOWN);
+					Enter(KeyEvent.VK_ENTER);
+					threadWait(5000);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+				 	GreenTickMarkValidation();
+				 	clickonProcess();
+					explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					selectMeasures();
+					
+				//Measure verification
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 44, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 45, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_Capacity", "ESG Values","CPL_1", 37, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Dishwasher_CEETier", "ESG Values","CPL_1", 38, 1);
+				 	GreenTickMarkValidation();
+		   }  
+		   
+		   public static void CEEClotheswasherBackendEnrollment() {
+			   
+				 //Login to EECP Application
+					login("helper", "BaseURL", 1, 0, 1, 1);
+					threadWait(3000);
+					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 117, 1);
+					explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
+					clickWebelement("Certified_Product_List_CPL_1", "NewButton");
+					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 118, 1);
+					explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
+					clickWebelement("Certified_Product_List_CPL_1", "GeneralSearchNumber");
+					enterTextboxValue("Certified_Product_List_CPL_1", "GeneralSearchNumber", "ESG Values", "CPL_1", 119, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "GoButton");
+					clickWebelement("Certified_Product_List_CPL_1", "GoButton");
+					explicitWaitForClickable(3000, "Certified_Product_List_CPL_1", "Customer");
+					clickWebelement("Certified_Product_List_CPL_1", "Customer");
+					explicitWaitForClickable(2000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
+					selectMeasures();
+					threadWait(5000);
+				
+			     //New Measure
+					clickWebelement("Certified_Product_List_CPL_1", "AddMeasure");
+					explicitWait(300, "Certified_Product_List_CPL_1", "ClotheswasherCheckBox");
+					clickWebelement("Certified_Product_List_CPL_1", "ClotheswasherCheckBox");
+					clickWebelement("Certified_Product_List_CPL_1", "SavebuttonBackendEnrollment");
+					threadWait(3000);
+					clickWebelement("Certified_Product_List_CPL_1", "MeasureActivate");
+					threadWait(3000);
+					enterTextboxValue("Certified_Product_List_CPL_1", "Quantity", "ESG Values", "CPL_1", 120, 1);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment");
+					enterTextboxValue("Certified_Product_List_CPL_1", "BrandNameBackendEnrollment", "ESG Values", "CPL_1", 121, 1);
+					threadWait(2000);
+					Enter(KeyEvent.VK_DOWN);
+					threadWait(2000);
+					Enter(KeyEvent.VK_ENTER);
+					explicitWait(3000, "Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+					clickWebelement("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment");
+					enterTextboxValue("Certified_Product_List_CPL_1", "ModelNumberBackendEnrollment", "ESG Values", "CPL_1", 122, 1);
+					threadWait(2000);
+					Enter(KeyEvent.VK_DOWN);
+					Enter(KeyEvent.VK_ENTER);
+					threadWait(2000);
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
+				 	GreenTickMarkValidation();
+				 	clickonProcess();
+					explicitWait(300, "Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					clickWebelement("Certified_Product_List_CPL_1", "Enrollment_Application_Click");
+					selectMeasures();
+					
+				//Measure verification
+					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Brand", "ESG Values","CPL_1", 67, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_ModelNumber", "ESG Values","CPL_1", 68, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_Volume(cu.ft)", "ESG Values","CPL_1", 56, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_UsesSilverInTechnology", "ESG Values","CPL_1", 57, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_FrontOrTopLoading", "ESG Values","CPL_1", 58, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsEnergyStarConnectedVersion", "ESG Values","CPL_1", 59, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_MeetsCEEConnectedCriteria", "ESG Values","CPL_1", 60, 1);
+				 	VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Application_Measure_CEE_Clotheswasher_CEETier", "ESG Values","CPL_1", 61, 1);
+				 	GreenTickMarkValidation();
+					
+
 						
 			   }	
+			   
+
 			   
 //**************************************************************************************************************************************************************************************************************************************************
 			 //****************************************************CPL Energy Star Ceiling Fan*****************************************************************************
