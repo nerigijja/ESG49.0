@@ -802,13 +802,13 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				clickWebelement("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_OkButton");
 				enterTextboxValue("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_AddEquimentMeasureQty", "ESG Values","CPL" , 7, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_BrandName");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_BrandName", "ESG Values","CPL", 236, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_BrandName","", "ESG Values","CPL", 236, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_ModelNumber");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_ModelNumber", "ESG Values","CPL", 237, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_ModelNumber","", "ESG Values","CPL", 237, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Tank_Model_Number");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Tank_Model_Number", "ESG Values","CPL", 238, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Tank_Model_Number","", "ESG Values","CPL", 238, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Bowl_Model_Number");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Bowl_Model_Number", "ESG Values","CPL", 239, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_Bowl_Model_Number","", "ESG Values","CPL", 239, 1);
 				explicitWait(3000, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_ModelName");
 				threadWait(2500);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Toilet_Residential_OnlineApplication_ModelName", "ESG Values","CPL", 241, 1);
@@ -904,9 +904,9 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				clickWebelement("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_OkButton");
 				enterTextboxValue("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_AddEquimentMeasureQty", "ESG Values","CPL" , 253, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_BrandName");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_BrandName", "ESG Values","CPL", 255, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_BrandName","", "ESG Values","CPL", 255, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_ModelNumber");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_ModelNumber", "ESG Values","CPL", 256, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_ModelNumber","", "ESG Values","CPL", 256, 1);
 				explicitWait(3000, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_ModelName");
 				threadWait(2500);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Showerhead_Residential_OnlineApplication_ModelName", "ESG Values","CPL", 257, 1);
@@ -993,10 +993,10 @@ public class Certified_Product_List_CPL_TestClass extends HelperClass {
 				clickWebelement("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_OkButton");
 				enterTextboxValue("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_AddEquimentMeasureQty", "ESG Values","CPL" , 267, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_BrandName");
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_BrandName", "ESG Values","CPL", 269, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_BrandName","", "ESG Values","CPL", 269, 1);
 				//explicitWaitForClickable(300, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelNumber");
 				threadWait(5000);
-				selectDropdownByVisibleText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelNumber", "ESG Values","CPL", 270, 1);
+				selectDropdown("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelNumber","", "ESG Values","CPL", 270, 1);
 				explicitWait(3000, "Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelName");
 				threadWait(5000);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL", "EquipedInformation_WaterSense_Irrigation_Controller_OnlineApplication_ModelName", "ESG Values","CPL", 271, 1);
@@ -1292,7 +1292,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_EnrollmentPa
 	explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 	ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 	clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-	selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 331, 1);
+	selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 331, 1);
 	clickWebelement("Certified_Product_List_CPL", "NextButton1");
 	enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 330, 1);
 	clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1368,7 +1368,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 		explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 		ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 		clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-		selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 347, 1);
+		selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 347, 1);
 		clickWebelement("Certified_Product_List_CPL", "NextButton1");
 		enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 346, 1);
 		clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1428,7 +1428,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 			ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 			clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-			selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 359, 1);
+			selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 359, 1);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_WaterSense_Irrigation_Controller_Residential_Backend_Enrollment_NextButton");
 			enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 358, 1);
 			clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1494,7 +1494,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 			ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 			clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-			selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 373, 1);
+			selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 373, 1);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Air_Conditioner_Residential_Backend_Enrollment_NextButton");
 			enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 372, 1);
 			clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1592,7 +1592,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 			ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 			clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-			selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 405, 1);
+			selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 405, 1);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_Furnace_Backend_Enrollment_NextButton");
 			enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 404, 1);
 			clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1680,7 +1680,7 @@ public static void WaterSense_Toilet_Residential_Backend_Enrollment_After_Proces
 			explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 			ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 			clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-			selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 433, 1);
+			selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 433, 1);
 			clickWebelement("Certified_Product_List_CPL", "Application_Measure_AHRI_HeatPump_Backend_Enrollment_NextButton");
 			enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 432, 1);
 			clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -1806,9 +1806,9 @@ public static void Refrigerator() {
 				clickWebelement("Certified_Product_List_CPL_1", "OkButton");
 				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Quantity");
 				enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Quantity", "ESG Values","CPL_1", 3, 1);
-				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Brand", "ESG Values","CPL_1", 4, 1);
+				selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Brand","", "ESG Values","CPL_1", 4, 1);
 				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ModelNumber");
-				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ModelNumber", "ESG Values","CPL_1", 5, 1);
+				selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_ModelNumber","", "ESG Values","CPL_1", 5, 1);
 				threadWait(5000);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_AdditionalModelNumberVariations", "ESG Values","CPL_1", 7, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Refrigerator_Configuration", "ESG Values","CPL_1", 8, 1);
@@ -1918,8 +1918,8 @@ public static void Refrigerator() {
 				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity");
 				enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 32, 1);
 				explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand");
-				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 33, 1);
-				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 34, 1);
+				selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand","", "ESG Values","CPL_1", 33, 1);
+				selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber","", "ESG Values","CPL_1", 34, 1);
 				threadWait(5000);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_EnergyUse(kWh/year)", "ESG Values","CPL_1", 35, 1);
 				VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_WaterUse(gallons/cycle)", "ESG Values","CPL_1", 36, 1);
@@ -2002,8 +2002,8 @@ public static void Refrigerator() {
 					explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity");
 					enterTextboxValue("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Quantity", "ESG Values","CPL_1", 51, 1);
 					explicitWait(300, "Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand");
-					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand", "ESG Values","CPL_1", 52, 1);
-					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber", "ESG Values","CPL_1", 53, 1);
+					selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_Brand","", "ESG Values","CPL_1", 52, 1);
+					selectDropdown("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Dishwasher_ModelNumber","", "ESG Values","CPL_1", 53, 1);
 					threadWait(5000);
 					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_IntegratedModifiedEnergyFactor", "ESG Values","CPL_1", 54, 1);
 					VerifyElementForExistingValueWithText("Certified_Product_List_CPL_1", "Equipment_Information_CEE_Clotheswasher_IntegratedWaterFactor", "ESG Values","CPL_1", 55, 1);
@@ -2329,7 +2329,7 @@ public static void Refrigerator() {
 				ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 101, 1);
 				explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
 				clickWebelement("Certified_Product_List_CPL_1", "NewButton");
-				selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 102, 1);
+				selectDropdown("Certified_Product_List_CPL_1", "SelectProgram","", "ESG Values", "CPL_1", 102, 1);
 				explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 				clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 				explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
@@ -2416,7 +2416,7 @@ public static void Refrigerator() {
 					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 109, 1);
 					explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
 					clickWebelement("Certified_Product_List_CPL_1", "NewButton");
-					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 110, 1);
+					selectDropdown("Certified_Product_List_CPL_1", "SelectProgram","", "ESG Values", "CPL_1", 110, 1);
 					explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 					explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
@@ -2482,7 +2482,7 @@ public static void Refrigerator() {
 					ClickByActionClass("Certified_Product_List_CPL_1", "MainMenu", "ESG Values", "CPL_1", 117, 1);
 					explicitWaitForClickable(300, "Certified_Product_List_CPL_1", "NewButton");
 					clickWebelement("Certified_Product_List_CPL_1", "NewButton");
-					selectDropdownByVisibleText("Certified_Product_List_CPL_1", "SelectProgram", "ESG Values", "CPL_1", 118, 1);
+					selectDropdown("Certified_Product_List_CPL_1", "SelectProgram","", "ESG Values", "CPL_1", 118, 1);
 					explicitWaitForClickable(5000, "Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 					clickWebelement("Certified_Product_List_CPL_1", "NextButtonBackendEnrollment");
 					explicitWait(300, "Certified_Product_List_CPL_1", "GeneralSearchNumber");
@@ -2595,13 +2595,13 @@ public static void Refrigerator() {
 					// Enter Value for CPL: Energy Star - Ceiling Fan - Residential
 					Pass_Message("Enter Value for CPL: Energy Star - Ceiling Fan - Residential Step-3");
 					enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_Quantity", "CPL", "CPL_Energy_Star_CeilingFan", 34, 1);
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_BrandName", "CPL", "CPL_Energy_Star_CeilingFan", 35, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_BrandName","", "CPL", "CPL_Energy_Star_CeilingFan", 35, 1);
 					explicitWait(30, "Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ModelNumber");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ModelNumber", "CPL", "CPL_Energy_Star_CeilingFan", 36, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ModelNumber","", "CPL", "CPL_Energy_Star_CeilingFan", 36, 1);
 					explicitWait(30, "Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ProductType");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ProductType", "CPL", "CPL_Energy_Star_CeilingFan", 37, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_ProductType","", "CPL", "CPL_Energy_Star_CeilingFan", 37, 1);
 					explicitWait(30, "Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_BladeSpan");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_BladeSpan", "CPL", "CPL_Energy_Star_CeilingFan", 38, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_CeilingFan_BladeSpan","", "CPL", "CPL_Energy_Star_CeilingFan", 38, 1);
 
 					// Verify CPL: Energy Star - Ceiling Fan - Residential
 					Pass_Message("Verify CPL: Energy Star - Ceiling Fan - Residential");
@@ -2789,9 +2789,9 @@ public static void Refrigerator() {
 					// Enter Value for CPL: Energy Star - Clothes Washer - Residential
 					Pass_Message("Enter Value for CPL: Energy Star - Clothes Washer - Residential Step-3");
 					enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_Quantity", "CPL", "CPL_Energy_Star_ClothesWasher", 34, 1);
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_BrandName", "CPL", "CPL_Energy_Star_ClothesWasher", 35, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_BrandName","", "CPL", "CPL_Energy_Star_ClothesWasher", 35, 1);
 					explicitWait(30, "Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_ModelNumber");
-					selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_ModelNumber", "CPL", "CPL_Energy_Star_ClothesWasher", 36, 1);
+					selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesWasher_ModelNumber","", "CPL", "CPL_Energy_Star_ClothesWasher", 36, 1);
 					
 					// Verify CPL: Energy Star - Clothes Washer - Residential
 					Pass_Message("Verify CPL: Energy Star - Clothes Washer - Residential");
@@ -2955,9 +2955,9 @@ public static void Refrigerator() {
 							// Enter Value for CPL: Energy Star - Clothes Dryer - Residential
 							Pass_Message("Enter Value for CPL: Energy Star - Clothes Dryer - Residential Step-3");
 							enterTextboxValue("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_Quantity", "CPL", "CPL_Energy_Star_ClothesDryer", 34, 1);
-							selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_BrandName", "CPL", "CPL_Energy_Star_ClothesDryer", 35, 1);
+							selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_BrandName","", "CPL", "CPL_Energy_Star_ClothesDryer", 35, 1);
 							explicitWait(30, "Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_ModelNumber");
-							selectDropdownByVisibleText("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_ModelNumber", "CPL", "CPL_Energy_Star_ClothesDryer", 36, 1);
+							selectDropdown("Certified_Product_List_CPL", "Equipment_Information_EnergyStar_ClothesDryer_ModelNumber","", "CPL", "CPL_Energy_Star_ClothesDryer", 36, 1);
 							
 							// Verify CPL: Energy Star - Clothes Dryer - Residential
 							Pass_Message("Verify CPL: Energy Star - Clothes Dryer - Residential");
@@ -3635,7 +3635,7 @@ public static void Refrigerator() {
 									explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 									ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 									clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-									selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 331, 1);
+									selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 331, 1);
 									clickWebelement("Certified_Product_List_CPL", "NextButton1");
 									enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 330, 1);
 									clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -3807,7 +3807,7 @@ public static void Refrigerator() {
 									explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 									ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 									clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-									selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 331, 1);
+									selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 331, 1);
 									clickWebelement("Certified_Product_List_CPL", "NextButton1");
 									enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 330, 1);
 									clickWebelement("Certified_Product_List_CPL", "SearchButton1");
@@ -3947,7 +3947,7 @@ public static void Refrigerator() {
 									explicitWait(300, "Certified_Product_List_CPL", "MainMenu");
 									ClickByActionClass("Certified_Product_List_CPL", "MainMenu", "ESG Values", "CPL", 35, 1);
 									clickWebelement("Certified_Product_List_CPL", "NewEnrollmentButton");
-									selectDropdownByVisibleText("Certified_Product_List_CPL", "SelectProgram", "ESG Values","CPL", 331, 1);
+									selectDropdown("Certified_Product_List_CPL", "SelectProgram","", "ESG Values","CPL", 331, 1);
 									clickWebelement("Certified_Product_List_CPL", "NextButton1");
 									enterTextboxValue("Certified_Product_List_CPL", "SearchBox", "ESG Values","CPL" , 330, 1);
 									clickWebelement("Certified_Product_List_CPL", "SearchButton1");

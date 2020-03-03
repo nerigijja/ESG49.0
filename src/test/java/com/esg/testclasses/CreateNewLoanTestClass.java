@@ -40,11 +40,12 @@ public class CreateNewLoanTestClass extends HelperClass {
 		enterTextboxValue("CreateNewLoan", "originalCustomer", "ESG Values", "Create New Loan", 10, 1);
 		enterTextboxValue("CreateNewLoan", "FinalCustomer", "ESG Values", "Create New Loan", 10, 2);
 		threadWait(5000);
+		scrollToElement("CreateNewLoan", "AddButton");
 		clickWebelement("CreateNewLoan", "AddButton");
 		threadWait(2500);
 		clickWebelement("CreateNewLoan", "AccountSearch");
 		threadWait(2500);
-		selectDropdownByVisibleText("CreateNewLoan", "SearchType", "ESG Values", "Create New Loan", 11, 1);
+		selectDropdown("CreateNewLoan", "SearchType","", "ESG Values", "Create New Loan", 11, 1);
 		threadWait(2500);
 		enterTextboxValue("CreateNewLoan", "SearchBox", "ESG Values", "Create New Loan", 12, 1);
 		clickWebelement("CreateNewLoan", "Go");
@@ -53,7 +54,8 @@ public class CreateNewLoanTestClass extends HelperClass {
 		clickWebelement("CreateNewLoan", "Ok");
 		threadWait(2500);
 		enterTextboxValue("CreateNewLoan", "PrimaryPhoneNumber", "ESG Values", "Create New Loan", 27, 1);
-		clickWebelement("CreateNewLoan", "Saveoption");
+		HandleErrorCodeOnSave("CreateNewLoan", "Saveoption", "");
+	//	clickWebelement("CreateNewLoan", "Saveoption");
 		threadWait(2500);
 		defineLogs("BRITTANY SMITH", "BRITTANY SMITH", "BRITTANY SMITH", "Loan Details are Generated Successfully", "Loan Details are not Generated", "CreateNewLoan", "CreateLoanValidation");
 		clickWebelement("CreateNewLoan", "CloseButton");
@@ -79,7 +81,7 @@ public class CreateNewLoanTestClass extends HelperClass {
 		defineLogs("Loan List", "Loan List", "Loan List", "The Loan Number page is Successfully Validated", "The Loan Number page is failed to Validate", "CreateNewLoan", "LoanListValidation");
 		//Loan Status validation
 		ClickByActionClass("CreateNewLoan", "MainMenu", "ESG Values", "Create New Loan", 1, 1);
-		selectDropdownByVisibleText("CreateNewLoan", "LoanStatusSearch", "ESG Values", "Create New Loan", 24, 1);
+		selectDropdown("CreateNewLoan", "LoanStatusSearch","", "ESG Values", "Create New Loan", 24, 1);
 		clickWebelement("CreateNewLoan", "SearchButton");
 		threadWait(2500);
 		defineLogs("Loan List", "Loan List", "Loan List", "The Loan Status page is Successfully Validated", "The Loan Status page is failed to open", "CreateNewLoan", "LoanListValidation");
@@ -103,7 +105,7 @@ public class CreateNewLoanTestClass extends HelperClass {
 		defineLogs("BRITTANY SMITH", "BRITTANY SMITH", "BRITTANY SMITH", "Customer Name is Validated Successfully", "Customer Name is not Validated", "CreateNewLoan", "AccountValidation");
 		//Trade Ally Search Validation
 		ClickByActionClass("CreateNewLoan", "MainMenu", "ESG Values", "Create New Loan", 1, 1);
-		selectDropdownByVisibleText("CreateNewLoan", "TradeAllySearch", "ESG Values", "Create New Loan", 26, 1);
+		selectDropdown("CreateNewLoan", "TradeAllySearch","", "ESG Values", "Create New Loan", 26, 1);
 		clickWebelement("CreateNewLoan", "SearchButton");
 		threadWait(2500);
 		defineLogs("Loan List", "Loan List", "Loan List", "Trade Ally page is Successfully Opened", "Trade Ally page is failed to open", "CreateNewLoan", "LoanListValidation");
@@ -139,6 +141,7 @@ public class CreateNewLoanTestClass extends HelperClass {
 				clickWebelement("CreateNewLoan", "SearchButton");
 				threadWait(2500);
 				defineLogs("BRITTANY SMITH", "BRITTANY SMITH", "BRITTANY SMITH", "Phone Number Search is Validated Successfully", "Phone Number Search is not Validated", "CreateNewLoan", "AccountValidation");
+				Close();
 	}
 
 }

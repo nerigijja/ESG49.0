@@ -1,5 +1,6 @@
 package com.esg.utilities;
 
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -7,10 +8,8 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-
-import javax.swing.text.Document;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -19,9 +18,12 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -30,8 +32,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -115,24 +115,25 @@ public class BaseClass
 		
 //***************************************Select Drop Down Method***************************
 	
-	/*public static void selectDropdownByVisibleText(String filename,String webelement,String actionLocator, String excelfname, String sheet, int row, int column) {
+	public static void selectDropdown(String filename,String webelement,String actionLocator, String excelfname, String sheet, int row, int column) {
 		
-		//WebElement value = Xpath(filename, webelement);
 		
 		try {
-		
+			System.out.println("Enter First Try  Block");
 				Select select=new Select(Xpath(filename,webelement));
 				select.selectByVisibleText(ReadExcel.readData(excelfname, sheet, row, column));	
 				
 		} catch (Exception e) {
+			System.out.println("Enter First Catch  Block");
 			
-		
-				ClickWebelementByActionClass(filename, actionLocator);
+				System.out.println("Enter Second Catch  Block");
+		    	ClickWebelementByActionClass(filename, actionLocator);
 				enterTextboxValue(filename, webelement, excelfname, sheet, row, column);
 				Enter(KeyEvent.VK_ENTER);
+			   
+			}
 			}
 			
-		}	*/
 	
 	public static String GetText(String filename,String webelement) {
 		threadWait(3000);
@@ -149,21 +150,6 @@ public static String GetCssValue(String filename,String webelement) {
 	threadWait(3000);
 	return Xpath(filename,webelement).getCssValue("value");
 }
-	public static void selectDropdownValue(String filename,String webelement,String excelfname,String sheet,int row,int column) 
-	{
-		Select select=new Select(Xpath(filename,webelement));
-		select.selectByValue(ReadExcel.readData(excelfname, sheet, row, column));	      		
-	}
-	public static void selectDropdownByVisibleText(String filename,String webelement,String excelfname,String sheet,int row,int column) 
-	{
-		Select select=new Select(Xpath(filename,webelement));
-		select.selectByVisibleText(ReadExcel.readData(excelfname, sheet, row, column));	      		
-	}
-	public static void selectDropdownByIndex(String filename,String webelement,int indexNumber) 
-	{
-		Select select=new Select(Xpath(filename,webelement));
-		select.selectByIndex(indexNumber);      		
-	}
 	public static void clickWebelement(String filename,String webelement)
 	{
 		Xpath(filename,webelement).click();	
@@ -397,6 +383,54 @@ public static void SwitchToChild() {
 		   System.out.println("file deleted");
 	}
 
+public static void HandleErrorCodeOnSave(String filename, String Webelement, String FrameWebElement) {
+	
+	try {
+		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+		}
+		scrollToElement(filename, Webelement);
+		clickWebelement(filename, Webelement);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+		}
+		
+	} catch (Exception e) {
+		System.out.println("Waiting for Alert Message");
+		
+		try {
+		driver.switchTo().alert().accept();
+		} catch (NoAlertPresentException e1) {
+		try {
+			WebDriverWait wait1 = new WebDriverWait(driver, 10);
+			wait1.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(ReadConfig.ReadFile(filename, FrameWebElement)));
+			driver.switchTo().frame(ReadConfig.ReadFile(filename, FrameWebElement));
+			driver.switchTo().alert().accept();
+		} catch (WebDriverException e2) {
+			if (driver.getPageSource().contains("Error Code")) {
+				Enter(KeyEvent.VK_F5);
+				try {
+					Thread.sleep(4000);
+				} catch (InterruptedException e3) {
+				}
+				scrollToElement("helper", "SaveButton");
+				clickWebelement("helper", "SaveButton");
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e4) {
+				}
+				
+		System.out.println("An exceptional case");
+		
+		
+	}
+}
+		}
+		
+	}
 
-
+}
 }

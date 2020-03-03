@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [esg by groups]">
-  <test verbose="2" name="GRP-CEEClotheswasher">
+  <test verbose="2" name="GRP-AHRI_Furnace">
     <groups>
       <run>
-        <include name="CEEClotheswasher"/>
+        <include name="AHRI_Furnace"/>
       </run>
     </groups>
     <classes>
       <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass"/>
     </classes>
-  </test> <!-- GRP-CEEClotheswasher -->
-  <test name="GRP-CEEClotheswasher(failed)">
-    <groups>
-      <run>
-        <include name="CEEClotheswasher"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass">
-        <methods>
-          <include name="CEEClotheswasher_BackendEnrollment"/>
-          <include name="CEEClotheswasher_MobileApplication"/>
-          <include name="getStatusWithScreenshot"/>
-          <include name="CEEClotheswasher"/>
-          <include name="Initialization"/>
-        </methods>
-      </class> <!-- com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass -->
-    </classes>
-  </test> <!-- GRP-CEEClotheswasher(failed) -->
+  </test> <!-- GRP-AHRI_Furnace -->
 </suite> <!-- Failed suite [esg by groups] -->

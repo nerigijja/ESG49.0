@@ -10,7 +10,7 @@ public class Ekpc_esapTestClass extends HelperClass{
 		clickWebelement("Ekpc_Esap", "NewEnrollment");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "NewEnrollmentWizard", "ESG Values", "Ekpc_Esap", 5, 2);
 		
-		selectDropdownByVisibleText("Ekpc_Esap", "SelectProgram", "ESG Values", "Ekpc_Esap", 2, 1);
+		selectDropdown("Ekpc_Esap", "SelectProgram","", "ESG Values", "Ekpc_Esap", 2, 1);
 		explicitWaitForClickable(3000, "Ekpc_Esap", "NextButton");
 		clickWebelement("Ekpc_Esap", "NextButton");
 		enterTextboxValue("Ekpc_Esap", "AccountNumber", "ESG Values", "Ekpc_Esap", 3, 1);

@@ -67,9 +67,9 @@ public class TradeAllyRegistrationTestClass extends HelperClass {
 
 	public static void Step1_GettingStarted() {
 		clickWebelement("TradeAllyRegistration", "ProgramYear");
-		selectDropdownByVisibleText("TradeAllyRegistration", "ProgramYear", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "ProgramYear","", "ESG Values", "TradeAlly_Registration",
 				8, 1);
-		selectDropdownByVisibleText("TradeAllyRegistration", "TaxID", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "TaxID","", "ESG Values", "TradeAlly_Registration",
 				9, 1);
 		clearWebelement("TradeAllyRegistration", "EnterUniqueID");
 		threadWait(2500);
@@ -109,7 +109,7 @@ public class TradeAllyRegistrationTestClass extends HelperClass {
 		clickWebelement("TradeAllyRegistration", "CompanyName");
 		enterTextboxValue("TradeAllyRegistration", "CompanyName", "ESG Values", "TradeAlly_Registration", 23, 1);
 		Enter(KeyEvent.VK_TAB);
-		selectDropdownByVisibleText("TradeAllyRegistration", "TaxStatus", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "TaxStatus","", "ESG Values", "TradeAlly_Registration",
 				24, 1);
 		
 		clickWebelement("TradeAllyRegistration", "OfficeAddressStreet");
@@ -275,7 +275,7 @@ public class TradeAllyRegistrationTestClass extends HelperClass {
 		explicitWaitForClickable(300, "TradeAllyRegistration", "MeasureToBeInstalled");
 		
 		clickWebelement("TradeAllyRegistration", "MeasureToBeInstalled");
-		selectDropdownByVisibleText("TradeAllyRegistration", "MeasureType", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "MeasureType","", "ESG Values", "TradeAlly_Registration",
 				80, 1);
 		Enter(KeyEvent.VK_TAB);		
 		enterTextboxValue("TradeAllyRegistration", "MeasureInstalledBy", "ESG Values", "TradeAlly_Registration", 81, 1);
@@ -307,7 +307,7 @@ public class TradeAllyRegistrationTestClass extends HelperClass {
 		enterTextboxValue("TradeAllyRegistration", "Registration_CompanyName", "ESG Values", "TradeAlly_Registration", 23, 1);
 		//clickWebelement("TradeAllyRegistration", "Registration_TaxID_or_SSN");
 		//enterTextboxValue("TradeAllyRegistration", "Registration_TaxID_or_SSN", "ESG Values", "TradeAlly_Registration", 10, 1);
-		selectDropdownByVisibleText("TradeAllyRegistration", "Registration_Status", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "Registration_Status","", "ESG Values", "TradeAlly_Registration",
 				86, 1);
 		clickWebelement("TradeAllyRegistration", "Registration_Search_Button");
 		explicitWaitForClickable(300, "TradeAllyRegistration", "Registration_CompanyLink");
@@ -315,7 +315,7 @@ public class TradeAllyRegistrationTestClass extends HelperClass {
 		explicitWaitForClickable(300, "TradeAllyRegistration", "Registration_Abbreviation");
 		clickWebelement("TradeAllyRegistration", "Registration_Abbreviation");
 		enterTextboxValue("TradeAllyRegistration", "Registration_Abbreviation", "ESG Values", "TradeAlly_Registration", 87, 1);
-		selectDropdownByVisibleText("TradeAllyRegistration", "Registration_TradeAllyType", "ESG Values", "TradeAlly_Registration",
+		selectDropdown("TradeAllyRegistration", "Registration_TradeAllyType","", "ESG Values", "TradeAlly_Registration",
 				88, 1);
 		clickonProcess();
 		clickWebelement("TradeAllyRegistration", "Approved_Button");

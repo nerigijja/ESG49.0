@@ -18,7 +18,7 @@ public class CompressedFileUploadWith100MeasuresTestClass extends HelperClass {
 		threadWait(5000);
 		UploadFile("CompressedFileUploadWith100Measures", "Filepath");
 		threadWait(2500);
-		selectDropdownByVisibleText("CompressedFileUploadWith100Measures", "UploadType", "ESG Values", "Compressed File Upload With 100", 2, 1);
+		selectDropdown("CompressedFileUploadWith100Measures", "UploadType","", "ESG Values", "Compressed File Upload With 100", 2, 1);
 		clickWebelement("CompressedFileUploadWith100Measures", "UploadButton");
 		explicitWait(3000, "CompressedFileUploadWith100Measures", "StatusWait");
 		test.log(LogStatus.INFO, "File is uploaded successfully");

@@ -53,11 +53,11 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 		linkText("Main Menu").click();
 		linkText("Enrollments").click();
 		clickWebelement("helper", "NewButton");
-		selectDropdownValue("helper", "SelectProgram_Dropdown", "CreateEnrollments", "Enrollments", programRow,programCoulmn);
+		selectDropdown("helper", "SelectProgram_Dropdown","", "CreateEnrollments", "Enrollments", programRow,programCoulmn);
 		explicitWaitForClickable(3000, "helper", "NextButton");
 		clickWebelement("helper", "NextButton");
 		clickWebelement("helper", "GeneralSearch_Dropdown");		
-		selectDropdownValue("helper", "GeneralSearch_Dropdown", "CreateEnrollments", "Enrollments", 3, 0);
+		selectDropdown("helper", "GeneralSearch_Dropdown", "","CreateEnrollments", "Enrollments", 3, 0);
 		enterTextboxValue("helper", "EnterAccountNumber", "CreateEnrollments", "Enrollments", accountRow, accountCoulmn);
 		clickWebelement("helper", "ClickOn_GoButton");
 	    clickWebelement("helper", "ClickOn_CustomerName");	
@@ -284,7 +284,7 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 					linkText("Main Menu").click();
 					linkText("Enrollments").click();
 					clickWebelement("helper", "NewButton");
-					selectDropdownByVisibleText("helper", "SelectProgram_Dropdown", FileName, SheetName, programRow,programCoulmn);
+					selectDropdown("helper", "SelectProgram_Dropdown","", FileName, SheetName, programRow,programCoulmn);
 					clickWebelement("helper", "NextButton");
 					//clickWebelement("helper", "GeneralSearch_Dropdown");		
 					//selectDropdownValue("helper", "GeneralSearch_Dropdown", FileName, SheetName, 3, 0);
@@ -304,9 +304,9 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 					clickWebelement("helper", "CancelButton");
 					explicitWait(3000, "helper", "AccountNumber");
 					enterTextboxValue("helper", "AccountNumber", "ESG Values", "ESA_Data", 4, 1);
-					selectDropdownByVisibleText("helper", "AssignTradeAlly", "ESG Values", "ESA_Data", 8, 1);
-					selectDropdownByVisibleText("helper", "LeadStatus", "ESG Values", "ESA_Data", 8, 2);
-					selectDropdownByVisibleText("helper", "EmployeeName", "ESG Values", "ESA_Data", 8, 1);
+					selectDropdown("helper", "AssignTradeAlly","", "ESG Values", "ESA_Data", 8, 1);
+					selectDropdown("helper", "LeadStatus","", "ESG Values", "ESA_Data", 8, 2);
+					selectDropdown("helper", "EmployeeName","", "ESG Values", "ESA_Data", 8, 1);
 					scrollToElement("helper", "SearchButton");
 					clickWebelement("helper", "SearchButton");
 					explicitWait(3000, "helper", "LeadSearchWait");

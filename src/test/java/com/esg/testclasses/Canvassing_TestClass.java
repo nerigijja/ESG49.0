@@ -21,13 +21,23 @@ public static void Create_New_Canvassing_List() {
 	clickWebelement("Canvassing", "NewCanvassingList");
 	explicitWait(3000, "Canvassing", "CustomerName");
 	enterTextboxValue("Canvassing", "CustomerName", "ESG Values", "Canvassing_Data", 2, 1);
-	selectDropdownByVisibleText("Canvassing", "ProgramName", "ESG Values", "Canvassing_Data", 3, 1);
+	
+	selectDropdown("Canvassing", "ProgramName","", "ESG Values", "Canvassing_Data", 3, 1);
+	selectDropdown("Canvassing", "LeadSource","", "ESG Values", "Canvassing_Data", 4, 1);
+	selectDropdown("Canvassing", "TradeAlly","", "ESG Values", "Canvassing_Data", 5, 1);
+	selectDropdown("Canvassing", "EmployeeName","", "ESG Values", "Canvassing_Data", 6, 1);
+	
+	
+	
+	
+	/*selectDropdownByVisibleText("Canvassing", "ProgramName", "ESG Values", "Canvassing_Data", 3, 1);
 	selectDropdownByVisibleText("Canvassing", "LeadSource", "ESG Values", "Canvassing_Data", 4, 1);
 	selectDropdownByVisibleText("Canvassing", "TradeAlly", "ESG Values", "Canvassing_Data", 5, 1);
-	selectDropdownByVisibleText("Canvassing", "EmployeeName", "ESG Values", "Canvassing_Data", 6, 1);
+	selectDropdownByVisibleText("Canvassing", "EmployeeName", "ESG Values", "Canvassing_Data", 6, 1);*/
 	ActiveDate();
 	enterTextboxValue("Canvassing", "ExpirationDate", "ESG Values", "Canvassing_Data", 8, 1);
-	selectDropdownByVisibleText("Canvassing", "AccountClass", "ESG Values", "Canvassing_Data", 9, 1);
+	selectDropdown("Canvassing", "AccountClass","", "ESG Values", "Canvassing_Data", 9, 1);
+	//selectDropdownByVisibleText("Canvassing", "AccountClass", "ESG Values", "Canvassing_Data", 9, 1);
 	clickonSave();
 	test.log(LogStatus.INFO, "New Cutsomer Canvassing List is Created");
 
@@ -191,9 +201,14 @@ public static void Remove_Customers_From_Canvassing_List() {
 }
 public static void Create_Open_Lead() throws IOException {
 	ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-	selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+	selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
 	threadWait(3000);
-	selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+	selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);	
+	
+	
+	/*selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+	threadWait(3000);
+	selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	*/
 	threadWait(3000);
 	clickWebelement("Canvassing", "SearchButton");
 	threadWait(3000);
@@ -290,12 +305,15 @@ public static void Create_Open_Lead() throws IOException {
 	clickWebelement("Canvassing", "SelectAppointmentTime");
 	//enterTextboxValue("Canvassing", "Appointment_Time", "ESG Values", "Canvassing_Data", 177, 1);
 	threadWait(2500);
-	selectDropdownByVisibleText("Canvassing", "Appointment_Duration", "ESG Values", "Canvassing_Data", 178, 1);
+	selectDropdown("Canvassing", "Appointment_Duration","", "ESG Values", "Canvassing_Data", 178, 1);
+	//selectDropdownByVisibleText("Canvassing", "Appointment_Duration", "ESG Values", "Canvassing_Data", 178, 1);
 	clickonSave();
 	ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-	selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+	selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
+	//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
 	threadWait(3000);
-	selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+	selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);
+	//selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
 	threadWait(3000);
 	clickWebelement("Canvassing", "SearchButton");
 	threadWait(3000);
@@ -308,9 +326,13 @@ public static void Create_Open_Lead() throws IOException {
 	public static void Create_Cancel_Lead() throws IOException {
 		
 		ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-		selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+		selectDropdown("Canvassing", "TradeAllyName", "ESG Values","", "Canvassing_Data", 102, 1);
+		
+		//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
 		threadWait(3000);
-		selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+		selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);	
+		
+		//selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
 		threadWait(3000);
 		clickWebelement("Canvassing", "SearchButton");
 		threadWait(4000);
@@ -403,9 +425,12 @@ public static void Create_Open_Lead() throws IOException {
 
 	public static void Export_Customer_Canvassing_List() {
 		ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-		selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+		selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
+		
+		//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
 		threadWait(3000);
-		selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+		selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);
+		//selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
 		threadWait(3000);
 		clickWebelement("Canvassing", "SearchButton");
 		threadWait(4000);
@@ -533,9 +558,12 @@ public static void Create_Open_Lead() throws IOException {
 	}
 	public static void Copy_Customer_Canvasing_List() throws IOException {
 		ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-		selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+		selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
+		
+		//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
 		threadWait(3000);
-		selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+		selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);
+		//selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
 		threadWait(3000);
 		clickWebelement("Canvassing", "SearchButton");
 		threadWait(4000);
@@ -626,9 +654,13 @@ public static void Create_Open_Lead() throws IOException {
 				Verify_Button_Enabled("Canvassing", "CustomerSearchButtonValidadtion", "Customer Search Button is Enabled", "Customer Search Button is Disabled");
 				Verify_Button_Enabled("Canvassing", "CopyButton", "Copy Button is Enabled", "Copy Button is Disabled");
 				clickonclose();
-				selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
+				selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
+				
+				//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
 				threadWait(3000);
-				selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
+				selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);	
+				
+				//selectDropdownByVisibleText("Canvassing", "ProgramName1", "ESG Values", "Canvassing_Data", 101, 1);	
 				threadWait(3000);
 				CanvassingListFromDate();
 				clickWebelement("Canvassing", "SearchButton");

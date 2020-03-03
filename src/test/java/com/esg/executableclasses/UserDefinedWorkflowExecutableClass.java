@@ -41,7 +41,7 @@ public class UserDefinedWorkflowExecutableClass extends UserDefinedWorkflowTestC
 		InitiatePaymentWorkflowStep_AutomatedWorkflow_Inspection();
 	}
 
-	@Test(priority = 4)
+	/*@Test(priority = 4)
 	public static void UserDefinedWorkflow_AutomatedWorkflow_Inspection_EnrollmentStep_2() {
 		test = Report.startTest("UserDefinedWorkflow_AutomatedWorkflow_Inspection_EnrollmentStep_2");
 		NavigateToEnrollment(3, 1, 4, 1);
@@ -56,7 +56,7 @@ public class UserDefinedWorkflowExecutableClass extends UserDefinedWorkflowTestC
 		Complete_ReinspectionWorkflowStep_AutomatedWorkflow_Inspection();
 		InitiatePaymentWorkflowStep_AutomatedWorkflow_Inspection();
 		Close();
-	}
+	}*/
 
 /*	//----- Automated Workflow OPAL -----
 	@Test(priority = 6)

@@ -13,7 +13,7 @@ public class Compressed_FileUpload_With_Installation_TestClass extends HelperCla
 			threadWait(5000);
 			UploadFile("CompressedFileUploadWithInstallation", "Filepath");
 			threadWait(2500);
-			selectDropdownByVisibleText("CompressedFileUploadWithInstallation", "UploadType", "ESG Values", "CompressedFileUploadInstall", 2, 1);
+			selectDropdown("CompressedFileUploadWithInstallation", "UploadType","", "ESG Values", "CompressedFileUploadInstall", 2, 1);
 			clickWebelement("CompressedFileUploadWithInstallation", "UploadButton");
 			explicitWait(3000, "CompressedFileUploadWithInstallation", "StatusWait");
 			test.log(LogStatus.INFO, "File is uploaded successfully");

@@ -40,8 +40,8 @@ public class TECO_LightingTestClasses extends HelperClass {
 		enterTextboxValue("TECOLighting", "PrimaryPhone", "ESG Values", "TECO_Lighting", 8, 1);
 		enterTextboxValue("TECOLighting", "EmailID", "ESG Values", "TECO_Lighting", 16, 1);
 		scrollToElement("TECOLighting", "BuildingType");
-		selectDropdownByVisibleText("TECOLighting", "BuildingType", "ESG Values", "TECO_Lighting", 9, 1);
-		selectDropdownByVisibleText("TECOLighting", "OccupancyStatus", "ESG Values", "TECO_Lighting", 10, 1);
+		selectDropdown("TECOLighting", "BuildingType","", "ESG Values", "TECO_Lighting", 9, 1);
+		selectDropdown("TECOLighting", "OccupancyStatus","", "ESG Values", "TECO_Lighting", 10, 1);
 		threadWait(2000);
 		clickWebelement("TECOLighting", "NextButton");
 		threadWait(2000);
@@ -66,7 +66,7 @@ public class TECO_LightingTestClasses extends HelperClass {
 	public static void Step4_PayeeInformation() {
 		clickWebelement("TECOLighting", "SelectAccountHolder");
 		threadWait(3000);
-		selectDropdownByVisibleText("TECOLighting", "TaxStatus", "ESG Values", "TECO_Lighting", 21, 1);
+		selectDropdown("TECOLighting", "TaxStatus","", "ESG Values", "TECO_Lighting", 21, 1);
 		clickWebelement("TECOLighting", "NextButton");
 		defineLogs("Equipment Information", "Equipment Information", "Equipment Information", "Navigate to Equipment Information Successfully", "Unable to Navigate to Equipment Information", "TECOLighting", "VerifyEquipmentInformation");	
 	}
@@ -91,9 +91,9 @@ public class TECO_LightingTestClasses extends HelperClass {
 		Enter(KeyEvent.VK_TAB);
 		enterTextboxValue("TECOLighting", "LightingExistingQuantity", "ESG Values", "TECO_Lighting", 28, 1);
 		Enter(KeyEvent.VK_TAB);
-		selectDropdownByVisibleText("TECOLighting", "LightingExistingFixture", "ESG Values", "TECO_Lighting", 29, 1);
+		selectDropdown("TECOLighting", "LightingExistingFixture","", "ESG Values", "TECO_Lighting", 29, 1);
 		Enter(KeyEvent.VK_TAB);
-		selectDropdownByVisibleText("TECOLighting", "LightingExistingFixtureDescription", "ESG Values", "TECO_Lighting", 30, 1);
+		selectDropdown("TECOLighting", "LightingExistingFixtureDescription","", "ESG Values", "TECO_Lighting", 30, 1);
 		Enter(KeyEvent.VK_TAB);
 		enterTextboxValue("TECOLighting", "LightingFixturesNotWorking", "ESG Values", "TECO_Lighting", 31, 1);
 		Enter(KeyEvent.VK_TAB);

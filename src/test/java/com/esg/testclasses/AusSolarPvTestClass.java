@@ -14,7 +14,7 @@ public class AusSolarPvTestClass extends HelperClass {
 	public static void NavigateToEnrollment() {
 		ClickByActionClass("AusSolarPV", "MainMenu", "ESG Values", "Aus_Solar_PV", 1, 1);
 		clickWebelement("AusSolarPV", "NewEnrollment");
-		selectDropdownByVisibleText("AusSolarPV", "SelectProgram", "ESG Values", "Aus_Solar_PV", 2, 1);
+		selectDropdown("AusSolarPV", "SelectProgram","", "ESG Values", "Aus_Solar_PV", 2, 1);
 		clickWebelement("AusSolarPV", "NextButton");
 		enterTextboxValue("AusSolarPV", "AccountNumber", "ESG Values", "Aus_Solar_PV", 3, 1);
 		clickWebelement("AusSolarPV", "Go");
@@ -23,11 +23,11 @@ public class AusSolarPvTestClass extends HelperClass {
 		defineLogs("Application - Applicant Information - New", "Application - Applicant Information - New", "Application - Applicant Information - New", "Enrollment was Created Successfully", "Enrollment was not Created", "helper", "Varify_Enrollment");	
 	}
 	public static void CompleteApplicationWorkflowStep() {
-		selectDropdownByVisibleText("AusSolarPV", "BatteryStorage", "ESG Values", "Aus_Solar_PV", 4, 1);
-		selectDropdownByVisibleText("AusSolarPV", "ExistingSystem", "ESG Values", "Aus_Solar_PV", 5, 1);
+		selectDropdown("AusSolarPV", "BatteryStorage","", "ESG Values", "Aus_Solar_PV", 4, 1);
+		selectDropdown("AusSolarPV", "ExistingSystem","", "ESG Values", "Aus_Solar_PV", 5, 1);
 		enterTextboxValue("AusSolarPV", "kWhcapacity", "ESG Values", "Aus_Solar_PV", 6, 1);
 		scrollToElement("AusSolarPV", "ConstructionType");
-		selectDropdownByVisibleText("AusSolarPV", "ConstructionType", "ESG Values", "Aus_Solar_PV", 7, 1);
+		selectDropdown("AusSolarPV", "ConstructionType","", "ESG Values", "Aus_Solar_PV", 7, 1);
 		enterTextboxValue("AusSolarPV", "TaxAssessorPropertyID", "ESG Values", "Aus_Solar_PV", 8, 1);
 		scrollToElement("AusSolarPV", "Save");
 		clickonSave();
@@ -37,9 +37,9 @@ public class AusSolarPvTestClass extends HelperClass {
 		clickWebelement("AusSolarPV", "TradeAlleyAdd");
 		clickWebelement("AusSolarPV", "Primary");
 		threadWait(5000);
-		selectDropdownByVisibleText("AusSolarPV", "TradeAllyType", "ESG Values", "Aus_Solar_PV", 16, 1);
+		selectDropdown("AusSolarPV", "TradeAllyType","", "ESG Values", "Aus_Solar_PV", 16, 1);
 		threadWait(2500);
-		selectDropdownByVisibleText("AusSolarPV", "TradeAlly_Employee", "ESG Values", "Aus_Solar_PV", 17, 1);
+		selectDropdown("AusSolarPV", "TradeAlly_Employee","", "ESG Values", "Aus_Solar_PV", 17, 1);
 		clickWebelement("AusSolarPV", "TradeAllySave");
 		threadWait(2500);
 		clickWebelement("AusSolarPV", "TradeAllyCheckBox");

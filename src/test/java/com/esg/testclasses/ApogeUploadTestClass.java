@@ -13,7 +13,8 @@ public static void Login() {
 public static void UploadFile() throws AWTException {
 	
 	ClickByActionClass("ApogeUpload", "MainMenu", "ESG Values", "Apoge Upload", 1, 1);
-	selectDropdownByVisibleText("ApogeUpload", "UploadType", "ESG Values", "Apoge Upload", 2, 1);
+	
+	selectDropdown("ApogeUpload", "UploadType","", "ESG Values", "Apoge Upload", 2, 1);
 	threadWait(5000);
 	clickWebelement("ApogeUpload", "SelectUpload1");
 	threadWait(5000);
@@ -63,7 +64,8 @@ public static void VerifyApogeeWithModifiedFiles() {
 public static void UploadFile2() throws AWTException {
 	
 	ClickByActionClass("ApogeUpload", "MainMenu", "ESG Values", "Apoge Upload", 1, 1);
-	selectDropdownByVisibleText("ApogeUpload", "UploadType", "ESG Values", "Apoge Upload", 2, 1);
+	
+	selectDropdown("ApogeUpload", "UploadType","", "ESG Values", "Apoge Upload", 2, 1);
 	threadWait(2500);
 	clickWebelement("ApogeUpload", "SelectUpload1");
 	threadWait(5000);
@@ -97,7 +99,6 @@ public static void VerifyApogeeWithoutModifiedFiles() {
 	defineLogs("1", "1", "1", "Measure I QTY Value is Validated", "Measure I QTY Value is not Validated", "ApogeUpload", "MeasureQTYWitout1");
 	defineLogs("$0.00", "$0.00", "$0.00", "Incentive Amount Value is Validated", "Incentive Amount Value is not Validated", "ApogeUpload", "IncentiveAmountWithout1");
 	defineLogs("0.0000", "0.0000", "0.0000", "Savings KWh Value is Validated", "Savings KWh Value is not Validated", "ApogeUpload", "SavingsKWhWithout1");
-	
 	defineLogs("1", "1", "1", "Measure I QTY Value is Validated", "Measure I QTY Value is not Validated", "ApogeUpload", "MeasureQTYWitout2");
 	defineLogs("$0.00", "$0.00", "$0.00", "Incentive Amount Value is Validated", "Incentive Amount Value is not Validated", "ApogeUpload", "IncentiveAmountWithout2");
 	defineLogs("0.0000", "0.0000", "0.0000", "Savings KWh Value is Validated", "Savings KWh Value is not Validated", "ApogeUpload", "SavingsKWhWithout2");

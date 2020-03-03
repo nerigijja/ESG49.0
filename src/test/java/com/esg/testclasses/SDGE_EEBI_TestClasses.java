@@ -13,7 +13,7 @@ public static void login() {
 public static void NavigateToEnrollment() {
 		ClickByActionClass("SDGEEEBI", "MainMenu", "ESG Values", "SDGE_EEBI", 1, 1);
 		clickWebelement("SDGEEEBI", "NewEnrollment");
-		selectDropdownByVisibleText("SDGEEEBI", "SelectProgram", "ESG Values", "SDGE_EEBI", 2, 1);
+		selectDropdown("SDGEEEBI", "SelectProgram","", "ESG Values", "SDGE_EEBI", 2, 1);
 		explicitWaitForClickable(3000, "SDGEEEBI", "NextButton");
 		clickWebelement("SDGEEEBI", "NextButton");
 		enterTextboxValue("SDGEEEBI", "AccountNumber", "ESG Values", "SDGE_EEBI", 3, 1);
@@ -25,48 +25,62 @@ public static void NavigateToEnrollment() {
 		defineLogs("Application - Applicant Information - New", "Application - Applicant Information - New", "Application - Applicant Information - New", "Enrollment was Created Successfully", "Enrollment was not Created", "helper", "Varify_Enrollment");	
 	}
 public static void CompleteApplicationWorkflowStep() {
-	clickWebelement("SDGEEEBI", "Calculation_Tool");
+	selectDropdown("SDGEEEBI", "Calculation_Tool","Calculation_Tool", "ESG Values", "SDGE_EEBI", 6, 1);
+	/*clickWebelement("SDGEEEBI", "Calculation_Tool");
 	enterTextboxValue("SDGEEEBI", "Calculation_Tool", "ESG Values", "SDGE_EEBI", 6, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Qualified_for_PartnerIncentiveRate");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Qualified_for_PartnerIncentiveRate","Qualified_for_PartnerIncentiveRate", "ESG Values", "SDGE_EEBI", 7, 1);
+	
+	/*clickWebelement("SDGEEEBI", "Qualified_for_PartnerIncentiveRate");
 	enterTextboxValue("SDGEEEBI", "Qualified_for_PartnerIncentiveRate", "ESG Values", "SDGE_EEBI", 7, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Financing");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Financing","Financing", "ESG Values", "SDGE_EEBI", 8, 1);
+	
+	
+	/*clickWebelement("SDGEEEBI", "Financing");
 	enterTextboxValue("SDGEEEBI", "Financing", "ESG Values", "SDGE_EEBI", 8, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	scrollToElement("SDGEEEBI", "School_ID");
-	clickWebelement("SDGEEEBI", "Prop_39_Funding");
+	selectDropdown("SDGEEEBI", "Prop_39_Funding","Prop_39_Funding", "ESG Values", "SDGE_EEBI", 9, 1);
+	/*clickWebelement("SDGEEEBI", "Prop_39_Funding");
 	enterTextboxValue("SDGEEEBI", "Prop_39_Funding", "ESG Values", "SDGE_EEBI", 9, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Public_K12_School");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Public_K12_School","Public_K12_School", "ESG Values", "SDGE_EEBI", 10, 1);
+	/*clickWebelement("SDGEEEBI", "Public_K12_School");
 	enterTextboxValue("SDGEEEBI", "Public_K12_School", "ESG Values", "SDGE_EEBI", 10, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	clickWebelement("SDGEEEBI", "Engineer_Assisted_Application");
 	clickWebelement("SDGEEEBI", "Expedite_Review");
 	enterTextboxValue("SDGEEEBI", "Project_Sponsor", "ESG Values", "SDGE_EEBI", 11, 1);
 	enterTextboxValue("SDGEEEBI", "School_ID", "ESG Values", "SDGE_EEBI", 12, 1);
 	SelectIncentiveAgreementTargetDate();
 	scrollToElement("SDGEEEBI", "Building_Type");
-	clickWebelement("SDGEEEBI", "Building_Type");
+	selectDropdown("SDGEEEBI", "Building_Type","Building_Type", "ESG Values", "SDGE_EEBI", 13, 1);
+	/*clickWebelement("SDGEEEBI", "Building_Type");
 	enterTextboxValue("SDGEEEBI", "Building_Type", "ESG Values", "SDGE_EEBI", 13, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Occupancy_Status");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Occupancy_Status","Occupancy_Status", "ESG Values", "SDGE_EEBI", 14, 1);
+	/*clickWebelement("SDGEEEBI", "Occupancy_Status");
 	enterTextboxValue("SDGEEEBI", "Occupancy_Status", "ESG Values", "SDGE_EEBI", 14, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	enterTextboxValue("SDGEEEBI", "Total_Sq_Ft_of_Facility", "ESG Values", "SDGE_EEBI", 15, 1);
 	enterTextboxValue("SDGEEEBI", "Years_Since_Built_or_Last_Renovation", "ESG Values", "SDGE_EEBI", 16, 1);
 	enterTextboxValue("SDGEEEBI", "Number_of_Floors", "ESG Values", "SDGE_EEBI", 17, 1);
 	SelectEstimatedInstallationCompletionDate();
 	scrollToElement("SDGEEEBI", "Tax_Status");
-	clickWebelement("SDGEEEBI", "Account_Executive");
+	selectDropdown("SDGEEEBI", "Account_Executive","Account_Executive", "ESG Values", "SDGE_EEBI", 18, 1);
+	
+	/*clickWebelement("SDGEEEBI", "Account_Executive");
 	enterTextboxValue("SDGEEEBI", "Account_Executive", "ESG Values", "SDGE_EEBI", 18, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Tax_Status");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Tax_Status","Tax_Status", "ESG Values", "SDGE_EEBI", 19, 1);
+	/*clickWebelement("SDGEEEBI", "Tax_Status");
 	enterTextboxValue("SDGEEEBI", "Tax_Status", "ESG Values", "SDGE_EEBI", 19, 1);
-	Enter(KeyEvent.VK_ENTER);
-	clickWebelement("SDGEEEBI", "Tax_Id_Type");
+	Enter(KeyEvent.VK_ENTER);*/
+	selectDropdown("SDGEEEBI", "Tax_Id_Type","Tax_Id_Type", "ESG Values", "SDGE_EEBI", 20, 1);
+	/*clickWebelement("SDGEEEBI", "Tax_Id_Type");
 	enterTextboxValue("SDGEEEBI", "Tax_Id_Type", "ESG Values", "SDGE_EEBI", 20, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	scrollToElement("SDGEEEBI", "Tax_Id_or_SSN");
 	enterTextboxValue("SDGEEEBI", "Tax_Id_or_SSN", "ESG Values", "SDGE_EEBI", 21, 1);
 	explicitWaitForClickable(3000, "SDGEEEBI", "Address_Section");
@@ -188,13 +202,16 @@ public static void Process_InstallationWorkflowStep() {
 public static void Process_InspectionWorkflowStep() {
 	clickWebelement("SDGEEEBI", "InspectionWorkflowStep");
 	threadWait(3000);
-	clickWebelement("SDGEEEBI", "AssignedTradeAlly");
+	selectDropdown("SDGEEEBI", "AssignedTradeAlly","AssignedTradeAlly", "ESG Values", "SDGE_EEBI", 55, 1);
+	/*clickWebelement("SDGEEEBI", "AssignedTradeAlly");
 	enterTextboxValue("SDGEEEBI", "AssignedTradeAlly", "ESG Values", "SDGE_EEBI", 55, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	threadWait(6000);
-	clickWebelement("SDGEEEBI", "AssignedEmployee");
+	selectDropdown("SDGEEEBI", "AssignedEmployee","AssignedEmployee", "ESG Values", "SDGE_EEBI", 56, 1);
+	
+	/*clickWebelement("SDGEEEBI", "AssignedEmployee");
 	enterTextboxValue("SDGEEEBI", "AssignedEmployee", "ESG Values", "SDGE_EEBI", 56, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	clickWebelement("SDGEEEBI", "UpdateMeasure");
 	enterTextboxValue("SDGEEEBI", "PassQty", "ESG Values", "SDGE_EEBI", 53, 1);
 	Enter(KeyEvent.VK_TAB);
@@ -226,9 +243,11 @@ public static void Process_Management_ReviewWorkflowStep() {
 	scrollToElement("SDGEEEBI", "Management_ReviewWorkflowStep");
 	clickWebelement("SDGEEEBI", "Management_ReviewWorkflowStep");
 	threadWait(3000);
-	clickWebelement("SDGEEEBI", "ManagementReviewAssignedTradeAlly");
+	selectDropdown("SDGEEEBI", "ManagementReviewAssignedTradeAlly","ManagementReviewAssignedTradeAlly", "ESG Values", "SDGE_EEBI", 63, 1);
+	
+	/*clickWebelement("SDGEEEBI", "ManagementReviewAssignedTradeAlly");
 	enterTextboxValue("SDGEEEBI", "ManagementReviewAssignedTradeAlly", "ESG Values", "SDGE_EEBI", 63, 1);
-	Enter(KeyEvent.VK_ENTER);
+	Enter(KeyEvent.VK_ENTER);*/
 	selectDueDate();
 	clickonProcess();
 	if (driver.getPageSource().contains("Workflow Step Warnings")) {

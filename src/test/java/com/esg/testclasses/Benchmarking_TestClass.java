@@ -35,7 +35,9 @@ public class Benchmarking_TestClass extends HelperClass {
 		//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
 		explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 		clickWebelement("BenchMarking", "SelectCheckBox");
-		selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
+		selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
+		
+		//selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
 		clickWebelement("BenchMarking", "DateMeterBecameActive");
 		clickWebelement("BenchMarking", "ActiveDate");
 		clickWebelement("BenchMarking", "CreateMeter");
@@ -81,7 +83,9 @@ public class Benchmarking_TestClass extends HelperClass {
 		//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
 		explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 		clickWebelement("BenchMarking", "SelectCheckBox");
-		selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
+		selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
+		
+		//selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
 		clickWebelement("BenchMarking", "DateMeterBecameActive");
 		clickWebelement("BenchMarking", "ActiveDate");
 		clickWebelement("BenchMarking", "CreateMeter");
@@ -127,7 +131,9 @@ public class Benchmarking_TestClass extends HelperClass {
 			//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
 			explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 			clickWebelement("BenchMarking", "SelectCheckBox");
-			selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
+			selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
+			
+			//selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
 			clickWebelement("BenchMarking", "DateMeterBecameActive");
 			clickWebelement("BenchMarking", "ActiveDate");
 			clickWebelement("BenchMarking", "CreateMeter");
@@ -175,7 +181,9 @@ public class Benchmarking_TestClass extends HelperClass {
 			//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
 			explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 			clickWebelement("BenchMarking", "SelectCheckBox");
-			selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
+			selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
+			
+			//selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
 			clickWebelement("BenchMarking", "DateMeterBecameActive");
 			clickWebelement("BenchMarking", "ActiveDate");
 			clickWebelement("BenchMarking", "CreateMeter");
@@ -223,7 +231,9 @@ public class Benchmarking_TestClass extends HelperClass {
 				//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
 				explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 				clickWebelement("BenchMarking", "SelectCheckBox");
-				selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
+				selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
+				
+				//selectDropdownByVisibleText("BenchMarking", "Units", "ESG Values", "BenchMarking", 3, 1);
 				clickWebelement("BenchMarking", "DateMeterBecameActive");
 				clickWebelement("BenchMarking", "ActiveDate");
 				clickWebelement("BenchMarking", "CreateMeter");
@@ -306,9 +316,15 @@ public class Benchmarking_TestClass extends HelperClass {
 				//Building Information Tab
 				explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
 				enterTextboxValue("BenchMarking", "PortfolioManagerUsername", "ESG Values", "BenchMarking", 27, 1);
-				selectDropdownByVisibleText("BenchMarking", "RequestType", "ESG Values", "BenchMarking", 28, 1);
+				
+				selectDropdown("BenchMarking", "RequestType","", "ESG Values", "BenchMarking", 28, 1);
+				selectDropdown("BenchMarking", "RequestFrequency","", "ESG Values", "BenchMarking", 29, 1);
+				selectDropdown("BenchMarking", "DeliveryMethod","", "ESG Values", "BenchMarking", 30, 1);
+				
+				
+				/*selectDropdownByVisibleText("BenchMarking", "RequestType", "ESG Values", "BenchMarking", 28, 1);
 				selectDropdownByVisibleText("BenchMarking", "RequestFrequency", "ESG Values", "BenchMarking", 29, 1);
-				selectDropdownByVisibleText("BenchMarking", "DeliveryMethod", "ESG Values", "BenchMarking", 30, 1);
+				selectDropdownByVisibleText("BenchMarking", "DeliveryMethod", "ESG Values", "BenchMarking", 30, 1);*/
 				clickWebelement("BenchMarking", "TermsAndCondition");
 				clickWebelement("BenchMarking", "TCOk");
 				clickWebelement("BenchMarking", "TCCheckBox");
@@ -452,9 +468,14 @@ public class Benchmarking_TestClass extends HelperClass {
 					//Building Information Tab
 					explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
 					enterTextboxValue("BenchMarking", "PortfolioManagerUsername", "ESG Values", "BenchMarking", 27, 1);
-					selectDropdownByVisibleText("BenchMarking", "RequestType", "ESG Values", "BenchMarking", 90, 1);
+					
+					selectDropdown("BenchMarking", "RequestType","", "ESG Values", "BenchMarking", 90, 1);
+					selectDropdown("BenchMarking", "RequestFrequency","", "ESG Values", "BenchMarking", 29, 1);
+					selectDropdown("BenchMarking", "DeliveryMethod","", "ESG Values", "BenchMarking", 30, 1);
+					
+					/*selectDropdownByVisibleText("BenchMarking", "RequestType", "ESG Values", "BenchMarking", 90, 1);
 					selectDropdownByVisibleText("BenchMarking", "RequestFrequency", "ESG Values", "BenchMarking", 29, 1);
-					selectDropdownByVisibleText("BenchMarking", "DeliveryMethod", "ESG Values", "BenchMarking", 30, 1);
+					selectDropdownByVisibleText("BenchMarking", "DeliveryMethod", "ESG Values", "BenchMarking", 30, 1);*/
 					clickWebelement("BenchMarking", "TermsAndCondition");
 					clickWebelement("BenchMarking", "TCOk");
 					clickWebelement("BenchMarking", "TCCheckBox");

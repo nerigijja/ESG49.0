@@ -20,7 +20,7 @@ public static void login() {
 		defineLogs("Letter List", "Letter List", "Letter List", "Account Number validated Successfully", "Failed to validate Account Number", "LetterListSearch", "VerifyAccountNumber");
 		
 		ClickByActionClass("LetterListSearch", "MainMenu", "ESG Values", "Letter_List_Search", 1, 1);
-		selectDropdownByVisibleText("LetterListSearch", "LetterName", "ESG Values", "Letter_List_Search", 4, 1);
+		selectDropdown("LetterListSearch", "LetterName","", "ESG Values", "Letter_List_Search", 4, 1);
 		clickWebelement("LetterListSearch", "SearchButton");
 		threadWait(5000);
 		defineLogs("Letter List", "Letter List", "Letter List", "Letter Name validated Successfully", "Failed to validate Letter Name", "LetterListSearch", "VerifyLetterName");

@@ -14,8 +14,8 @@ public static void Login() {
 public static void UploadFile() throws AWTException {
 	
 	ClickByActionClass("SingleFileUpload", "MainMenu", "ESG Values", "SingleFileUpload", 1, 1);
-	selectDropdownByVisibleText("SingleFileUpload", "UploadType", "ESG Values", "SingleFileUpload", 2, 1);
-	selectDropdownByVisibleText("SingleFileUpload", "TradeAlly", "ESG Values", "SingleFileUpload", 3, 1);
+	selectDropdown("SingleFileUpload", "UploadType","", "ESG Values", "SingleFileUpload", 2, 1);
+	selectDropdown("SingleFileUpload", "TradeAlly","", "ESG Values", "SingleFileUpload", 3, 1);
 	explicitWaitForClickable(3000, "SingleFileUpload", "SelectUpload");
 	clickWebelement("SingleFileUpload", "SelectUpload");
 	UploadFile("SingleFileUpload", "Filepath");
