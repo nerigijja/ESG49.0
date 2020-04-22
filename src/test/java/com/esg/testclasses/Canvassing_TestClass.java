@@ -17,28 +17,23 @@ public static void Login() {
 
 public static void Create_New_Canvassing_List() {
 	ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
-	explicitWaitForClickable(3000, "Canvassing", "NewCanvassingList");
+	WaitForElement(300, "Canvassing", "NewCanvassingList");
+	//explicitWaitForClickable(3000, "Canvassing", "NewCanvassingList");
 	clickWebelement("Canvassing", "NewCanvassingList");
-	explicitWait(3000, "Canvassing", "CustomerName");
+	WaitForElement(300, "Canvassing", "CustomerName");
+	//explicitWait(3000, "Canvassing", "CustomerName");
 	enterTextboxValue("Canvassing", "CustomerName", "ESG Values", "Canvassing_Data", 2, 1);
 	
 	selectDropdown("Canvassing", "ProgramName","", "ESG Values", "Canvassing_Data", 3, 1);
 	selectDropdown("Canvassing", "LeadSource","", "ESG Values", "Canvassing_Data", 4, 1);
 	selectDropdown("Canvassing", "TradeAlly","", "ESG Values", "Canvassing_Data", 5, 1);
 	selectDropdown("Canvassing", "EmployeeName","", "ESG Values", "Canvassing_Data", 6, 1);
-	
-	
-	
-	
-	/*selectDropdownByVisibleText("Canvassing", "ProgramName", "ESG Values", "Canvassing_Data", 3, 1);
-	selectDropdownByVisibleText("Canvassing", "LeadSource", "ESG Values", "Canvassing_Data", 4, 1);
-	selectDropdownByVisibleText("Canvassing", "TradeAlly", "ESG Values", "Canvassing_Data", 5, 1);
-	selectDropdownByVisibleText("Canvassing", "EmployeeName", "ESG Values", "Canvassing_Data", 6, 1);*/
 	ActiveDate();
 	enterTextboxValue("Canvassing", "ExpirationDate", "ESG Values", "Canvassing_Data", 8, 1);
 	selectDropdown("Canvassing", "AccountClass","", "ESG Values", "Canvassing_Data", 9, 1);
-	//selectDropdownByVisibleText("Canvassing", "AccountClass", "ESG Values", "Canvassing_Data", 9, 1);
-	clickonSave();
+	HandleErrorCodeOnSave("helper", "SaveButton", "");
+	
+	//clickonSave();
 	test.log(LogStatus.INFO, "New Cutsomer Canvassing List is Created");
 
 }
@@ -50,7 +45,6 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 	enterTextboxValue("Canvassing", "ZipCode", "ESG Values", "Canvassing_Data", 16, 1);
 	clickWebelement("Canvassing", "SearchButton");
 	threadWait(4000);
-	//explicitWaitForClickable(3000, "Canvassing", "SelectPremise1");
 	clickWebelement("Canvassing", "SelectPremise1");
 	
 	//Verify the First Row Data
@@ -71,7 +65,8 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 	clickonclose();
 	
 	test.log(LogStatus.INFO, "Validating the First Row Data added to the Customer Canvassing List");
-	explicitWait(3000, "Canvassing", "VerifyPremiseID1");
+	WaitForElement(300, "Canvassing", "VerifyPremiseID1");
+	//explicitWait(3000, "Canvassing", "VerifyPremiseID1");
 	VerifyElementForExistingValueWithText("Canvassing", "VerifyPremiseCustomerPageID1", "ESG Values", "Canvassing_Data", 24, 1);
 	VerifyElementForExistingValueWithText("Canvassing", "VerifyStreetNumberCustomerPage1", "ESG Values", "Canvassing_Data", 25, 1);
 	VerifyElementForExistingValueWithText("Canvassing", "VerifyStreetNameCustomerPage1", "ESG Values", "Canvassing_Data", 26, 1);
@@ -93,6 +88,7 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		enterTextboxValue("Canvassing", "StreetNumberFrom", "ESG Values", "Canvassing_Data", 13, 1);
 		enterTextboxValue("Canvassing", "ZipCode", "ESG Values", "Canvassing_Data", 16, 1);
 		clickWebelement("Canvassing", "SearchButton");
+		WaitForElement(300, "Canvassing", "SelectPremise1");
 		threadWait(2500);
 		clickWebelement("Canvassing", "SelectPremise1");
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyPremiseID1", "ESG Values", "Canvassing_Data", 54, 1);
@@ -119,6 +115,8 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyArea_Prizm_Code2", "ESG Values", "Canvassing_Data", 75, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_Page2", "ESG Values", "Canvassing_Data", 76, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_Grid2", "ESG Values", "Canvassing_Data", 77, 1);
+		WaitForElement(300, "Canvassing", "VerifyAccount2");
+		threadWait(2500);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccount2", "ESG Values", "Canvassing_Data", 79, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountStatus2", "ESG Values", "Canvassing_Data", 80, 1);
 		
@@ -142,7 +140,8 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		//Verify the Permises is Added to Customer Canvassing List
 		//Verify Second Row Data
 		test.log(LogStatus.INFO, "Validating the Second Row Data is added to the Customer Canvassing List");
-		explicitWait(3000, "Canvassing", "VerifyPremiseID1");
+		WaitForElement(300, "Canvassing", "VerifyPremiseID1");
+		//explicitWait(3000, "Canvassing", "VerifyPremiseID1");
 		
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyPremiseCustomerPageID2", "ESG Values", "Canvassing_Data", 54, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyStreetNumberCustomerPage2", "ESG Values", "Canvassing_Data", 55, 1);
@@ -154,11 +153,12 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_PageCustomerPage2", "ESG Values", "Canvassing_Data", 61, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_GridCustomerPage2", "ESG Values", "Canvassing_Data", 62, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyNameCustomerPage2", "ESG Values", "Canvassing_Data", 67, 1);
+		threadWait(2500);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountCustomerPage2", "ESG Values", "Canvassing_Data", 64, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountStatusCustomerPage2", "ESG Values", "Canvassing_Data", 65, 1);
 		
 		test.log(LogStatus.INFO, "Validating the Third Row Data is added to the Customer Canvassing List");
-		explicitWait(3000, "Canvassing", "VerifyPremiseID1");
+		WaitForElement(300, "Canvassing", "VerifyPremiseCustomerPageID3");
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyPremiseCustomerPageID3", "ESG Values", "Canvassing_Data", 69, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyStreetNumberCustomerPage3", "ESG Values", "Canvassing_Data", 70, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyStreetNameCustomerPage3", "ESG Values", "Canvassing_Data", 71, 1);
@@ -169,6 +169,7 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_PageCustomerPage3", "ESG Values", "Canvassing_Data", 76, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_GridCustomerPage3", "ESG Values", "Canvassing_Data", 77, 1);
 		//VerifyElementForExistingValueWithText("Canvassing", "VerifyNameCustomerPage3", "ESG Values", "Canvassing_Data", 82, 1);
+		threadWait(2500);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountCustomerPage3", "ESG Values", "Canvassing_Data", 79, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountStatusCustomerPage3", "ESG Values", "Canvassing_Data", 80, 1);
 		
@@ -183,6 +184,7 @@ public static void Adding_Customers_To_Canvassing_List() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_PageCustomerPage4", "ESG Values", "Canvassing_Data", 92, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyThomas_Guide_GridCustomerPage4", "ESG Values", "Canvassing_Data", 93, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyNameCustomerPage4", "ESG Values", "Canvassing_Data", 98, 1);
+		threadWait(2500);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountCustomerPage4", "ESG Values", "Canvassing_Data", 95, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountStatusCustomerPage4", "ESG Values", "Canvassing_Data", 96, 1);
 }
@@ -190,6 +192,7 @@ public static void Remove_Customers_From_Canvassing_List() {
 	clickWebelement("Canvassing", "SelectCheckBox1");
 	clickWebelement("Canvassing", "Remove_Selected_Customer");
 	ReadPopUp();
+	WaitForElement(300, "Canvassing", "SelectCheckBox1");
 	threadWait(3000);
 	clickWebelement("Canvassing", "SelectCheckBox1");
 	clickWebelement("Canvassing", "SelectCheckBox2");
@@ -202,7 +205,8 @@ public static void Remove_Customers_From_Canvassing_List() {
 public static void Create_Open_Lead() throws IOException {
 	ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
 	selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
-	threadWait(3000);
+	WaitForElement(300, "Canvassing", "ProgramName1");
+	//threadWait(3000);
 	selectDropdown("Canvassing", "ProgramName1","", "ESG Values", "Canvassing_Data", 101, 1);	
 	
 	
@@ -229,7 +233,7 @@ public static void Create_Open_Lead() throws IOException {
 	VerifyElementForExistingValueWithText("Canvassing", "CreateNameVerify", "ESG Values", "Canvassing_Data", 116, 1);
 	VerifyElementForExistingValueWithText("Canvassing", "CreateAccountStatusVerify", "ESG Values", "Canvassing_Data", 114, 1);
 	clickWebelement("Canvassing", "CreateOpenLeadButton");
-	explicitWait(3000, "Canvassing", "AccountNumberValidadtion");
+	WaitForElement(300, "Canvassing", "AccountNumberValidadtion");
 	
 	test.log(LogStatus.INFO, "Validating the Data in the Create Open Lead Window");
 	VerifyElementForExistingValueWithText("Canvassing", "AccountNumberValidadtion", "ESG Values", "Canvassing_Data", 119, 1);
@@ -237,10 +241,9 @@ public static void Create_Open_Lead() throws IOException {
 	VerifyElementForExistingValueWithText("Canvassing", "CityNameValidation", "ESG Values", "Canvassing_Data", 121, 1);
 	VerifyElementForExistingValueWithText("Canvassing", "ZipCodeValidation", "ESG Values", "Canvassing_Data", 122, 1);
 	clickWebelement("Canvassing", "CreateNewLead");
-	
-	explicitWait(3000, "Canvassing", "VerifyLeadStatusCreating");
+	WaitForElement(300, "Canvassing", "VerifyLeadStatusCreating");
 	VerifyElementForExistingValueWithText("Canvassing", "VerifyLeadStatusCreating", "ESG Values", "Canvassing_Data", 123, 1);
-	explicitWait(3000, "Canvassing", "VerifyLeadStatusUnscheduled");
+	WaitForElement(300, "Canvassing", "VerifyLeadStatusUnscheduled");
 	WriteExcel.WriteCopiedData("Canvassing", "VerifyLeadStatusUnscheduled", "ESG Values", "Canvassing_Data", 124, 1);
 	VerifyElementForExistingValueWithText("Canvassing", "VerifyLeadStatusUnscheduled", "ESG Values", "Canvassing_Data", 124, 1);
 	WriteExcel.WriteCopiedData("Canvassing", "LeadNumberCreated", "ESG Values", "Canvassing_Data", 125, 1);
@@ -255,18 +258,19 @@ public static void Create_Open_Lead() throws IOException {
 	clickWebelement("Canvassing", "LeadNumberCreated");
 	
 	test.log(LogStatus.INFO, "Validating the Data Lead Summary");
-	explicitWait(3000, "Canvassing", "LeadSummaryProgram");
+	WaitForElement(300, "Canvassing", "LeadSummaryProgram");
+	//explicitWait(3000, "Canvassing", "LeadSummaryProgram");
 	SubStringData("Canvassing", "LeadSummaryProgram", 7, 21, "ESG Values", "Canvassing_Data", 128, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 34, 46, "ESG Values", "Canvassing_Data", 124, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 35, 46, "ESG Values", "Canvassing_Data", 124, 1);
 	SubStringData("Canvassing", "LeadSummaryProgram", 55, 59, "ESG Values", "Canvassing_Data", 125, 1);
 	SubStringData("Canvassing", "LeadSummaryProgram", 71, 80, "ESG Values", "Canvassing_Data", 130, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 102, 122, "ESG Values", "Canvassing_Data", 131, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 129, 133, "ESG Values", "Canvassing_Data", 136, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 134, 158, "ESG Values", "Canvassing_Data", 133, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 171, 181, "ESG Values", "Canvassing_Data", 119, 1);
-	SubStringData("Canvassing", "LeadSummaryProgram", 197, 203, "ESG Values", "Canvassing_Data", 134, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 101, 122, "ESG Values", "Canvassing_Data", 131, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 128, 132, "ESG Values", "Canvassing_Data", 136, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 133, 157, "ESG Values", "Canvassing_Data", 133, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 170, 180, "ESG Values", "Canvassing_Data", 119, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 196, 202, "ESG Values", "Canvassing_Data", 134, 1);
 	
-	SubStringData("Canvassing", "LeadSummaryProgram", 216, 219, "ESG Values", "Canvassing_Data", 135, 1);
+	SubStringData("Canvassing", "LeadSummaryProgram", 215, 218, "ESG Values", "Canvassing_Data", 135, 1);
 	
 	//Verifying the Lead Details page Data
 	test.log(LogStatus.INFO, "Validating the Data In the Lead List");
@@ -307,7 +311,9 @@ public static void Create_Open_Lead() throws IOException {
 	threadWait(2500);
 	selectDropdown("Canvassing", "Appointment_Duration","", "ESG Values", "Canvassing_Data", 178, 1);
 	//selectDropdownByVisibleText("Canvassing", "Appointment_Duration", "ESG Values", "Canvassing_Data", 178, 1);
-	clickonSave();
+	HandleErrorCodeOnSave("helper", "SaveButton", "");
+	
+	//clickonSave();
 	ClickByActionClass("Canvassing", "MainMenu", "ESG Values", "Canvassing_Data", 1, 1);
 	selectDropdown("Canvassing", "TradeAllyName","", "ESG Values", "Canvassing_Data", 102, 1);
 	//selectDropdownByVisibleText("Canvassing", "TradeAllyName", "ESG Values", "Canvassing_Data", 102, 1);
@@ -353,10 +359,12 @@ public static void Create_Open_Lead() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Create_Cancel_Lead_Account", "ESG Values", "Canvassing_Data", 192, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Create_Cancel_Lead_Name", "ESG Values", "Canvassing_Data", 195, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Create_Cancel_Lead_Account_Status", "ESG Values", "Canvassing_Data", 193, 1);
-		threadWait(2500);
+		WaitForElement(300, "Canvassing", "SelectCancelLead");
+		//threadWait(2500);
 		clickWebelement("Canvassing", "SelectCancelLead");
 		clickWebelement("Canvassing", "CreateCancelLeadButton");
-		explicitWait(3000, "Canvassing", "Verify_Cancel_Account_Number");
+		WaitForElement(300, "Canvassing", "Verify_Cancel_Account_Number");
+		//explicitWait(3000, "Canvassing", "Verify_Cancel_Account_Number");
 		test.log(LogStatus.INFO, "Validating the Data in the create Cancelled Lead Window");
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Cancel_Account_Number", "ESG Values", "Canvassing_Data", 198, 1);
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Cancel_Street_Number", "ESG Values", "Canvassing_Data", 199, 1);
@@ -364,7 +372,8 @@ public static void Create_Open_Lead() throws IOException {
 		VerifyElementForExistingValueWithText("Canvassing", "Verify_Cancel_Zip_Number", "ESG Values", "Canvassing_Data", 201, 1);
 		clickWebelement("Canvassing", "CreateNewCancelLead");
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyLeadStatusCreating", "ESG Values", "Canvassing_Data", 204, 1);
-		explicitWait(3000, "Canvassing", "VerifyLeadStatusCancelled");
+		WaitForElement(300, "Canvassing", "VerifyLeadStatusCancelled");
+		//explicitWait(3000, "Canvassing", "VerifyLeadStatusCancelled");
 		VerifyElementForExistingValueWithText("Canvassing", "VerifyLeadStatusCancelled", "ESG Values", "Canvassing_Data", 205, 1);
 		WriteExcel.WriteCopiedData("Canvassing", "Verify_Lead_Number", "ESG Values", "Canvassing_Data", 206, 1);
 
@@ -380,18 +389,19 @@ public static void Create_Open_Lead() throws IOException {
 		
 		//Lead Summary Field Validation
 		test.log(LogStatus.INFO, "Validating the Data in Lead summary for the create Cancelled Lead");
-		explicitWait(3000, "Canvassing", "LeadSummaryProgram");
+		WaitForElement(300, "Canvassing", "LeadSummaryProgram");
+		//explicitWait(3000, "Canvassing", "LeadSummaryProgram");
 		SubStringData("Canvassing", "LeadSummaryProgram", 7, 21, "ESG Values", "Canvassing_Data", 128, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 34, 44, "ESG Values", "Canvassing_Data", 210, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 35, 44, "ESG Values", "Canvassing_Data", 210, 1);
 		SubStringData("Canvassing", "LeadSummaryProgram", 53, 57, "ESG Values", "Canvassing_Data", 206, 1);
 		SubStringData("Canvassing", "LeadSummaryProgram", 69, 78, "ESG Values", "Canvassing_Data", 212, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 100, 120, "ESG Values", "Canvassing_Data", 213, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 127, 131, "ESG Values", "Canvassing_Data", 214, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 132, 156, "ESG Values", "Canvassing_Data", 215, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 169, 179, "ESG Values", "Canvassing_Data", 216, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 187, 201, "ESG Values", "Canvassing_Data", 217, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 210, 216, "ESG Values", "Canvassing_Data", 218, 1);
-		SubStringData("Canvassing", "LeadSummaryProgram", 229, 232, "ESG Values", "Canvassing_Data", 219, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 99, 119, "ESG Values", "Canvassing_Data", 213, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 126, 130, "ESG Values", "Canvassing_Data", 214, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 131, 155, "ESG Values", "Canvassing_Data", 215, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 168, 178, "ESG Values", "Canvassing_Data", 216, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 186, 200, "ESG Values", "Canvassing_Data", 217, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 209, 215, "ESG Values", "Canvassing_Data", 218, 1);
+		SubStringData("Canvassing", "LeadSummaryProgram", 228, 231, "ESG Values", "Canvassing_Data", 219, 1);
 		
 		//Verify the Lead Detail Page
 		test.log(LogStatus.INFO, "Validating the Data in Lead List for the create Cancelled Lead");
@@ -628,7 +638,8 @@ public static void Create_Open_Lead() throws IOException {
 				VerifyElementForExistingValueWithText("Canvassing", "VerifyAccount3CustomerPage3", "ESG Values", "Canvassing_Data", 299, 1);
 				VerifyElementForExistingValueWithText("Canvassing", "VerifyAccountStatus3CustomerPage3", "ESG Values", "Canvassing_Data", 300, 1);
 				clickWebelement("Canvassing", "CopyButton");
-				explicitWait(3000, "Canvassing", "Name_Export_Module");
+				WaitForElement(300, "Canvassing", "Name_Export_Module");
+				//explicitWait(3000, "Canvassing", "Name_Export_Module");
 				VerifyElementForExistingValueWithAttribute("Canvassing", "Name_Export_Module", "ESG Values", "Canvassing_Data", 262, 1);
 				VerifyElementForExistingValueWithText("Canvassing", "Program_Export_Module", "ESG Values", "Canvassing_Data", 263, 1);
 				VerifyElementForExistingValueWithText("Canvassing", "Lead_Source_Export_Module", "ESG Values", "Canvassing_Data", 264, 1);
@@ -647,8 +658,11 @@ public static void Create_Open_Lead() throws IOException {
 				Verify_Button_Disabled("Canvassing", "CopyButton", "Copy Button is Disabled", "Copy Button is Enabled");
 				ActiveDate();
 				enterTextboxValue("Canvassing", "ExpirationDate", "ESG Values", "Canvassing_Data", 269, 1);
-				clickonSave();
-				explicitWait(3000, "Canvassing", "DeleteButton");
+				
+				HandleErrorCodeOnSave("helper", "SaveButton", "");
+				//clickonSave();
+				WaitForElement(300, "Canvassing", "DeleteButton");
+				//explicitWait(3000, "Canvassing", "DeleteButton");
 				Verify_Button_Enabled("Canvassing", "DeleteButton", "Delete Button is Enabled", "Delete Button is Disabled");
 				Verify_Button_Enabled("Canvassing", "ExportToExcelButton", "Export Button is Enabled", "Export Button is Disabled");
 				Verify_Button_Enabled("Canvassing", "CustomerSearchButtonValidadtion", "Customer Search Button is Enabled", "Customer Search Button is Disabled");
@@ -673,10 +687,7 @@ public static void Create_Open_Lead() throws IOException {
 				VerifyElementForExistingValueWithText("Canvassing", "VerifyNewCanvassingListCustomersWithNoLeads", "ESG Values", "Canvassing_Data", 310, 1);
 				WriteExcel.WriteCopiedData("Canvassing", "VerifyNewCanvassingListActiveDate", "ESG Values", "Canvassing_Data", 311, 1);
 				VerifyElementForExistingValueWithText("Canvassing", "VerifyNewCanvassingListActiveDate", "ESG Values", "Canvassing_Data", 311, 1);
-				VerifyElementForExistingValueWithText("Canvassing", "VerifyNewCanvassingListExpirationDate", "ESG Values", "Canvassing_Data", 313, 1);
-				
-				
-				
+				VerifyElementForExistingValueWithText("Canvassing", "VerifyNewCanvassingListExpirationDate", "ESG Values", "Canvassing_Data", 313, 1);	
 	}
 	
 	}

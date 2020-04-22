@@ -24,7 +24,7 @@ public class RNCRegressionExecutableClass extends RNCRegressionTestClass {
 		test = Report.startTest("LoginPage");
 		login("helper", "BaseURL", 1, 0, 1, 1);
 	}
-	@Test(priority = 2)
+/*	@Test(priority = 2)
 	public static void PositiveBasicFlow() {
 		test = Report.startTest("Positive Basic Flow");
 		Enrollment();
@@ -39,7 +39,7 @@ public class RNCRegressionExecutableClass extends RNCRegressionTestClass {
 		QAreviewMethod2();
 		NonVerifiedInitiatePaymentMethod2();
 		CloseMethod2();
-	}@Test(priority = 3)
+	}*//*@Test(priority = 3)
 	public static void PastPricing() {
 		test = Report.startTest("Past Pricing");
 		Enrollment();
@@ -50,7 +50,7 @@ public class RNCRegressionExecutableClass extends RNCRegressionTestClass {
 		PastPricingQAreviewMethod();
 		PastPricingInitiatePaymentMethod();
 		CloseMethod();
-	}
+	}*/
 	@Test(priority = 4)
 	public static void ChangingOrientation() {
 		test = Report.startTest("Changing Orientation - Set Orientation on Install, Change on Inspection");
@@ -62,7 +62,9 @@ public class RNCRegressionExecutableClass extends RNCRegressionTestClass {
 		QAreviewMethod();
 		ChangingOrientationInitiatePaymentMethod();
 		CloseMethod();
-	}@Test(priority = 5)
+	}
+	
+	/*@Test(priority = 5)
 	public static void NonVerifiedLot() {
 		test = Report.startTest("Non Verified Lot");
 		Enrollment();
@@ -77,7 +79,7 @@ public class RNCRegressionExecutableClass extends RNCRegressionTestClass {
 		QAreviewMethod2();
 		NonVerifiedInitiatePaymentMethod2();
 		CloseMethod2();
-	}	
+	}	*/
 	@AfterMethod
 	 public void getResult(ITestResult result) throws IOException
 	    {

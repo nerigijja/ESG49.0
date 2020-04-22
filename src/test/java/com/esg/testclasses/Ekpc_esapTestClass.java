@@ -9,17 +9,16 @@ public class Ekpc_esapTestClass extends HelperClass{
 		ClickByActionClass("Ekpc_Esap", "MainMenu", "ESG Values", "Ekpc_Esap", 1, 1);
 		clickWebelement("Ekpc_Esap", "NewEnrollment");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "NewEnrollmentWizard", "ESG Values", "Ekpc_Esap", 5, 2);
-		
 		selectDropdown("Ekpc_Esap", "SelectProgram","", "ESG Values", "Ekpc_Esap", 2, 1);
-		explicitWaitForClickable(3000, "Ekpc_Esap", "NextButton");
+		WaitForElement(3000, "Ekpc_Esap", "NextButton");
 		clickWebelement("Ekpc_Esap", "NextButton");
 		enterTextboxValue("Ekpc_Esap", "AccountNumber", "ESG Values", "Ekpc_Esap", 3, 1);
-		explicitWaitForClickable(3000, "Ekpc_Esap", "Go");
+		WaitForElement(3000, "Ekpc_Esap", "Go");
 		clickWebelement("Ekpc_Esap", "Go");
 		validationWithWebelement("Ekpc_Esap", "SearchTypeValidation");
-		explicitWaitForClickable(3000, "Ekpc_Esap", "Customer");
+		WaitForElement(3000, "Ekpc_Esap", "Customer");
 		clickWebelement("Ekpc_Esap", "Customer");
-		explicitWaitForClickable(2000, "Ekpc_Esap", "NextButton");
+		WaitForElement(2000, "Ekpc_Esap", "NextButton");
 		clickWebelement("Ekpc_Esap", "NextButton");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "EnrollemtApplication", "ESG Values", "Ekpc_Esap", 5, 5);
 		
@@ -31,7 +30,9 @@ public class Ekpc_esapTestClass extends HelperClass{
 		scrollToElement("Ekpc_Esap", "TradeAllies");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "Owenelectric", "ESG Values", "Ekpc_Esap", 6, 5);
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "Arca", "ESG Values", "Ekpc_Esap", 7, 5);
-		clickonSave();
+		
+		HandleErrorCodeOnSave("helper", "SaveButton", "");
+	//	clickonSave();
 		selectMeasures();
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "Measuresubtab", "ESG Values", "Ekpc_Esap", 8, 5);
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "lostrevenue", "ESG Values", "Ekpc_Esap", 9, 5);
@@ -42,10 +43,10 @@ public class Ekpc_esapTestClass extends HelperClass{
 		clickWebelement("Ekpc_Esap", "AddMeasure");
 		explicitWait(3000, "Ekpc_Esap", "AddMeasuredialoguebox");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "AddMeasuredialoguebox", "ESG Values", "Ekpc_Esap", 11, 5);
-		explicitWaitForClickable(2000, "Ekpc_Esap", "Ekpcclotheswasher");
+		WaitForElement(2000, "Ekpc_Esap", "Ekpcclotheswasher");
 		clickWebelement("Ekpc_Esap", "Ekpcclotheswasher");
 		clickWebelement("Ekpc_Esap", "Ekpcdishwasher");
-		explicitWaitForClickable(2000, "Ekpc_Esap", "Savebutton");
+		WaitForElement(2000, "Ekpc_Esap", "Savebutton");
 		clickWebelement("Ekpc_Esap", "Savebutton");
 		threadWait(3000);
 		clickWebelement("Ekpc_Esap", "MeasureName");
@@ -64,7 +65,8 @@ public class Ekpc_esapTestClass extends HelperClass{
 		enterTextboxValue("Ekpc_Esap", "EkpcdishwasherModel", "ESG Values", "Ekpc_Esap", 10, 1);
 		enterTextboxValue("Ekpc_Esap", "EkpcdishwasherNumber", "ESG Values", "Ekpc_Esap", 11, 1);
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "GrandTotal", "ESG Values", "Ekpc_Esap", 14, 5);
-		clickonSave();
+		HandleErrorCodeOnSave("helper", "SaveButton", "");
+	//	clickonSave();
 		
 		//Validation Points
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "IncentiveValidationClothesWasher", "ESG Values", "Ekpc_Esap", 17, 5);
@@ -88,7 +90,7 @@ public class Ekpc_esapTestClass extends HelperClass{
 	public static void ApplicationStatus() {
 		explicitWait(300, "Ekpc_Esap", "ApplicationStatus");
 		VerifyElementForExistingValueWithText("Ekpc_Esap", "ApplicationStatus", "ESG Values", "Ekpc_Esap", 23, 5);
-		explicitWaitForClickable(300, "Ekpc_Esap", "ApplicationLink");
+		WaitForElement(300, "Ekpc_Esap", "ApplicationLink");
 		clickWebelement("Ekpc_Esap", "ApplicationLink");
 		clickonProcess();
 		explicitWait(300, "Ekpc_Esap", "ApplicationStatus");

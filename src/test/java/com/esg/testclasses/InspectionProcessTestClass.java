@@ -15,7 +15,7 @@ public class InspectionProcessTestClass extends HelperClass {
 		public static void Enrollment() {
 			ClickByActionClass("InspectionProcess", "MainMenu", "ESG Values", "Inspection Process", 1, 1);
 			clickWebelement("InspectionProcess", "NewButton");
-			selectDropdownByVisibleText("InspectionProcess", "SelectProgram", "ESG Values", "Inspection Process", 2, 1);
+			selectDropdown("InspectionProcess", "SelectProgram","", "ESG Values", "Inspection Process", 2, 1);
 			threadWait(2500);
 			clickWebelement("InspectionProcess", "NextButton");
 			enterTextboxValue("InspectionProcess", "SearchType", "ESG Values", "Monitor", 3, 1);
@@ -26,8 +26,8 @@ public class InspectionProcessTestClass extends HelperClass {
 		public static void InspectionCGIModule() {
 			//CGI Process
 			scrollToElement("InspectionProcess", "BuldingType");
-			selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-			selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+			selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+			selectDropdown("InspectionProcess", "OccupancyStatus", "","ESG Values", "Inspection Process", 5, 1);
 			scrollToElement("InspectionProcess", "Save");
 			clickWebelement("InspectionProcess", "Save");
 			threadWait(2500);
@@ -102,8 +102,8 @@ public class InspectionProcessTestClass extends HelperClass {
 		public static void InspectionRefusedModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -178,8 +178,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void InspectionCancelModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -258,8 +258,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void CorrectionCGIModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -317,7 +317,7 @@ public class InspectionProcessTestClass extends HelperClass {
 				clickWebelement("InspectionProcess", "FailCode");
 				enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 11, 1);
 				threadWait(2500);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 				clickWebelement("InspectionProcess", "OutcomeCGI");
 				selectActualReviewDate();
 				clickonProcess();
@@ -343,8 +343,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void CorrectionRefusedModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -402,7 +402,7 @@ public class InspectionProcessTestClass extends HelperClass {
 				clickWebelement("InspectionProcess", "FailCode");
 				enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 11, 1);
 				threadWait(2500);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 				clickWebelement("InspectionProcess", "OutcomeRefused");
 				selectActualReviewDate();
 				clickonProcess();
@@ -428,8 +428,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void CorrectionCancelModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType", "","ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus", "","ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -487,7 +487,7 @@ public class InspectionProcessTestClass extends HelperClass {
 				clickWebelement("InspectionProcess", "FailCode");
 				enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 11, 1);
 				threadWait(2500);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 				clickWebelement("InspectionProcess", "OutComeCancel");
 				selectActualReviewDate();
 				clickonProcess();
@@ -513,8 +513,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void CorrectionNotCompletedModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -573,7 +573,7 @@ public class InspectionProcessTestClass extends HelperClass {
 				threadWait(2500);
 				clickWebelement("InspectionProcess", "FailCodeTest1");
 				enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 13, 1);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 				selectActualReviewDate();
 				clickonProcess();
 				threadWait(2500);
@@ -601,8 +601,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void ReInspectionCGIModule() {
 				Enrollment();
 				scrollToElement("InspectionProcess", "BuldingType");
-				selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-				selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+				selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+				selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 				scrollToElement("InspectionProcess", "Save");
 				clickWebelement("InspectionProcess", "Save");
 				threadWait(2500);
@@ -660,13 +660,13 @@ public class InspectionProcessTestClass extends HelperClass {
 				clickWebelement("InspectionProcess", "FailCode");
 				enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 13, 1);
 				threadWait(2500);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 				selectActualReviewDate();
 				clickonProcess();
 				threadWait(2500);
 				clickWebelement("InspectionProcess", "ReInspectionLink");
 				threadWait(2500);
-				selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 12, 1);
+				selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 12, 1);
 				clickWebelement("InspectionProcess", "FailCode");
 				WebElement Pass1 = driver.findElement(By.xpath("//td[11]//div[1]//div[1]//span[1]//span[1]//input[1]"));
 				WebElement Fail1 = driver.findElement(By.xpath("//td[12]//div[1]//div[1]//span[1]//span[1]//input[1]"));
@@ -715,8 +715,8 @@ public class InspectionProcessTestClass extends HelperClass {
 			public static void ReInspectionRefusedModule() {
 					Enrollment();
 					scrollToElement("InspectionProcess", "BuldingType");
-					selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-					selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+					selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+					selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 					scrollToElement("InspectionProcess", "Save");
 					clickWebelement("InspectionProcess", "Save");
 					threadWait(2500);
@@ -774,13 +774,13 @@ public class InspectionProcessTestClass extends HelperClass {
 					clickWebelement("InspectionProcess", "FailCode");
 					enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 13, 1);
 					threadWait(2500);
-					selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+					selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 					selectActualReviewDate();
 					clickonProcess();
 					threadWait(2500);
 					clickWebelement("InspectionProcess", "ReInspectionLink");
 					threadWait(2500);
-					selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 12, 1);
+					selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 12, 1);
 					clickWebelement("InspectionProcess", "FailCode");
 					WebElement Pass1 = driver.findElement(By.xpath("//td[11]//div[1]//div[1]//span[1]//span[1]//input[1]"));
 					WebElement Fail1 = driver.findElement(By.xpath("//td[12]//div[1]//div[1]//span[1]//span[1]//input[1]"));
@@ -829,8 +829,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void ReInspectionCancelModule() {
 					Enrollment();
 					scrollToElement("InspectionProcess", "BuldingType");
-					selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-					selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+					selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+					selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 					scrollToElement("InspectionProcess", "Save");
 					clickWebelement("InspectionProcess", "Save");
 					threadWait(2500);
@@ -888,13 +888,13 @@ public class InspectionProcessTestClass extends HelperClass {
 					clickWebelement("InspectionProcess", "FailCode");
 					enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 13, 1);
 					threadWait(2500);
-					selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+					selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 					selectActualReviewDate();
 					clickonProcess();
 					threadWait(2500);
 					clickWebelement("InspectionProcess", "ReInspectionLink");
 					threadWait(2500);
-					selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 12, 1);
+					selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 12, 1);
 					clickWebelement("InspectionProcess", "FailCode");
 					WebElement Pass1 = driver.findElement(By.xpath("//td[11]//div[1]//div[1]//span[1]//span[1]//input[1]"));
 					WebElement Fail1 = driver.findElement(By.xpath("//td[12]//div[1]//div[1]//span[1]//span[1]//input[1]"));
@@ -942,8 +942,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void CorrectionStepDisabledAllFail() {
 						Enrollment();
 						scrollToElement("InspectionProcess", "BuldingType");
-						selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-						selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+						selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+						selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 						scrollToElement("InspectionProcess", "Save");
 						clickWebelement("InspectionProcess", "Save");
 						threadWait(2500);
@@ -1014,8 +1014,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void CorrectionStepDisabledPartialFail() {
 					Enrollment();
 					scrollToElement("InspectionProcess", "BuldingType");
-					selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-					selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+					selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+					selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 					scrollToElement("InspectionProcess", "Save");
 					clickWebelement("InspectionProcess", "Save");
 					threadWait(2500);
@@ -1086,8 +1086,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void FailCodeNoCorrectionRequired() {
 					Enrollment();
 					scrollToElement("InspectionProcess", "BuldingType");
-					selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-					selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+					selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+					selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 					scrollToElement("InspectionProcess", "Save");
 					clickWebelement("InspectionProcess", "Save");
 					threadWait(2500);
@@ -1163,8 +1163,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void PositiveCorrectionAndReInspection() {
 						Enrollment();
 						scrollToElement("InspectionProcess", "BuldingType");
-						selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-						selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+						selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+						selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 						scrollToElement("InspectionProcess", "Save");
 						clickWebelement("InspectionProcess", "Save");
 						threadWait(2500);
@@ -1222,13 +1222,13 @@ public class InspectionProcessTestClass extends HelperClass {
 						clickWebelement("InspectionProcess", "FailCode");
 						enterTextboxValue("InspectionProcess", "CorrectionInfo", "ESG Values", "Inspection Process", 13, 1);
 						threadWait(2500);
-						selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 10, 1);
+						selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 10, 1);
 						selectActualReviewDate();
 						clickonProcess();
 						threadWait(2500);
 						clickWebelement("InspectionProcess", "ReInspectionLink");
 						threadWait(2500);
-						selectDropdownByVisibleText("InspectionProcess", "EmployeeName", "ESG Values", "Inspection Process", 12, 1);
+						selectDropdown("InspectionProcess", "EmployeeName","", "ESG Values", "Inspection Process", 12, 1);
 						clickWebelement("InspectionProcess", "FailCode");
 						WebElement Pass1 = driver.findElement(By.xpath("//td[11]//div[1]//div[1]//span[1]//span[1]//input[1]"));
 						WebElement Fail1 = driver.findElement(By.xpath("//td[12]//div[1]//div[1]//span[1]//span[1]//input[1]"));
@@ -1279,8 +1279,8 @@ public class InspectionProcessTestClass extends HelperClass {
 				public static void PositiveInspectionNoCorrectionNeeded() {
 					Enrollment();
 					scrollToElement("InspectionProcess", "BuldingType");
-					selectDropdownByVisibleText("InspectionProcess", "BuldingType", "ESG Values", "Inspection Process", 4, 1);
-					selectDropdownByVisibleText("InspectionProcess", "OccupancyStatus", "ESG Values", "Inspection Process", 5, 1);
+					selectDropdown("InspectionProcess", "BuldingType","", "ESG Values", "Inspection Process", 4, 1);
+					selectDropdown("InspectionProcess", "OccupancyStatus","", "ESG Values", "Inspection Process", 5, 1);
 					scrollToElement("InspectionProcess", "Save");
 					clickWebelement("InspectionProcess", "Save");
 					threadWait(2500);

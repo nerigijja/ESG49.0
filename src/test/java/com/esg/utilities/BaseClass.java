@@ -79,7 +79,6 @@ public class BaseClass
 			String TextValue = GetText(filename, webelement);
 			String AttributeValue =GetAttribute(filename, webelement);
 			String CssValue =GetCssValue(filename, webelement);
-			
 			String Value = TextValue+AttributeValue+CssValue;
 			System.out.println(Value);
 			if (Value.equalsIgnoreCase("")) {
@@ -120,15 +119,16 @@ public class BaseClass
 		
 		try {
 			System.out.println("Enter First Try  Block");
+			threadWait(2500);
 				Select select=new Select(Xpath(filename,webelement));
 				select.selectByVisibleText(ReadExcel.readData(excelfname, sheet, row, column));	
 				
 		} catch (Exception e) {
 			System.out.println("Enter First Catch  Block");
-			
-				System.out.println("Enter Second Catch  Block");
-		    	ClickWebelementByActionClass(filename, actionLocator);
-				enterTextboxValue(filename, webelement, excelfname, sheet, row, column);
+			threadWait(2500);
+		    	ClickWebelementByActionClass(filename, webelement);
+				enterTextboxValue(filename, actionLocator, excelfname, sheet, row, column);
+				threadWait(1000);
 				Enter(KeyEvent.VK_ENTER);
 			   
 			}
@@ -145,15 +145,85 @@ public class BaseClass
 		return Xpath(filename,webelement).getAttribute("value");
 		
 	}
-
+	/*public static void selectDropdownByVisibleText(String filename,String webelement,String excelfname,String sheet,int row,int column) 
+	{
+		Select select=new Select(Xpath(filename,webelement));
+		select.selectByVisibleText(ReadExcel.readData(excelfname, sheet, row, column));	      		
+	}*/
 public static String GetCssValue(String filename,String webelement) {
 	threadWait(3000);
 	return Xpath(filename,webelement).getCssValue("value");
 }
-	public static void clickWebelement(String filename,String webelement)
+	/*public static void clickWebelement(String filename,String webelement)
 	{
 		Xpath(filename,webelement).click();	
+	}*/
+
+public static void clickWebelement(String filename,String webelement)
+{
+	threadWait(2500);
+	
+	try {
+		Xpath(filename,webelement).click();	
+	} catch (Exception e) {
+		try {
+			Xpath(filename,webelement).sendKeys(Keys.ENTER);
+		} catch (Exception e2) {
+			try {
+				WebElement complexelement=Xpath(filename, webelement);
+				Actions act=new Actions(driver);
+				act.click(complexelement).build().perform();
+			} catch (Exception e3) {
+				try {
+					WebElement complexelement=Xpath(filename, webelement);
+					js.executeScript("arguments[0].click();", complexelement);
+					} finally {
+						if (Xpath(filename,webelement).isDisplayed() && Xpath(filename,webelement).isEnabled()) {
+							WebElement complexelement=Xpath(filename, webelement);
+							Actions act=new Actions(driver);
+							System.out.println("Clicked successfully still the web-element exists in the webpage");
+							test.log(LogStatus.WARNING, "Clicked successfully still the web-element exists in the webpage");
+							act.click(complexelement).build().perform();
+						}else {
+							System.out.println("Referenced Webelement is not found in the Webpage");	
+						}
+												
+					}		
+				}
+			}
+		}
 	}
+
+public static void WaitForElement(int time,String filename,String weblement) {
+	try {
+		//Check Presence of Element
+		new WebDriverWait(driver, time).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ReadConfig.ReadFile(filename, weblement))));	
+		System.out.println("Element Present");
+	} catch (Exception e) {
+		try {
+			//Check Visibility
+			new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ReadConfig.ReadFile(filename, weblement))));	
+			System.out.println("Element Visible");
+		} catch (Exception e1) {
+			try {
+				//Check Clickable or not
+				new WebDriverWait(driver, time).until(ExpectedConditions.elementToBeClickable(By.xpath(ReadConfig.ReadFile(filename, weblement))));	
+				System.out.println("Element Clickable");
+			} finally {
+						test.log(LogStatus.WARNING, "Wait for the web-element more than the expected time");
+						System.out.println("Takes longer time");
+						threadWait(5000);
+				
+			          }
+		   }
+	    }
+	
+	
+    }
+
+
+
+
 	public static void clearWebelement(String filename,String webelement)
 	{
 		Xpath(filename,webelement).clear();
@@ -342,6 +412,7 @@ public static void Validation(String Text) {
 if(driver.getPageSource().contains(Text))
 {
     System.out.println("Validation is passed:" + Text);
+    test.log(LogStatus.PASS,"Validated Successfully for the element = " + Text );
 }
 
 else
@@ -388,14 +459,11 @@ public static void HandleErrorCodeOnSave(String filename, String Webelement, Str
 	try {
 		
 		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-		}
-		scrollToElement(filename, Webelement);
-		clickWebelement(filename, Webelement);
-		try {
 			Thread.sleep(3000);
+			scrollToElement(filename, Webelement);
+			clickWebelement(filename, Webelement);
 		} catch (InterruptedException e) {
+			System.out.println("First block");
 		}
 		
 	} catch (Exception e) {
@@ -428,6 +496,51 @@ public static void HandleErrorCodeOnSave(String filename, String Webelement, Str
 		
 	}
 }
+		}
+	}
+}
+		public static void HandleErrorCodeOnProcess(String filename, String Webelement, String FrameWebElement) {
+			
+			try {
+				
+				try {
+					Thread.sleep(3000);
+					scrollToElement(filename, Webelement);
+					clickWebelement(filename, Webelement);
+				} catch (InterruptedException e) {
+					System.out.println("First block");
+				}
+				
+			} catch (Exception e) {
+				System.out.println("Waiting for Alert Message");
+				
+				try {
+				driver.switchTo().alert().accept();
+				} catch (NoAlertPresentException e1) {
+				try {
+					WebDriverWait wait1 = new WebDriverWait(driver, 10);
+					wait1.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(ReadConfig.ReadFile(filename, FrameWebElement)));
+					driver.switchTo().frame(ReadConfig.ReadFile(filename, FrameWebElement));
+					driver.switchTo().alert().accept();
+				} catch (WebDriverException e2) {
+					if (driver.getPageSource().contains("Error Code")) {
+						Enter(KeyEvent.VK_F5);
+						try {
+							Thread.sleep(4000);
+						} catch (InterruptedException e3) {
+						}
+						scrollToElement("helper", "SaveButton");
+						clickWebelement("helper", "SaveButton");
+						try {
+							Thread.sleep(3000);
+						} catch (InterruptedException e4) {
+						}
+						
+				System.out.println("An exceptional case");
+				
+				
+			}
+		}
 		}
 		
 	}

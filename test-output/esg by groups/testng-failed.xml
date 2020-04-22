@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [esg by groups]">
-  <test verbose="2" name="GRP-AHRI_Furnace">
+  <test verbose="2" name="GRP-Energy_Star">
     <groups>
       <run>
-        <include name="AHRI_Furnace"/>
+        <include name="Energy_Star"/>
       </run>
     </groups>
     <classes>
       <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass"/>
     </classes>
-  </test> <!-- GRP-AHRI_Furnace -->
+  </test> <!-- GRP-Energy_Star -->
+  <test name="GRP-Energy_Star(failed)">
+    <groups>
+      <run>
+        <include name="Energy_Star"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass">
+        <methods>
+          <include name="CPL_Energy_Star_ClothesWasher_OnlineApplication_Step_2"/>
+          <include name="CPL_Energy_Star_ClothesWasher_OnlineApplication_Step_4"/>
+          <include name="CPL_Energy_Star_CeilingFan_OnlineApplication_Step_4"/>
+          <include name="CPL_Energy_Star_ClothesWasher_OnlineApplication_Step_1"/>
+          <include name="CPL_Energy_Star_ClothesWasher_OnlineApplication_Step_3"/>
+          <include name="CPL_Energy_Star_ClothesDryer_Verify_ApplicationWorkflowStep"/>
+          <include name="getStatusWithScreenshot"/>
+          <include name="Initialization"/>
+          <include name="CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep"/>
+          <include name="CPL_Energy_Star_CeilingFan_Verify_ApplicationWorkflowStep_After_Process"/>
+          <include name="CPL_Energy_Star_ClothesWasher_Login"/>
+          <include name="CPL_Energy_Star_ClothesDryer_OnlineApplication_Step_1"/>
+          <include name="CPL_Energy_Star_ClothesDryer_OnlineApplication_Step_3"/>
+          <include name="CPL_Energy_Star_ClothesDryer_OnlineApplication_VerifyEnrollment"/>
+          <include name="CPL_Energy_Star_ClothesWasher_OnlineApplication_VerifyEnrollment"/>
+          <include name="CPL_Energy_Star_CeilingFan_OnlineApplication_VerifyEnrollment"/>
+          <include name="CPL_Energy_Star_ClothesDryer_OnlineApplication_Step_2"/>
+          <include name="CPL_Energy_Star_ClothesDryer_Login"/>
+          <include name="CPL_Energy_Star_ClothesDryer_OnlineApplication_Step_4"/>
+          <include name="CPL_Energy_Star_ClothesWasher_Verify_ApplicationWorkflowStep_After_Process"/>
+          <include name="CPL_Energy_Star_CeilingFan_OnlineApplication_Step_3"/>
+          <include name="CPL_Energy_Star_ClothesDryer_Verify_ApplicationWorkflowStep_After_Process"/>
+          <include name="CPL_Energy_Star_ClothesWasher_Verify_ApplicationWorkflowStep"/>
+        </methods>
+      </class> <!-- com.esg.executableclasses.Certified_Product_List_CPL_ExecutableClass -->
+    </classes>
+  </test> <!-- GRP-Energy_Star(failed) -->
 </suite> <!-- Failed suite [esg by groups] -->

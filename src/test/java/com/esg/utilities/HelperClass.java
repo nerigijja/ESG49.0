@@ -1,5 +1,6 @@
 package com.esg.utilities;
 
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,8 +31,9 @@ public class HelperClass extends ExtentReport
 		  enterTextboxValue("helper", "Username_Xpath", "LoginData", "Login", UsernameRow, UsernameColumn);
 		  enterTextboxValue("helper", "Password_Xpath", "LoginData", "Login", PasswordRow, PasswordColumn);
 		  clickWebelement("helper","Login_Xpath");
-		  defineLogs("Logout", "Logout", "Logout", "User was Loggedin Successfully", "User is not able to Login","helper", "Logout_Xpath");
-		  Report.endTest(test);
+		 // VerifyElementForExistingValueWithText("helper", "Logout_Xpath", "LoginData", "Login", 1, 1);
+		 // defineLogs("Logout", "Logout", "Logout", "User was Loggedin Successfully", "User is not able to Login","helper", "Logout_Xpath");
+		 // Report.endTest(test);
 	}   	
 	
 	
@@ -106,38 +108,52 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 	}
 	public static void selectActualReviewDate()
 	{
-		clickWebelement("helper", "ActualReviewDateImage");				
-		clickWebelement("helper", "SelectDate");
+		clickWebelement("helper", "ActualReviewDateImage");		
+		threadWait(3000);
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
 	public static void selectActualVisitDate()
 	{
-		clickWebelement("helper", "ActualVisitDateImage");				
-		clickWebelement("helper", "SelectDate");
+		clickWebelement("helper", "ActualVisitDateImage");		
+		threadWait(5000);
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
 	public static void selectLOIApprovedDate()
 	{
-		clickWebelement("helper", "LOIApprovedDateImage");				
-		clickWebelement("helper", "SelectDate");
+		clickWebelement("helper", "LOIApprovedDateImage");	
+		threadWait(3000);
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
 	public static void selectDueDate()
 	{
-		clickWebelement("helper", "DueDateImage");				
-		clickWebelement("helper", "SelectDate");
+		clickWebelement("helper", "DueDateImage");	
+		threadWait(3000);
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
+	
+	public static void Effective_Date()
+	{
+		clickWebelement("helper", "Effective_Date");	
+		threadWait(3000);
+		Enter(KeyEvent.VK_ENTER);
+		/*clickonSave();*/
+	}
+	
 	public static void SelectIncentiveAgreementTargetDate()
 	{
-		clickWebelement("helper", "IncentiveAgreementTargetDateImage");				
-		clickWebelement("helper", "SelectDate");
+		clickWebelement("helper", "IncentiveAgreementTargetDateImage");	
+		threadWait(3000);
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
 	public static void SelectEstimatedInstallationCompletionDate()
 	{
 		clickWebelement("helper", "EstimatedInstallationCompletionDateImage");				
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}
 	public static void selectReadyForPayment()
@@ -149,77 +165,74 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 	public static void InstallationDate() {
 		clickWebelement("helper", "InstallationDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 	}
 	public static void CustomerSignDate() {
 		clickWebelement("helper", "InstallationDate");
 		threadWait(2500); 
-		clickWebelement("helper", "CustomerSignDate");
+		Enter(KeyEvent.VK_ENTER);
 	}
 	public static void ApplicationInstallationDate() {
 		clickWebelement("helper", "ApplicationInstallationDate");
-		threadWait(2500);
-		clickWebelement("helper", "ApplicationDate");
+		Enter(KeyEvent.VK_ENTER);
 		clickonSave();
 	}  
 	public static void EICompletedDate() {
 		clickWebelement("helper", "EICompleteDate");
-		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
-		
+		Enter(KeyEvent.VK_ENTER);	
 	}
 	public static void EIConstructionStartDate() {
 		clickWebelement("helper", "ECStartDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 	}
 	public static void AgreementSignDateApplicant() {
 		clickWebelement("helper", "AgreementSignDateApplicant");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 }	
 	public static void AgreementSignDateManagement() {
 		clickWebelement("helper", "AgreementSignDateManagement");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	
 	public static void AppointmentDate() {
 		clickWebelement("helper", "AppointmentDate");
-		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		threadWait(6000);
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	public static void ContactDate() {
 		clickWebelement("helper", "ContactDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	public static void CanvassingListFromDate() {
 		clickWebelement("helper", "CanvassingListFromDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	
 	public static void SchedulingDate() {
 		clickWebelement("helper", "SchedulingDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	public static void ActiveDate() {
 		clickWebelement("helper", "ActiveDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	public static void ExpirationDate() {
 		clickWebelement("helper", "ExpirationDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectDate");
+		Enter(KeyEvent.VK_ENTER);
 		
 	}
 	
@@ -240,12 +253,12 @@ public static void login2( int UsernameRow,int UsernameColumn,int PasswordRow,in
 		public static void PurchaseDate() {
 		clickWebelement("helper", "PurchaseDate");
 		threadWait(2500);
-		clickWebelement("helper", "SelectPurchaseDate");
+		Enter(KeyEvent.VK_ENTER);
 	}
 		public static void InstallationDate2() {
 			clickWebelement("helper", "InstallationDate2");
 			threadWait(2500);
-			clickWebelement("helper", "SelectDate");
+			Enter(KeyEvent.VK_ENTER);;
 		}
 		
 		public static void Setup(String Browsername) {

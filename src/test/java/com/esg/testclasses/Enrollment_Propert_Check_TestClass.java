@@ -9,7 +9,7 @@ public class Enrollment_Propert_Check_TestClass extends HelperClass {
 	public static void CreateNewEnrollment() {
 		ClickByActionClass("EnrollmentPropertyCheck", "MainMenu", "ESG Values", "Enrollment_Property_Check", 1, 1);
 		clickWebelement("EnrollmentPropertyCheck", "NewButton");
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "SelectProgram", "ESG Values", "Enrollment_Property_Check", 2, 1);
+		selectDropdown("EnrollmentPropertyCheck", "SelectProgram","", "ESG Values", "Enrollment_Property_Check", 2, 1);
 		clickWebelement("EnrollmentPropertyCheck", "NextButton");
 		enterTextboxValue("EnrollmentPropertyCheck", "AccountNumber", "ESG Values", "Enrollment_Property_Check", 3, 1);
 		clickWebelement("EnrollmentPropertyCheck", "SearchGo");
@@ -98,15 +98,15 @@ public class Enrollment_Propert_Check_TestClass extends HelperClass {
 	}
 	public static void ApplicationFillUp() {
 		scrollToElement("EnrollmentPropertyCheck", "ProcessTradeAlly");
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "ProcessTradeAlly", "ESG Values", "Enrollment_Property_Check", 70, 1);
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "ProcessEmployee", "ESG Values", "Enrollment_Property_Check", 71, 1);
+		selectDropdown("EnrollmentPropertyCheck", "ProcessTradeAlly","", "ESG Values", "Enrollment_Property_Check", 70, 1);
+		selectDropdown("EnrollmentPropertyCheck", "ProcessEmployee","", "ESG Values", "Enrollment_Property_Check", 71, 1);
 		scrollToElement("EnrollmentPropertyCheck", "BuildingType");
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "BuildingType1", "ESG Values", "Enrollment_Property_Check", 72, 1);
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "OccupancyStatus1", "ESG Values", "Enrollment_Property_Check", 73, 1);
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "AccessToRooms", "ESG Values", "Enrollment_Property_Check", 74, 1);
+		selectDropdown("EnrollmentPropertyCheck", "BuildingType1","", "ESG Values", "Enrollment_Property_Check", 72, 1);
+		selectDropdown("EnrollmentPropertyCheck", "OccupancyStatus1","", "ESG Values", "Enrollment_Property_Check", 73, 1);
+		selectDropdown("EnrollmentPropertyCheck", "AccessToRooms","", "ESG Values", "Enrollment_Property_Check", 74, 1);
 		scrollToElement("EnrollmentPropertyCheck", "TaxStatus");
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "TaxStatus", "ESG Values", "Enrollment_Property_Check", 75, 1);
-		selectDropdownByVisibleText("EnrollmentPropertyCheck", "TaxIDType", "ESG Values", "Enrollment_Property_Check", 76, 1);
+		selectDropdown("EnrollmentPropertyCheck", "TaxStatus","", "ESG Values", "Enrollment_Property_Check", 75, 1);
+		selectDropdown("EnrollmentPropertyCheck", "TaxIDType","", "ESG Values", "Enrollment_Property_Check", 76, 1);
 		clickonSave();
 		test.log(LogStatus.INFO, "Application Details are added successfully");
 	}

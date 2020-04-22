@@ -37,9 +37,11 @@ public static void login(int UsernameRow,int UsernameColumn,int PasswordRow,int 
 public static void Enrollment() {
 	ClickByActionClass("Configuration", "MainMenu", "ESG Values", "Program Level", 9, 1);
 	clickWebelement("Configuration", "NewEnrollment");
-	threadWait(2500);
+	WaitForElement(2500, "ProgramLevel", "SelectProgram");
+//	threadWait(2500);
 	enterTextboxValue("ProgramLevel", "SelectProgram", "ESG Values", "Program Level", 10, 1);
-	threadWait(5000);
+	WaitForElement(2500, "ProgramLevel", "NextButton");
+	//threadWait(5000);
 	clickWebelement("ProgramLevel", "NextButton");
 }
 
@@ -51,14 +53,16 @@ public static void Enrollment() {
 		ClickByActionClass("Configuration", "MainMenu", "ESG Values", "Program Level", 9, 1);
 		clickWebelement("Configuration", "NewEnrollment");
 		enterTextboxValue("ProgramLevel", "SelectProgram", "Esg Values", "Program Level", 21, 1);
-		threadWait(2000);
+		//threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "NextButton");
 		clickWebelement("ProgramLevel", "NextButton");
 	}
 	
 		public static void Online() {
 			
 		OpenOnlineApplication();
-		threadWait(5000);
+		//threadWait(5000);
+		WaitForElement(2500, "ProgramLevel", "AccountHolder");
 		clickWebelement("ProgramLevel", "AccountHolder");
 		enterTextboxValue("ProgramLevel", "AccountNumber", "Esg Values", "Program Level", 2, 1);
 		enterLogs("Account number: 90000710001 is entered successfully");
@@ -82,12 +86,11 @@ public static void Enrollment() {
 		enterLogs("Account number: 90000730001 is entered successfully");
 		clickWebelement("ProgramLevel", "Next");
 		defineLogs("Warning", "Account Status (INACTIVE) is not eligible for this program", "Account Status (INACTIVE) is not eligible for this program", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame");
-		clickWebelement("ProgramLevel", "Alert");
-		Clear("ProgramLevel", "AccountNumber");
-		
-		//clickWebelement("ProgramLevel", "BackButton");
-		//Validation("MultiFamily");
+		//clickWebelement("ProgramLevel", "Alert");
 		//Clear("ProgramLevel", "AccountNumber");
+		clickWebelement("ProgramLevel", "BackButton");
+		Validation("MultiFamily");
+		Clear("ProgramLevel", "AccountNumber");
 
 		//Account Number = 4
 		clickWebelement("ProgramLevel", "AccountHolder");
@@ -117,9 +120,10 @@ public static void Enrollment() {
 		Enrollment();
 		threadWait(5000);
 		SwitchToFrame("ProgramLevel", "SwitchTo");
-		threadWait(5000);
+		WaitForElement(2500, "ProgramLevel", "AccountHolder");
 		clickWebelement("ProgramLevel", "AccountHolder");
-		threadWait(2500);
+		//threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNumber");
 		enterTextboxValue("ProgramLevel", "AccountNumber", "Esg Values", "Program Level", 11, 1);
 		enterLogs("Account number: 90000710001 is entered successfully");
 		clickWebelement("ProgramLevel", "Next");
@@ -142,7 +146,8 @@ public static void Enrollment() {
 			enterLogs("Account number: 90000730001 is entered successfully");
 			clickWebelement("ProgramLevel", "Next");
 			defineLogs("Warning", "This account is not eligible for this program, as it does not have any Active Electric services", "This account is not eligible for this program, as it does not have any Active Electric services", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame");
-			clickWebelement("ProgramLevel", "Alert");
+			clickWebelement("ProgramLevel", "BackButton");
+			Validation("MultiFamily");
 			Clear("ProgramLevel", "AccountNumber");
 				
 				//Application Number = 4	
@@ -189,19 +194,22 @@ public static void Enrollment() {
 		EsgLoginCustomer();
 		enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 22, 1);
 		clickWebelement("ProgramLevel", "Go");
-		threadWait(2500);
-		doubleClickWebelement("ProgramLevel", "CustomerName");
+		WaitForElement(2500, "ProgramLevel", "CustomerName");
+		clickWebelement("ProgramLevel", "CustomerName");
+		WaitForElement(2500, "ProgramLevel", "NextButton");
+		clickWebelement("Ekpc_Esap", "NextButton");
 		threadWait(5000);
 		ReadPopUp();
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountSearch");
 		Clear("ProgramLevel", "AccountSearch");
 		
 		//Account Number = 2
 		enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 23, 1);
 		clickWebelement("ProgramLevel", "Go");
-		threadWait(3000);
-		doubleClickWebelement("ProgramLevel", "AutomatedInactive");
-		captureScreen(driver, "BackendWithCustomer2");
+		WaitForElement(2500, "ProgramLevel", "AutomatedInactive");
+		clickWebelement("ProgramLevel", "AutomatedInactive");
+		WaitForElement(2500, "ProgramLevel", "NextButton");
+		clickWebelement("Ekpc_Esap", "NextButton");
 		threadWait(5000);
 		ReadPopUp();
 		Clear("ProgramLevel", "AccountSearch");
@@ -209,9 +217,10 @@ public static void Enrollment() {
 		//Account Number = 3
 		enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 24, 1);
 		clickWebelement("ProgramLevel", "Go");
-		threadWait(3000);
-		doubleClickWebelement("ProgramLevel", "AutomatedMultifamily");
-		captureScreen(driver,"BackendWithCustomer3");
+		WaitForElement(2500, "ProgramLevel", "AutomatedMultifamily");
+		clickWebelement("ProgramLevel", "AutomatedMultifamily");
+		WaitForElement(2500, "ProgramLevel", "NextButton");
+		clickWebelement("Ekpc_Esap", "NextButton");
 		threadWait(5000);
 		ReadPopUp();
 		Clear("ProgramLevel", "AccountSearch");
@@ -219,9 +228,10 @@ public static void Enrollment() {
 		//Account Number = 4
 		enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 25, 1);
 		clickWebelement("ProgramLevel", "Go");
-		threadWait(3000);
-		doubleClickWebelement("ProgramLevel", "AutomatedGasCommudity");
-		captureScreen(driver,"BackendWithCustomer4");
+		WaitForElement(2500, "ProgramLevel", "AutomatedGasCommudity");
+		clickWebelement("ProgramLevel", "AutomatedGasCommudity");
+		WaitForElement(2500, "ProgramLevel", "NextButton");
+		clickWebelement("Ekpc_Esap", "NextButton");
 		threadWait(5000);
 		ReadPopUp();
 		Clear("ProgramLevel", "AccountSearch");
@@ -229,9 +239,10 @@ public static void Enrollment() {
 		//Account Number = 5
 				enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 26, 1);
 				clickWebelement("ProgramLevel", "Go");
-				threadWait(3000);
-				doubleClickWebelement("ProgramLevel", "AutomatedOneRate");
-				captureScreen(driver,"BackendWithCustomer5");
+				WaitForElement(2500, "ProgramLevel", "AutomatedOneRate");
+				clickWebelement("ProgramLevel", "AutomatedOneRate");
+				WaitForElement(2500, "ProgramLevel", "NextButton");
+				clickWebelement("Ekpc_Esap", "NextButton");
 				threadWait(5000);
 				ReadPopUp();
 				Clear("ProgramLevel", "AccountSearch");
@@ -239,9 +250,10 @@ public static void Enrollment() {
 				//Account Number = 6
 				enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 27, 1);
 				clickWebelement("ProgramLevel", "Go");
-				threadWait(3000);
-				doubleClickWebelement("ProgramLevel", "AutomatedCom");
-				captureScreen(driver,"BackendWithCustomer6");
+				WaitForElement(2500, "ProgramLevel", "AutomatedCom");
+				clickWebelement("ProgramLevel", "AutomatedCom");
+				WaitForElement(2500, "ProgramLevel", "NextButton");
+				clickWebelement("Ekpc_Esap", "NextButton");
 				threadWait(5000);
 				ReadPopUp();
 				Clear("ProgramLevel", "AccountSearch");
@@ -249,8 +261,10 @@ public static void Enrollment() {
 				//Account Number = 7
 				enterTextboxValue("ProgramLevel", "AccountSearch", "Esg Values", "Program Level", 28, 1);
 				clickWebelement("ProgramLevel", "Go");
-				threadWait(5000);
-				doubleClickWebelement("ProgramLevel", "AutomatedComAndInd");
+				WaitForElement(2500, "ProgramLevel", "AutomatedComAndInd");
+				clickWebelement("ProgramLevel", "AutomatedComAndInd");
+				WaitForElement(2500, "ProgramLevel", "NextButton");
+				clickWebelement("Ekpc_Esap", "NextButton");
 				threadWait(5000);
 				ReadPopUp();
 				driver.quit();
@@ -263,119 +277,119 @@ public static void Enrollment() {
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame2");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(5000);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 		
 		//Account Number = 2 
 		
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 23, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 		
 		//Account Number = 3
 		
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 24, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 		
 		//Account Number = 4
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 25, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 		
 		//Account Number = 5
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 26, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 
 		//Account Number = 6
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 27, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 		
 		//Account Number = 7
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		enterTextboxValue("ProgramLevel", "AccountNmr", "Esg Values", "Program Level", 28, 1);
 		clickWebelement("ProgramLevel", "Search");
 		Validation("Would you like to overwrite the Customer Information with the selected Account?");
 		//defineLogs("Overwrite Customer", "Would you like to overwrite the Customer Information with the selected Account?", "Would you like to overwrite the Customer Information with the selected Account?", "Warning message is Validated", "Failed to validate the Warning message", "ProgramLevel", "WarningFrame1");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes");
 		clickWebelement("ProgramLevel", "Yes");
 		threadWait(2500);
 		Validation("Would you like to update the address information with the information from the premise record?");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "Yes1");
 		clickWebelement("ProgramLevel", "Yes1");
-		threadWait(2000);
+		WaitForElement(2500, "ProgramLevel", "Cancel");
 		clickWebelement("ProgramLevel", "Cancel");
-		threadWait(2500);
+		WaitForElement(2500, "ProgramLevel", "AccountNmr");
 		Clear("ProgramLevel", "AccountNmr");
 	//	CloseBrowser();
 		

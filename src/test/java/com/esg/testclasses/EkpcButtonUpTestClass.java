@@ -16,7 +16,7 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		
 		ClickByActionClass("EKPCButtonUp", "MainMenu", "ESG Values", "EKPC ButtonUp", 1, 1);
 		clickWebelement("EKPCButtonUp", "NewButton");
-		selectDropdownByVisibleText("EKPCButtonUp", "SelectProgram", "ESG Values", "EKPC ButtonUp", 2, 1);
+		selectDropdown("EKPCButtonUp", "SelectProgram","", "ESG Values", "EKPC ButtonUp", 2, 1);
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "NextButton");
 		enterTextboxValue("EKPCButtonUp", "SearchType", "ESG Values", "EKPC ButtonUp", 3, 1);
@@ -35,7 +35,8 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		threadWait(2500);
 		Enter(KeyEvent.VK_DOWN);
 		Enter(KeyEvent.VK_ENTER);
-		clickonSave();
+		HandleErrorCodeOnSave("helper", "SaveButton", "");
+		//clickonSave();
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "resolveLead");
 		clickWebelement("EKPCButtonUp", "StatusCompleted");
@@ -47,7 +48,7 @@ public class EkpcButtonUpTestClass extends HelperClass {
 	public static void NeedToBeRammed() {
 		ClickByActionClass("EKPCButtonUp", "MainMenu", "ESG Values", "EKPC ButtonUp", 11, 1);
 		clickWebelement("EKPCButtonUp", "NewButton");
-		selectDropdownByVisibleText("EKPCButtonUp", "SelectProgram","ESG Values", "EKPC ButtonUp", 2, 1);
+		selectDropdown("EKPCButtonUp", "SelectProgram","","ESG Values", "EKPC ButtonUp", 2, 1);
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "NextButton");
 		enterTextboxValue("EKPCButtonUp", "SearchType", "ESG Values", "EKPC ButtonUp", 3, 1);
@@ -67,7 +68,8 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		threadWait(5000);
 		enterTextboxValue("EKPCButtonUp", "AgeOfHome", "ESG values", "EKPC ButtonUp", 31, 1);
 		enterTextboxValue("EKPCButtonUp", "PremiseSqft", "ESG values", "EKPC ButtonUp", 32, 1);
-		clickonSave();
+		HandleErrorCodeOnSave("helper", "SaveButton", "");
+		//clickonSave();
 		threadWait(2500);
 		scrollToElement("EKPCButtonUp", "Measure");
 		clickWebelement("EKPCButtonUp", "Measure");
@@ -96,7 +98,8 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		enterTextboxValue("EKPCButtonUp", "PrimaryHVACDuctLocation", "ESG values", "EKPC ButtonUp", 18, 1);
 		enterTextboxValue("EKPCButtonUp", "SecondaryHVACDuctLocation", "ESG values", "EKPC ButtonUp", 19, 1);
 		enterTextboxValue("EKPCButtonUp", "DuctsInsulated", "ESG values", "EKPC ButtonUp", 20, 1);
-		clickWebelement("EKPCButtonUp", "BTUHCeiling");
+		threadWait(5000);
+		/*clickWebelement("EKPCButtonUp", "BTUHCeiling");*/
 		enterTextboxValue("EKPCButtonUp", "BTUHCeiling", "ESG values", "EKPC ButtonUp", 21, 1);
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "BTUHFloor");
@@ -122,7 +125,9 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		clickWebelement("EKPCButtonUp", "LostRevenue");
 		threadWait(2500);
 		clickWebelement("EKPCButtonUp", "LostRevenueCheckbox");
-		clickonSave();
+		
+		HandleErrorCodeOnSave("helper", "SaveButton","");
+		//clickonSave();
 	}
 	public static void Verification() {
 		ValidateWithElement("EKPCButtonUp", "MeasureIQtyValidation", "1", "1", "1", "Measure Quantity value is Validated", "Measure Quantity value is In Correct");
@@ -149,7 +154,9 @@ public class EkpcButtonUpTestClass extends HelperClass {
 		ValidateWithElement("EKPCButtonUp", "WorkFlowStepCostsFeeCost", "$533.03", "$533.03", "$533.03", "WorkFlow Step Fee Cost value is Validated", "WorkFlow Step Therms value is In Correct");
 		ValidateWithElement("EKPCButtonUp", "WorkFlowStepCostsTotalCost", "$937.07", "$937.07", "$937.07", "WorkFlow Step Total Cost value is Validated", "WorkFlow Step Therms value is In Correct");
 		ValidateWithElement("EKPCButtonUp", "TotalBTUHReduction", "10101", "10101", "10101", "Total BTUH Reduction value is Validated", "Total BTUH Reduction value is In Correct");
-		clickonProcess();
+		
+		HandleErrorCodeOnProcess("helper", "ProcessButton", "");
+		//clickonProcess();
 	}
 	public static void Invoicing() {
 		threadWait(2500);

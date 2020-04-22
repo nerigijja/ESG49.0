@@ -22,18 +22,21 @@ public class Benchmarking_TestClass extends HelperClass {
 		
 		//Navigating to the property commercial Page
 		clickWebelement("BenchMarking", "Property1");
-		explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+		WaitForElement(300, "BenchMarking", "EnergyTab");
+		//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 		clickWebelement("BenchMarking", "EnergyTab");
 		
 		//Adding the properties
 		clickWebelement("BenchMarking", "AddMeterButton");
-		explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
+		WaitForElement(300, "BenchMarking", "DieselCheckOption");
+		//explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
 		clickWebelement("BenchMarking", "DieselCheckOption");
 		scrollToElement("BenchMarking", "GetStarted");
 		clickWebelement("BenchMarking", "GetStarted");
 		
 		//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
-		explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+		//explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+		WaitForElement(300, "BenchMarking", "SelectCheckBox");
 		clickWebelement("BenchMarking", "SelectCheckBox");
 		selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
 		
@@ -49,10 +52,12 @@ public class Benchmarking_TestClass extends HelperClass {
 		clickWebelement("BenchMarking", "ContinueButton");
 		
 		//Meter entries have been added to your meters!
-		explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
+		WaitForElement(300, "BenchMarking", "MyPortfolio");
+		//explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
 		clickWebelement("BenchMarking", "MyPortfolio");
 		clickWebelement("BenchMarking", "Property1");
-		explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+		WaitForElement(300, "BenchMarking", "EnergyTab");
+		//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 		clickWebelement("BenchMarking", "EnergyTab");
 		scrollToElement("BenchMarking", "DeleteDieselLink");
 		clickWebelement("BenchMarking", "DeleteDieselLink");
@@ -60,7 +65,8 @@ public class Benchmarking_TestClass extends HelperClass {
 		//Navigated to Manage Bills (Meter Entries) for Property 1 - Commercial page
 		threadWait(3000);
 		clickWebelement("BenchMarking", "BasicMeasureInfo");
-		explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
+		WaitForElement(300, "BenchMarking", "DeleteMeter");
+		//explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
 		clickWebelement("BenchMarking", "DeleteMeter");
 		clickWebelement("BenchMarking", "DeleteConfirmation");
 		validationWithWebelement("BenchMarking", "DeleteNotify", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -70,18 +76,23 @@ public class Benchmarking_TestClass extends HelperClass {
 		
 		//Navigating to the property commercial Page
 		clickWebelement("BenchMarking", "Property2");
-		explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+		WaitForElement(300, "BenchMarking", "EnergyTab");
+		
+		//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 		clickWebelement("BenchMarking", "EnergyTab");
 		
 		//Adding the properties
 		clickWebelement("BenchMarking", "AddMeterButton");
-		explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
+		
+		WaitForElement(300, "BenchMarking", "DieselCheckOption");
+		//explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
 		clickWebelement("BenchMarking", "DieselCheckOption");
 		scrollToElement("BenchMarking", "GetStarted");
 		clickWebelement("BenchMarking", "GetStarted");
 		
 		//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
-		explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+		WaitForElement(300, "BenchMarking", "SelectCheckBox");
+		//explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 		clickWebelement("BenchMarking", "SelectCheckBox");
 		selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
 		
@@ -89,7 +100,8 @@ public class Benchmarking_TestClass extends HelperClass {
 		clickWebelement("BenchMarking", "DateMeterBecameActive");
 		clickWebelement("BenchMarking", "ActiveDate");
 		clickWebelement("BenchMarking", "CreateMeter");
-		explicitWait(3000, "BenchMarking", "NotifyMessage");
+		WaitForElement(300, "BenchMarking", "NotifyMessage");
+	//	explicitWait(3000, "BenchMarking", "NotifyMessage");
 		
 		//Meters have been created!
 		validationWithWebelement("BenchMarking", "NotifyMessage", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -97,10 +109,12 @@ public class Benchmarking_TestClass extends HelperClass {
 		clickWebelement("BenchMarking", "ContinueButton");
 		
 		//Meter entries have been added to your meters!
-		explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
+		WaitForElement(300, "BenchMarking", "MyPortfolio");
+		//explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
 		clickWebelement("BenchMarking", "MyPortfolio");
 		clickWebelement("BenchMarking", "Property2");
-		explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+		WaitForElement(300, "BenchMarking", "EnergyTab");
+		//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 		clickWebelement("BenchMarking", "EnergyTab");
 		scrollToElement("BenchMarking", "DeleteDieselLink");
 		clickWebelement("BenchMarking", "DeleteDieselLink");
@@ -108,7 +122,8 @@ public class Benchmarking_TestClass extends HelperClass {
 		//Navigated to Manage Bills (Meter Entries) for Property 1 - Commercial page
 		threadWait(3000);
 		clickWebelement("BenchMarking", "BasicMeasureInfo");
-		explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
+		WaitForElement(300, "BenchMarking", "DeleteMeter");
+		//explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
 		clickWebelement("BenchMarking", "DeleteMeter");
 		clickWebelement("BenchMarking", "DeleteConfirmation");
 		validationWithWebelement("BenchMarking", "DeleteNotify", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -118,18 +133,21 @@ public class Benchmarking_TestClass extends HelperClass {
 			
 			//Navigating to the property commercial Page
 			clickWebelement("BenchMarking", "Property3");
-			explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+			WaitForElement(300, "BenchMarking", "EnergyTab");
+			//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 			clickWebelement("BenchMarking", "EnergyTab");
 			
 			//Adding the properties
 			clickWebelement("BenchMarking", "AddMeterButton");
-			explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
+			WaitForElement(300, "BenchMarking", "DieselCheckOption");
+			//explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
 			clickWebelement("BenchMarking", "DieselCheckOption");
 			scrollToElement("BenchMarking", "GetStarted");
 			clickWebelement("BenchMarking", "GetStarted");
 			
 			//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
-			explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+			WaitForElement(300, "BenchMarking", "SelectCheckBox");
+			//explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 			clickWebelement("BenchMarking", "SelectCheckBox");
 			selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
 			
@@ -137,7 +155,8 @@ public class Benchmarking_TestClass extends HelperClass {
 			clickWebelement("BenchMarking", "DateMeterBecameActive");
 			clickWebelement("BenchMarking", "ActiveDate");
 			clickWebelement("BenchMarking", "CreateMeter");
-			explicitWait(3000, "BenchMarking", "NotifyMessage");
+			WaitForElement(300, "BenchMarking", "NotifyMessage");
+			//explicitWait(3000, "BenchMarking", "NotifyMessage");
 			
 			//Meters have been created!
 			validationWithWebelement("BenchMarking", "NotifyMessage", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -145,10 +164,12 @@ public class Benchmarking_TestClass extends HelperClass {
 			clickWebelement("BenchMarking", "ContinueButton");
 			
 			//Meter entries have been added to your meters!
-			explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
+			WaitForElement(300, "BenchMarking", "MyPortfolio");
+			//explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
 			clickWebelement("BenchMarking", "MyPortfolio");
 			clickWebelement("BenchMarking", "Property3");
-			explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+			WaitForElement(300, "BenchMarking", "EnergyTab");
+			//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 			clickWebelement("BenchMarking", "EnergyTab");
 			scrollToElement("BenchMarking", "DeleteDieselLink");
 			clickWebelement("BenchMarking", "DeleteDieselLink");
@@ -156,7 +177,8 @@ public class Benchmarking_TestClass extends HelperClass {
 			//Navigated to Manage Bills (Meter Entries) for Property 1 - Commercial page
 			threadWait(3000);
 			clickWebelement("BenchMarking", "BasicMeasureInfo");
-			explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
+			WaitForElement(300, "BenchMarking", "DeleteMeter");
+			//explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
 			clickWebelement("BenchMarking", "DeleteMeter");
 			clickWebelement("BenchMarking", "DeleteConfirmation");
 			validationWithWebelement("BenchMarking", "DeleteNotify", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -168,18 +190,21 @@ public class Benchmarking_TestClass extends HelperClass {
 			//Navigating to the property commercial Page
 			scrollToElement("BenchMarking", "Property4");
 			clickWebelement("BenchMarking", "Property4");
-			explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+			WaitForElement(300, "BenchMarking", "EnergyTab");
+			//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 			clickWebelement("BenchMarking", "EnergyTab");
 			
 			//Adding the properties
 			clickWebelement("BenchMarking", "AddMeterButton");
-			explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
+			WaitForElement(300, "BenchMarking", "DieselCheckOption");
+			//explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
 			clickWebelement("BenchMarking", "DieselCheckOption");
 			scrollToElement("BenchMarking", "GetStarted");
 			clickWebelement("BenchMarking", "GetStarted");
 			
 			//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
-			explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+			WaitForElement(300, "BenchMarking", "SelectCheckBox");
+			//explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 			clickWebelement("BenchMarking", "SelectCheckBox");
 			selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
 			
@@ -187,7 +212,8 @@ public class Benchmarking_TestClass extends HelperClass {
 			clickWebelement("BenchMarking", "DateMeterBecameActive");
 			clickWebelement("BenchMarking", "ActiveDate");
 			clickWebelement("BenchMarking", "CreateMeter");
-			explicitWait(3000, "BenchMarking", "NotifyMessage");
+			WaitForElement(300, "BenchMarking", "NotifyMessage");
+			//explicitWait(3000, "BenchMarking", "NotifyMessage");
 			
 			//Meters have been created!
 			validationWithWebelement("BenchMarking", "NotifyMessage", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -195,10 +221,12 @@ public class Benchmarking_TestClass extends HelperClass {
 			clickWebelement("BenchMarking", "ContinueButton");
 			
 			//Meter entries have been added to your meters!
-			explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
+			WaitForElement(300, "BenchMarking", "MyPortfolio");
+			//explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
 			clickWebelement("BenchMarking", "MyPortfolio");
 			clickWebelement("BenchMarking", "Property4");
-			explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+			WaitForElement(300, "BenchMarking", "EnergyTab");
+			//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 			clickWebelement("BenchMarking", "EnergyTab");
 			scrollToElement("BenchMarking", "DeleteDieselLink");
 			clickWebelement("BenchMarking", "DeleteDieselLink");
@@ -206,7 +234,8 @@ public class Benchmarking_TestClass extends HelperClass {
 			//Navigated to Manage Bills (Meter Entries) for Property 1 - Commercial page
 			threadWait(3000);
 			clickWebelement("BenchMarking", "BasicMeasureInfo");
-			explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
+			WaitForElement(300, "BenchMarking", "DeleteMeter");
+		//	explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
 			clickWebelement("BenchMarking", "DeleteMeter");
 			clickWebelement("BenchMarking", "DeleteConfirmation");
 			validationWithWebelement("BenchMarking", "DeleteNotify", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -218,18 +247,21 @@ public class Benchmarking_TestClass extends HelperClass {
 				//Navigating to the property commercial Page
 				scrollToElement("BenchMarking", "Property5");
 				clickWebelement("BenchMarking", "Property5");
-				explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+				WaitForElement(300, "BenchMarking", "EnergyTab");
+				//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 				clickWebelement("BenchMarking", "EnergyTab");
 				
 				//Adding the properties
 				clickWebelement("BenchMarking", "AddMeterButton");
-				explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
+				WaitForElement(300, "BenchMarking", "DieselCheckOption");
+				//explicitWaitForClickable(3000, "BenchMarking", "DieselCheckOption");
 				clickWebelement("BenchMarking", "DieselCheckOption");
 				scrollToElement("BenchMarking", "GetStarted");
 				clickWebelement("BenchMarking", "GetStarted");
 				
 				//Navigating to the Energy Meter for Property 1 - Commercial (click table to edit)
-				explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
+				WaitForElement(300, "BenchMarking", "SelectCheckBox");
+				//explicitWaitForClickable(3000, "BenchMarking", "SelectCheckBox");
 				clickWebelement("BenchMarking", "SelectCheckBox");
 				selectDropdown("BenchMarking", "Units","", "ESG Values", "BenchMarking", 3, 1);
 				
@@ -237,7 +269,8 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "DateMeterBecameActive");
 				clickWebelement("BenchMarking", "ActiveDate");
 				clickWebelement("BenchMarking", "CreateMeter");
-				explicitWait(3000, "BenchMarking", "NotifyMessage");
+				WaitForElement(300, "BenchMarking", "NotifyMessage");
+				//explicitWait(3000, "BenchMarking", "NotifyMessage");
 				
 				//Meters have been created!
 				validationWithWebelement("BenchMarking", "NotifyMessage", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -245,10 +278,12 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "ContinueButton");
 				
 				//Meter entries have been added to your meters!
-				explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
+				WaitForElement(300, "BenchMarking", "MyPortfolio");
+				//explicitWaitForClickable(3000, "BenchMarking", "MyPortfolio");
 				clickWebelement("BenchMarking", "MyPortfolio");
 				clickWebelement("BenchMarking", "Property5");
-				explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
+				WaitForElement(300, "BenchMarking", "EnergyTab");
+				//explicitWaitForClickable(3000, "BenchMarking", "EnergyTab");
 				clickWebelement("BenchMarking", "EnergyTab");
 				scrollToElement("BenchMarking", "DeleteDieselLink");
 				clickWebelement("BenchMarking", "DeleteDieselLink");
@@ -256,7 +291,8 @@ public class Benchmarking_TestClass extends HelperClass {
 				//Navigated to Manage Bills (Meter Entries) for Property 1 - Commercial page
 				threadWait(3000);
 				clickWebelement("BenchMarking", "BasicMeasureInfo");
-				explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
+				WaitForElement(300, "BenchMarking", "DeleteMeter");
+			//	explicitWaitForClickable(3000, "BenchMarking", "DeleteMeter");
 				clickWebelement("BenchMarking", "DeleteMeter");
 				clickWebelement("BenchMarking", "DeleteConfirmation");
 				validationWithWebelement("BenchMarking", "DeleteNotify", "Notification Message is validated Successfully", "Failed to Validate the Notification Message");
@@ -275,7 +311,9 @@ public class Benchmarking_TestClass extends HelperClass {
 				clearWebelement("BenchMarking", "PortPassword");
 				threadWait(2500);
 				enterTextboxValue("BenchMarking", "PortPassword", "ESG Values", "BenchMarking", 10, 1);
-				clickonSave();
+				HandleErrorCodeOnSave("helper", "SaveButton", "");
+				
+			//	clickonSave();
 			}
 			public static void Verify_Last_Bill_Amount() {
 				login("helper", "BaseURL", 1, 0, 1, 1);
@@ -300,7 +338,8 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "NextButton");
 				
 				//Customer Information tab
-				explicitWait(300, "BenchMarking", "FirstName");
+				WaitForElement(300, "BenchMarking", "FirstName");
+				//explicitWait(300, "BenchMarking", "FirstName");
 				enterTextboxValue("BenchMarking", "FirstName", "ESG Values", "BenchMarking", 16, 1);
 				enterTextboxValue("BenchMarking", "LastName", "ESG Values", "BenchMarking", 17, 1);
 				enterTextboxValue("BenchMarking", "PrimaryPhone", "ESG Values", "BenchMarking", 18, 1);
@@ -314,7 +353,8 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "NextButton");
 				
 				//Building Information Tab
-				explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
+				WaitForElement(300, "BenchMarking", "PortfolioManagerUsername");
+				//explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
 				enterTextboxValue("BenchMarking", "PortfolioManagerUsername", "ESG Values", "BenchMarking", 27, 1);
 				
 				selectDropdown("BenchMarking", "RequestType","", "ESG Values", "BenchMarking", 28, 1);
@@ -329,10 +369,12 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "TCOk");
 				clickWebelement("BenchMarking", "TCCheckBox");
 				clickWebelement("BenchMarking", "RetriveSharedPropertiesButton");
-				explicitWait(3000, "BenchMarking", "RequestFrequencyValidation");
+				WaitForElement(300, "BenchMarking", "RequestFrequencyValidation");
+				//explicitWait(3000, "BenchMarking", "RequestFrequencyValidation");
 				VerifyElementForExistingValueWithText("BenchMarking", "RequestFrequencyValidation", "ESG Values", "BenchMarking", 29, 1);
 				VerifyElementForExistingValueWithText("BenchMarking", "DeliveryMethodValidation", "ESG Values", "BenchMarking", 30, 1);
-				explicitWait(3000, "BenchMarking", "Property1Validation");
+				WaitForElement(300, "BenchMarking", "Property1Validation");
+				//explicitWait(3000, "BenchMarking", "Property1Validation");
 				threadWait(20000);
 			/*	VerifyElementForExistingValueWithText("BenchMarking", "PropertyColumnNameValidation", "ESG Values", "BenchMarking", 31, 1);
 				VerifyElementForExistingValueWithText("BenchMarking", "PortfolioManagerPropertyIDValidation", "ESG Values", "BenchMarking", 32, 1);
@@ -384,7 +426,8 @@ public class Benchmarking_TestClass extends HelperClass {
 				clickWebelement("BenchMarking", "NextButton");
 				
 				//Authorization Tab
-				explicitWait(300, "BenchMarking", "PropertyValidation");
+				WaitForElement(300, "BenchMarking", "PropertyValidation");
+				//explicitWait(300, "BenchMarking", "PropertyValidation");
 				VerifyElementForExistingValueWithText("BenchMarking", "PropertyValidation", "ESG Values", "BenchMarking", 69, 1);
 				VerifyElementForExistingValueWithText("BenchMarking", "PortfolioValidation", "ESG Values", "BenchMarking", 70, 1);
 				VerifyElementForExistingValueWithText("BenchMarking", "AddressStep2Validaiton", "ESG Values", "BenchMarking", 71, 1);
@@ -452,7 +495,8 @@ public class Benchmarking_TestClass extends HelperClass {
 					clickWebelement("BenchMarking", "NextButton");
 					
 					//Customer Information tab
-					explicitWait(300, "BenchMarking", "FirstName");
+					WaitForElement(300, "BenchMarking", "FirstName");
+				//	explicitWait(300, "BenchMarking", "FirstName");
 					enterTextboxValue("BenchMarking", "FirstName", "ESG Values", "BenchMarking", 16, 1);
 					enterTextboxValue("BenchMarking", "LastName", "ESG Values", "BenchMarking", 17, 1);
 					enterTextboxValue("BenchMarking", "PrimaryPhone", "ESG Values", "BenchMarking", 18, 1);
@@ -466,7 +510,8 @@ public class Benchmarking_TestClass extends HelperClass {
 					clickWebelement("BenchMarking", "NextButton");
 					
 					//Building Information Tab
-					explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
+					WaitForElement(300, "BenchMarking", "PortfolioManagerUsername");
+				//	explicitWait(3000, "BenchMarking", "PortfolioManagerUsername");
 					enterTextboxValue("BenchMarking", "PortfolioManagerUsername", "ESG Values", "BenchMarking", 27, 1);
 					
 					selectDropdown("BenchMarking", "RequestType","", "ESG Values", "BenchMarking", 90, 1);
@@ -480,10 +525,12 @@ public class Benchmarking_TestClass extends HelperClass {
 					clickWebelement("BenchMarking", "TCOk");
 					clickWebelement("BenchMarking", "TCCheckBox");
 					clickWebelement("BenchMarking", "RetriveSharedPropertiesButton");
-					explicitWait(300, "BenchMarking", "RequestFrequencyValidation");
+					WaitForElement(300, "BenchMarking", "RequestFrequencyValidation");
+					//explicitWait(300, "BenchMarking", "RequestFrequencyValidation");
 					VerifyElementForExistingValueWithText("BenchMarking", "RequestFrequencyValidation", "ESG Values", "BenchMarking", 29, 1);
 					VerifyElementForExistingValueWithText("BenchMarking", "DeliveryMethodValidation", "ESG Values", "BenchMarking", 30, 1);
-					explicitWait(3000, "BenchMarking", "Property1Validation");
+					WaitForElement(300, "BenchMarking", "Property1Validation");
+					//explicitWait(3000, "BenchMarking", "Property1Validation");
 					threadWait(20000);
 					/*VerifyElementForExistingValueWithText("BenchMarking", "PropertyColumnNameValidation", "ESG Values", "BenchMarking", 31, 1);
 					VerifyElementForExistingValueWithText("BenchMarking", "PortfolioManagerPropertyIDValidation", "ESG Values", "BenchMarking", 32, 1);
@@ -604,7 +651,8 @@ public class Benchmarking_TestClass extends HelperClass {
 					VerifyElementForExistingValueWithText("BenchMarking", "RSMeters5", "ESG Values", "BenchMarking", 140, 1);
 					scrollToElement("BenchMarking", "SubmitButton");
 					clickWebelement("BenchMarking", "SubmitButton");
-					explicitWait(3000, "BenchMarking", "NewEnrollmentNumber");
+					WaitForElement(300, "BenchMarking", "NewEnrollmentNumber");
+					//explicitWait(3000, "BenchMarking", "NewEnrollmentNumber");
 					//New Enrollment Validation
 					validationWithWebelement("BenchMarking", "NewEnrollmentNumber");
 					
